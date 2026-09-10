@@ -1,0 +1,127 @@
+{
+  "_comment": "Standard wording for the Fortis Financial Reports pack, captured verbatim from the 2025/2026 packs. Placeholders: {entity} {fy_long} (e.g. 30 June 2026) {director_word} {director_word_cap} {responsibility_heading}. Company wording; trust/partnership variants are stubs until the firm templates are uploaded.",
+
+  "firm": {
+    "name": "Fortis Accounting Partners",
+    "descriptor": "Chartered Accountants",
+    "address_lines": ["Suite 9 Level 12 101 Bathurst Street", "SYDNEY NSW 2000"],
+    "signatory": "John Kalachian",
+    "prepared_by": "Prepared by Fortis Accounting Partners",
+    "pack_title": "Financial Reports",
+    "footer_left": "Financial Reports"
+  },
+
+  "report_titles": {
+    "pnl": "Profit and Loss Statement",
+    "bs": "Balance Sheet",
+    "equity": "Movements in Equity",
+    "notes": "Notes to the Financial Statements",
+    "depreciation": "Depreciation Schedule",
+    "depreciation_simple": "Accounting Depreciation Schedule",
+    "declaration": "Directors Declaration",
+    "compilation": "Compilation Report",
+    "contents": "Contents"
+  },
+
+  "default_report_order": ["pnl", "bs", "equity", "notes", "depreciation", "declaration", "compilation"],
+
+  "policies": {
+    "heading": "1. Statement of Significant Accounting Policies",
+    "basis": [
+      "a. This financial report is a special purpose financial report prepared for use by directors and members of the company. The directors have determined that the company is not a reporting entity. The financial report has been prepared in accordance with the requirements of the following Australian Accounting Standards (including Australian Accounting Interpretations) of the Australian Accounting Standards Board and the <i>Corporations Act 2001</i>:",
+      "AASB 1031: Materiality",
+      "AASB 110: Events after the Balance Sheet Date",
+      "The financial report is prepared on an accruals basis and is based on historic costs and does not take into account changing money values or, except where specifically stated, current valuations of non-current assets.",
+      "The following specific accounting policies, which are consistent with the previous period unless otherwise stated, have been adopted in the preparation of this report:"
+    ],
+    "ppe": {
+      "heading": "b. Property, Plant and Equipment",
+      "text": "Property, plant and equipment are carried at cost, independent or directors' valuation. All assets, excluding freehold land and buildings, are depreciated over their useful lives to the company."
+    },
+    "inventories": {
+      "heading": "c. Inventories",
+      "text": "Inventories are measured at the lower of cost and net realisable value. Costs are assigned on a first-in first-out basis and include direct materials, direct labour and an appropriate proportion of variable and fixed overhead expenses."
+    },
+    "optional": {
+      "_comment": "Extra policies the preparer may switch on via options.extra_policies (list of keys). Lettering continues automatically.",
+      "income_tax": {
+        "heading": "Income Tax",
+        "text": "The income tax expense for the year comprises current income tax expense. Current income tax expense charged to the profit or loss is the tax payable on taxable income, calculated using applicable income tax rates enacted at the reporting date. Deferred tax is not brought to account."
+      },
+      "revenue": {
+        "heading": "Revenue",
+        "text": "Revenue from the sale of goods is recognised upon the delivery of goods to customers. Revenue from the rendering of a service is recognised upon the delivery of the service to the customer. Interest revenue is recognised on a proportional basis taking into account the interest rates applicable to the financial assets. All revenue is stated net of the amount of goods and services tax (GST)."
+      },
+      "gst": {
+        "heading": "Goods and Services Tax (GST)",
+        "text": "Revenues, expenses and assets are recognised net of the amount of GST, except where the amount of GST incurred is not recoverable from the Australian Taxation Office. Receivables and payables in the balance sheet are shown inclusive of GST."
+      },
+      "employee_benefits": {
+        "heading": "Employee Benefits",
+        "text": "Provision is made for the company's liability for employee benefits arising from services rendered by employees to the end of the reporting period. Employee benefits that are expected to be settled within one year have been measured at the amounts expected to be paid when the liability is settled."
+      },
+      "foreign_currency": {
+        "heading": "Foreign Currency Transactions and Balances",
+        "text": "Foreign currency transactions are translated into functional currency using the exchange rates prevailing at the date of the transaction. Foreign currency monetary items are translated at the year-end exchange rate. Exchange differences arising on the translation of monetary items are recognised in the profit or loss."
+      }
+    }
+  },
+
+  "fx_note": "Exchange rates used to convert foreign currency into AUD are shown below. Rates are provided by XE.com unless otherwise stated.",
+
+  "declaration": {
+    "company": {
+      "plural": {
+        "p1": "The directors have determined that the company is not a reporting entity and that this special purpose financial report should be prepared in accordance with the accounting policies outlined in Note 1 to the financial statements.",
+        "p2": "The directors of the company declare that:",
+        "items": [
+          "The financial statements and notes, present fairly the company's financial position as at {fy_long} and its performance for the year ended on that date in accordance with the accounting policies described in Note 1 to the financial statements; and",
+          "In the directors' opinion, there are reasonable grounds to believe that the company will be able to pay its debts as and when they become due and payable."
+        ],
+        "p3": "This declaration is made in accordance with a resolution of the Board of Directors.",
+        "signature_label": "Director:",
+        "dated_label": "Dated:"
+      },
+      "singular": {
+        "p1": "The director has determined that the company is not a reporting entity and that this special purpose financial report should be prepared in accordance with the accounting policies outlined in Note 1 to the financial statements.",
+        "p2": "The director of the company declares that:",
+        "items": [
+          "The financial statements and notes, present fairly the company's financial position as at {fy_long} and its performance for the year ended on that date in accordance with the accounting policies described in Note 1 to the financial statements; and",
+          "In the director's opinion, there are reasonable grounds to believe that the company will be able to pay its debts as and when they become due and payable."
+        ],
+        "p3": "This declaration is made in accordance with a resolution of the director.",
+        "signature_label": "Director:",
+        "dated_label": "Dated:"
+      }
+    },
+    "trust": {
+      "_comment": "STUB - replace with the firm's Trustee Declaration wording when the trust template is uploaded.",
+      "plural": {
+        "title": "Trustee Declaration",
+        "p1": "The trustee has determined that the trust is not a reporting entity and that this special purpose financial report should be prepared in accordance with the accounting policies outlined in Note 1 to the financial statements.",
+        "p2": "The trustee of the trust declares that:",
+        "items": [
+          "The financial statements and notes, present fairly the trust's financial position as at {fy_long} and its performance for the year ended on that date in accordance with the accounting policies described in Note 1 to the financial statements; and",
+          "In the trustee's opinion, there are reasonable grounds to believe that the trust will be able to pay its debts as and when they become due and payable."
+        ],
+        "p3": "This declaration is made in accordance with a resolution of the trustee.",
+        "signature_label": "Trustee:",
+        "dated_label": "Dated:"
+      }
+    }
+  },
+
+  "compilation": {
+    "title_line": "Compilation report to {entity}",
+    "p1": "We have compiled the accompanying special purpose financial statements of {entity}, which comprise the balance sheet as at {fy_long}, the statement of profit or loss for the year then ended, a summary of significant accounting policies and other explanatory notes. The specific purpose for which the special purpose financial statements have been prepared is set out in Note 1.",
+    "responsibility_heading": "The Responsibility of the {director_word_cap}",
+    "p2": "The {director_word} of {entity} {are_is} solely responsible for the information contained in the special purpose financial statements, the reliability, accuracy and completeness of the information and for the determination that the basis of accounting used is appropriate to meet their needs and for the purpose that financial statements were prepared.",
+    "our_heading": "Our Responsibility",
+    "p3": "On the basis of information provided by the {director_word} we have compiled the accompanying special purpose financial statements in accordance with the basis of accounting as described in Note 1 to the financial statements and APES 315 <i>Compilation of Financial Information</i>.",
+    "p4": "We have applied our expertise in accounting and financial reporting to compile these financial statements in accordance with the basis of accounting described in Note 1 to the financial statements. We have complied with the relevant ethical requirements of APES 110 <i>Code of Ethics for Professional Accountants</i>.",
+    "disclaimer_heading": "Assurance Disclaimer",
+    "p5": "Since a compilation engagement is not an assurance engagement, we are not required to verify the reliability, accuracy or completeness of the information provided to us by management to compile these financial statements. Accordingly, we do not express an audit opinion or a review conclusion on these financial statements.",
+    "p6": "The special purpose financial statements were compiled exclusively for the benefit of the {director_word} who are responsible for the reliability, accuracy and completeness of the information used to compile them. We do not accept responsibility for the contents of the special purpose financial statements.",
+    "dated_label": "Dated:"
+  }
+}

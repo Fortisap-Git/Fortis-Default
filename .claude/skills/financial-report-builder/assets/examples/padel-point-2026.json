@@ -1,0 +1,1015 @@
+{
+ "_source": "2026 Financial Report - Padel Point Pty Ltd (14 pages). Start-up with heavy fit-out, five PPE classes, inventory, intangibles (trademark + bank guarantees), foreign-currency footnote, three director-loan trusts under Financial Liabilities > Non Current > Unsecured, PY capital loss reserve movement, 'Depreciation Schedule' with RATE/METHOD/PURCHASED columns.",
+ "entity": {
+  "name": "Padel Point Pty Ltd",
+  "abn": "92 671 640 029",
+  "type": "company",
+  "fy_end": "2026-06-30",
+  "directors": [
+   "Seyed Hiva Hosseini",
+   "Elliot C Nicholas"
+  ]
+ },
+ "options": {
+  "sort": "alpha",
+  "cost_of_sales_label": "Cost of Goods Sold",
+  "depreciation_layout": "standard",
+  "fx_rates": [
+   {
+    "date": "30 June 2026",
+    "rates": [
+     "0.604121 EUR (Euro)",
+     "0.688535 USD (United States Dollar)"
+    ]
+   }
+  ]
+ },
+ "equity": {
+  "opening_py": -4937
+ },
+ "equity_movements": [
+  {
+   "label": "Share Capital",
+   "py": 100
+  },
+  {
+   "label": "Capital Loss Reserve",
+   "py": -41745
+  }
+ ],
+ "accounts": [
+  {
+   "name": "Sale of goods",
+   "type": "Revenue",
+   "report_code": "REV.TRA",
+   "cy": 621805,
+   "py": 0
+  },
+  {
+   "name": "Purchases",
+   "type": "Direct Costs",
+   "report_code": "EXP.COS",
+   "cy": 95187,
+   "py": 0
+  },
+  {
+   "name": "Interest Income",
+   "type": "Other Income",
+   "report_code": "REV.OTH",
+   "cy": 8735,
+   "py": 0
+  },
+  {
+   "name": "Accounting & Consulting",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 11179,
+   "py": 1650
+  },
+  {
+   "name": "Advertising",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 7511,
+   "py": 9745
+  },
+  {
+   "name": "Bank Fees & charges",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 16839,
+   "py": 0
+  },
+  {
+   "name": "Bookeeping",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 5160,
+   "py": 0
+  },
+  {
+   "name": "Certifications & Licenses",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 3578,
+   "py": 0
+  },
+  {
+   "name": "Cleaning",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 3762,
+   "py": 0
+  },
+  {
+   "name": "Compliance fee",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 0,
+   "py": 3200
+  },
+  {
+   "name": "Depreciation",
+   "type": "Depreciation",
+   "report_code": "EXP.OPE",
+   "cy": 123965,
+   "py": 6003
+  },
+  {
+   "name": "Entertainment",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 3630,
+   "py": 0
+  },
+  {
+   "name": "Filing Fees",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 339,
+   "py": 321
+  },
+  {
+   "name": "Freight & Courier",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 36385,
+   "py": 0
+  },
+  {
+   "name": "General Expenses",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 0,
+   "py": 102
+  },
+  {
+   "name": "Insurance",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 4395,
+   "py": 0
+  },
+  {
+   "name": "Legal expenses",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 6715,
+   "py": 10576
+  },
+  {
+   "name": "Marketing & Promotion",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 60739,
+   "py": 0
+  },
+  {
+   "name": "Merchant Platform Fees",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 13712,
+   "py": 0
+  },
+  {
+   "name": "Motor Vehicle Expenses",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 378,
+   "py": 0
+  },
+  {
+   "name": "Office & Centre Expenses",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 38028,
+   "py": 0
+  },
+  {
+   "name": "Printing & Stationery",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 0,
+   "py": 135
+  },
+  {
+   "name": "Realised Currency Gains",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 6392,
+   "py": 0
+  },
+  {
+   "name": "Rent",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 244270,
+   "py": 0
+  },
+  {
+   "name": "Repairs and Maintenance",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 3716,
+   "py": 0
+  },
+  {
+   "name": "Staff Training",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 964,
+   "py": 233
+  },
+  {
+   "name": "Subscriptions",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 8466,
+   "py": 2793
+  },
+  {
+   "name": "Superannuation",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 12277,
+   "py": 0
+  },
+  {
+   "name": "Telephone & Internet",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 1810,
+   "py": 0
+  },
+  {
+   "name": "Travel - National",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 805,
+   "py": 0
+  },
+  {
+   "name": "Unrealised Currency Gains",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 4993,
+   "py": 0
+  },
+  {
+   "name": "Utilities (Light, Power, Heating)",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 11224,
+   "py": 0
+  },
+  {
+   "name": "Wages and Salaries",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 102359,
+   "py": 0
+  },
+  {
+   "name": "Business Account #8994",
+   "type": "Bank",
+   "report_code": "ASS.CUR.CAS.BAN",
+   "cy": 227559,
+   "py": 5664
+  },
+  {
+   "name": "Business Premium",
+   "type": "Bank",
+   "report_code": "ASS.CUR.CAS.BAN",
+   "cy": 2397,
+   "py": 0
+  },
+  {
+   "name": "Cash in Hand",
+   "type": "Bank",
+   "report_code": "ASS.CUR.CAS.OTH",
+   "cy": 100,
+   "py": 100
+  },
+  {
+   "name": "Loan - Padel Point Rosehill Pty Ltd",
+   "type": "Current Asset",
+   "report_code": "ASS.CUR.REC",
+   "cy": 425470,
+   "py": 0
+  },
+  {
+   "name": "Other",
+   "type": "Current Asset",
+   "report_code": "ASS.CUR.REC",
+   "cy": 0,
+   "py": 48796
+  },
+  {
+   "name": "Loan to Directors",
+   "type": "Current Asset",
+   "report_code": "ASS.CUR.REC",
+   "cy": 0,
+   "py": 478
+  },
+  {
+   "name": "Inventory",
+   "type": "Inventory",
+   "report_code": "ASS.CUR.INV.INV",
+   "cy": 43225,
+   "py": 0
+  },
+  {
+   "name": "Furniture & Fixture at Cost",
+   "type": "Fixed Asset",
+   "report_code": "ASS.NCA.PPE.FUR",
+   "cy": 97568,
+   "py": 2375
+  },
+  {
+   "name": "Accumulated Depreciation on Furniture & Fixtures",
+   "type": "Fixed Asset",
+   "report_code": "ASS.NCA.PPE.FUR",
+   "cy": -44560,
+   "py": -2375
+  },
+  {
+   "name": "Leasehold Improvements",
+   "type": "Fixed Asset",
+   "report_code": "ASS.NCA.PPE.LEA",
+   "cy": 916611,
+   "py": 52973
+  },
+  {
+   "name": "Accumulated Depreciation on Leasehold Improvements",
+   "type": "Fixed Asset",
+   "report_code": "ASS.NCA.PPE.LEA",
+   "cy": -2087,
+   "py": -28
+  },
+  {
+   "name": "Motor Vehicles at Cost",
+   "type": "Fixed Asset",
+   "report_code": "ASS.NCA.PPE.MOT",
+   "cy": 11580,
+   "py": 0
+  },
+  {
+   "name": "Accumulated Depreciation of Motor Vehicles",
+   "type": "Fixed Asset",
+   "report_code": "ASS.NCA.PPE.MOT",
+   "cy": -174,
+   "py": 0
+  },
+  {
+   "name": "Office Equipment at Cost",
+   "type": "Fixed Asset",
+   "report_code": "ASS.NCA.PPE.OFF",
+   "cy": 6172,
+   "py": 3600
+  },
+  {
+   "name": "Accumulated Depreciation on Office Equipments",
+   "type": "Fixed Asset",
+   "report_code": "ASS.NCA.PPE.OFF",
+   "cy": -6172,
+   "py": -3600
+  },
+  {
+   "name": "Plant and Equipment at Cost",
+   "type": "Fixed Asset",
+   "report_code": "ASS.NCA.PPE.PLA",
+   "cy": 121200,
+   "py": 0
+  },
+  {
+   "name": "Accumulated Depreciation of Plant and Equipment",
+   "type": "Fixed Asset",
+   "report_code": "ASS.NCA.PPE.PLA",
+   "cy": -76975,
+   "py": 0
+  },
+  {
+   "name": "Brand Deposit (Trademark)",
+   "type": "Non-current Asset",
+   "report_code": "ASS.NCA.INT.OTH",
+   "cy": 4000,
+   "py": 4000
+  },
+  {
+   "name": "Bank Guarantees",
+   "type": "Non-current Asset",
+   "report_code": "ASS.NCA.INT.OTH",
+   "cy": 437898,
+   "py": 0
+  },
+  {
+   "name": "Accounts Payable",
+   "type": "Current Liability",
+   "report_code": "LIA.CUR.PAY",
+   "cy": 404084,
+   "py": 0
+  },
+  {
+   "name": "ATO Integrated Client Account",
+   "type": "Current Liability",
+   "report_code": "LIA.CUR.PAY",
+   "cy": -364,
+   "py": 0
+  },
+  {
+   "name": "GST",
+   "type": "Current Liability",
+   "report_code": "LIA.CUR.TAX",
+   "cy": 30008,
+   "py": -1177
+  },
+  {
+   "name": "PAYG Withholdings Payable",
+   "type": "Current Liability",
+   "report_code": "LIA.CUR.TAX",
+   "cy": 10142,
+   "py": 0
+  },
+  {
+   "name": "Director Loan - F & F Nami Family Trust",
+   "type": "Non-current Liability",
+   "report_code": "LIA.NCA.FIN.UNS",
+   "cy": 1019522,
+   "py": 109000
+  },
+  {
+   "name": "Director Loan - E & L Nicholas Family Trust",
+   "type": "Non-current Liability",
+   "report_code": "LIA.NCA.FIN.UNS",
+   "cy": 800000,
+   "py": 68000
+  },
+  {
+   "name": "Director Loan - Hoss Family Trust",
+   "type": "Non-current Liability",
+   "report_code": "LIA.NCA.FIN.UNS",
+   "cy": 180000,
+   "py": 17500
+  },
+  {
+   "name": "Retained Earnings",
+   "type": "Equity",
+   "report_code": "EQU.RET",
+   "cy": -81439,
+   "py": -46681
+  },
+  {
+   "name": "Share Capital",
+   "type": "Equity",
+   "report_code": "EQU.SHA",
+   "cy": 100,
+   "py": 100
+  }
+ ],
+ "depreciation": {
+  "layout": "standard",
+  "groups": [
+   {
+    "name": "Furniture & Fixtures",
+    "assets": [
+     {
+      "name": "Bar Table",
+      "rate": "",
+      "method": "Full",
+      "purchased": "26 Feb 2026",
+      "cost": 2149,
+      "opening_value": 0,
+      "purchases": 2149,
+      "disposals": 0,
+      "depreciation": 2149,
+      "closing_value": 0
+     },
+     {
+      "name": "Bolero Steel & Acacia Industrial Bench & others",
+      "rate": "",
+      "method": "Full",
+      "purchased": "4 Mar 2026",
+      "cost": 1366,
+      "opening_value": 0,
+      "purchases": 1366,
+      "disposals": 0,
+      "depreciation": 1366,
+      "closing_value": 0
+     },
+     {
+      "name": "Bolero Steel & Acacia Industrial Bench 1600x380mm",
+      "rate": "",
+      "method": "Full",
+      "purchased": "26 Feb 2026",
+      "cost": 2498,
+      "opening_value": 0,
+      "purchases": 2498,
+      "disposals": 0,
+      "depreciation": 2498,
+      "closing_value": 0
+     },
+     {
+      "name": "Capri Arch Bar Stool × 12",
+      "rate": "",
+      "method": "Full",
+      "purchased": "26 Feb 2026",
+      "cost": 3823,
+      "opening_value": 0,
+      "purchases": 3823,
+      "disposals": 0,
+      "depreciation": 3823,
+      "closing_value": 0
+     },
+     {
+      "name": "Dinning Chair & Seater Sofa",
+      "rate": "",
+      "method": "Full",
+      "purchased": "26 Feb 2026",
+      "cost": 11613,
+      "opening_value": 0,
+      "purchases": 11613,
+      "disposals": 0,
+      "depreciation": 11613,
+      "closing_value": 0
+     },
+     {
+      "name": "Fixtures & Fittings",
+      "rate": "",
+      "method": "Full",
+      "purchased": "30 June 2025",
+      "cost": 2375,
+      "opening_value": 0,
+      "purchases": 0,
+      "disposals": 0,
+      "depreciation": 0,
+      "closing_value": 0
+     },
+     {
+      "name": "Front counter",
+      "rate": "",
+      "method": "Full",
+      "purchased": "2 Feb 2026",
+      "cost": 932,
+      "opening_value": 0,
+      "purchases": 932,
+      "disposals": 0,
+      "depreciation": 932,
+      "closing_value": 0
+     },
+     {
+      "name": "IKEA - AUINV26000001118396",
+      "rate": "",
+      "method": "Full",
+      "purchased": "2 Mar 2026",
+      "cost": 1005,
+      "opening_value": 0,
+      "purchases": 1005,
+      "disposals": 0,
+      "depreciation": 1005,
+      "closing_value": 0
+     },
+     {
+      "name": "Kave Home Australia - Furnitures",
+      "rate": "",
+      "method": "Full",
+      "purchased": "26 Feb 2026",
+      "cost": 4458,
+      "opening_value": 0,
+      "purchases": 4458,
+      "disposals": 0,
+      "depreciation": 4458,
+      "closing_value": 0
+     },
+     {
+      "name": "Pegboard Peg & Panel",
+      "rate": "",
+      "method": "Full",
+      "purchased": "30 Jan 2026",
+      "cost": 770,
+      "opening_value": 0,
+      "purchases": 770,
+      "disposals": 0,
+      "depreciation": 770,
+      "closing_value": 0
+     },
+     {
+      "name": "Pegboard peg & Shelf",
+      "rate": "",
+      "method": "Full",
+      "purchased": "9 Apr 2026",
+      "cost": 1021,
+      "opening_value": 0,
+      "purchases": 1021,
+      "disposals": 0,
+      "depreciation": 1021,
+      "closing_value": 0
+     },
+     {
+      "name": "Premier Lockers - IV0263735",
+      "rate": "20%",
+      "method": "DV",
+      "purchased": "25 Sept 2025",
+      "cost": 21954,
+      "opening_value": 0,
+      "purchases": 21954,
+      "disposals": 0,
+      "depreciation": 3356,
+      "closing_value": 18598
+     },
+     {
+      "name": "Stainless Steel Single Sink Bench",
+      "rate": "",
+      "method": "Full",
+      "purchased": "12 Jan 2026",
+      "cost": 796,
+      "opening_value": 0,
+      "purchases": 796,
+      "disposals": 0,
+      "depreciation": 796,
+      "closing_value": 0
+     },
+     {
+      "name": "The Factory - Furnitures",
+      "rate": "20%",
+      "method": "DV",
+      "purchased": "6 Aug 2025",
+      "cost": 41978,
+      "opening_value": 0,
+      "purchases": 41978,
+      "disposals": 0,
+      "depreciation": 7568,
+      "closing_value": 34411
+     },
+     {
+      "name": "White Sorrento Reception Counter",
+      "rate": "",
+      "method": "Full",
+      "purchased": "27 Jan 2026",
+      "cost": 831,
+      "opening_value": 0,
+      "purchases": 831,
+      "disposals": 0,
+      "depreciation": 831,
+      "closing_value": 0
+     }
+    ]
+   },
+   {
+    "name": "Leasehold Improvements",
+    "assets": [
+     {
+      "name": "Leasehold Improvements",
+      "rate": "3%",
+      "method": "SL",
+      "purchased": "6 June 2025",
+      "cost": 16109,
+      "opening_value": 16081,
+      "purchases": 0,
+      "disposals": 0,
+      "depreciation": 403,
+      "closing_value": 15679
+     },
+     {
+      "name": "Leasehold Improvements",
+      "rate": "",
+      "method": "None",
+      "purchased": "30 June 2025",
+      "cost": 36864,
+      "opening_value": 36864,
+      "purchases": 0,
+      "disposals": 0,
+      "depreciation": 0,
+      "closing_value": 36864
+     },
+     {
+      "name": "Leasehold Improvements",
+      "rate": "3%",
+      "method": "SL",
+      "purchased": "3 June 2026",
+      "cost": 863638,
+      "opening_value": 0,
+      "purchases": 863638,
+      "disposals": 0,
+      "depreciation": 1656,
+      "closing_value": 861982
+     }
+    ]
+   },
+   {
+    "name": "Motor Vehicles",
+    "assets": [
+     {
+      "name": "VOLKSWAGEN POLO 3/2015",
+      "rate": "",
+      "method": "DV",
+      "purchased": "9 June 2026",
+      "cost": 11580,
+      "opening_value": 0,
+      "purchases": 11580,
+      "disposals": 0,
+      "depreciation": 174,
+      "closing_value": 11405
+     }
+    ]
+   },
+   {
+    "name": "Office Equipment",
+    "assets": [
+     {
+      "name": "75\" 4K Google TV & Wall Mount",
+      "rate": "",
+      "method": "Full",
+      "purchased": "29 Jan 2026",
+      "cost": 1320,
+      "opening_value": 0,
+      "purchases": 1320,
+      "disposals": 0,
+      "depreciation": 1320,
+      "closing_value": 0
+     },
+     {
+      "name": "Apple IPAD",
+      "rate": "",
+      "method": "Full",
+      "purchased": "11 Feb 2026",
+      "cost": 1252,
+      "opening_value": 0,
+      "purchases": 1252,
+      "disposals": 0,
+      "depreciation": 1252,
+      "closing_value": 0
+     },
+     {
+      "name": "Office Equipment",
+      "rate": "",
+      "method": "Full",
+      "purchased": "27 Mar 2025",
+      "cost": 3600,
+      "opening_value": 0,
+      "purchases": 0,
+      "disposals": 0,
+      "depreciation": 0,
+      "closing_value": 0
+     }
+    ]
+   },
+   {
+    "name": "Plant & Equipment",
+    "assets": [
+     {
+      "name": "Bolero Steel Bullet Bin with Open Lid",
+      "rate": "",
+      "method": "Full",
+      "purchased": "5 Mar 2026",
+      "cost": 799,
+      "opening_value": 0,
+      "purchases": 799,
+      "disposals": 0,
+      "depreciation": 799,
+      "closing_value": 0
+     },
+     {
+      "name": "Air Cooling System",
+      "rate": "10%",
+      "method": "DV",
+      "purchased": "12 Nov 2025",
+      "cost": 47213,
+      "opening_value": 0,
+      "purchases": 47213,
+      "disposals": 0,
+      "depreciation": 2988,
+      "closing_value": 44225
+     },
+     {
+      "name": "Atelier Letter Board",
+      "rate": "",
+      "method": "Full",
+      "purchased": "16 Jan 2026",
+      "cost": 1282,
+      "opening_value": 0,
+      "purchases": 1282,
+      "disposals": 0,
+      "depreciation": 1282,
+      "closing_value": 0
+     },
+     {
+      "name": "Cafe Coffee Machine",
+      "rate": "",
+      "method": "Full",
+      "purchased": "2 Apr 2026",
+      "cost": 591,
+      "opening_value": 0,
+      "purchases": 591,
+      "disposals": 0,
+      "depreciation": 591,
+      "closing_value": 0
+     },
+     {
+      "name": "Circle Blade Sign",
+      "rate": "",
+      "method": "Full",
+      "purchased": "26 Feb 2026",
+      "cost": 1533,
+      "opening_value": 0,
+      "purchases": 1533,
+      "disposals": 0,
+      "depreciation": 1533,
+      "closing_value": 0
+     },
+     {
+      "name": "Coffee Machine",
+      "rate": "",
+      "method": "Full",
+      "purchased": "28 Nov 2025",
+      "cost": 3554,
+      "opening_value": 0,
+      "purchases": 3554,
+      "disposals": 0,
+      "depreciation": 3554,
+      "closing_value": 0
+     },
+     {
+      "name": "Commercial Displays Board & Screen",
+      "rate": "",
+      "method": "Full",
+      "purchased": "22 Apr 2026",
+      "cost": 6445,
+      "opening_value": 0,
+      "purchases": 6445,
+      "disposals": 0,
+      "depreciation": 6445,
+      "closing_value": 0
+     },
+     {
+      "name": "Edge Carbon + Surface Fiberglass",
+      "rate": "",
+      "method": "Full",
+      "purchased": "9 Feb 2026",
+      "cost": 4925,
+      "opening_value": 0,
+      "purchases": 4925,
+      "disposals": 0,
+      "depreciation": 4925,
+      "closing_value": 0
+     },
+     {
+      "name": "Fridge",
+      "rate": "",
+      "method": "Full",
+      "purchased": "13 Nov 2025",
+      "cost": 5929,
+      "opening_value": 0,
+      "purchases": 5929,
+      "disposals": 0,
+      "depreciation": 5929,
+      "closing_value": 0
+     },
+     {
+      "name": "Gym Direct - 177362 Bike",
+      "rate": "",
+      "method": "Full",
+      "purchased": "5 Feb 2026",
+      "cost": 3995,
+      "opening_value": 0,
+      "purchases": 3995,
+      "disposals": 0,
+      "depreciation": 3995,
+      "closing_value": 0
+     },
+     {
+      "name": "Lounge Lovers - SO0573454",
+      "rate": "",
+      "method": "Full",
+      "purchased": "26 Feb 2026",
+      "cost": 1271,
+      "opening_value": 0,
+      "purchases": 1271,
+      "disposals": 0,
+      "depreciation": 1271,
+      "closing_value": 0
+     },
+     {
+      "name": "Modular Systems Double Sink",
+      "rate": "",
+      "method": "Full",
+      "purchased": "15 Jan 2026",
+      "cost": 1107,
+      "opening_value": 0,
+      "purchases": 1107,
+      "disposals": 0,
+      "depreciation": 1107,
+      "closing_value": 0
+     },
+     {
+      "name": "Nama J2 Plug Type I - White",
+      "rate": "",
+      "method": "Full",
+      "purchased": "27 Nov 2025",
+      "cost": 910,
+      "opening_value": 0,
+      "purchases": 910,
+      "disposals": 0,
+      "depreciation": 910,
+      "closing_value": 0
+     },
+     {
+      "name": "New Dishwasher",
+      "rate": "",
+      "method": "Full",
+      "purchased": "16 Dec 2025",
+      "cost": 2317,
+      "opening_value": 0,
+      "purchases": 2317,
+      "disposals": 0,
+      "depreciation": 2317,
+      "closing_value": 0
+     },
+     {
+      "name": "Smart Padel Automation - 856735866",
+      "rate": "",
+      "method": "Full",
+      "purchased": "11 Oct 2025",
+      "cost": 6097,
+      "opening_value": 0,
+      "purchases": 6097,
+      "disposals": 0,
+      "depreciation": 6097,
+      "closing_value": 0
+     },
+     {
+      "name": "Smart Padel System - Control Panel Setup",
+      "rate": "",
+      "method": "Full",
+      "purchased": "10 Nov 2025",
+      "cost": 6911,
+      "opening_value": 0,
+      "purchases": 6911,
+      "disposals": 0,
+      "depreciation": 6911,
+      "closing_value": 0
+     },
+     {
+      "name": "Socket Mobile 2D Bluetooth Barcode Scanner and other",
+      "rate": "",
+      "method": "Full",
+      "purchased": "12 Feb 2026",
+      "cost": 1953,
+      "opening_value": 0,
+      "purchases": 1953,
+      "disposals": 0,
+      "depreciation": 1953,
+      "closing_value": 0
+     },
+     {
+      "name": "The Clutch Cam × 4",
+      "rate": "",
+      "method": "Full",
+      "purchased": "10 Nov 2025",
+      "cost": 2825,
+      "opening_value": 0,
+      "purchases": 2825,
+      "disposals": 0,
+      "depreciation": 2825,
+      "closing_value": 0
+     },
+     {
+      "name": "Thermaster",
+      "rate": "",
+      "method": "Full",
+      "purchased": "17 Nov 2025",
+      "cost": 3458,
+      "opening_value": 0,
+      "purchases": 3458,
+      "disposals": 0,
+      "depreciation": 3458,
+      "closing_value": 0
+     },
+     {
+      "name": "TurfSoft TS1 DC",
+      "rate": "",
+      "method": "Full",
+      "purchased": "18 June 2026",
+      "cost": 7273,
+      "opening_value": 0,
+      "purchases": 7273,
+      "disposals": 0,
+      "depreciation": 7273,
+      "closing_value": 0
+     },
+     {
+      "name": "Vending Machine & Locker",
+      "rate": "",
+      "method": "Full",
+      "purchased": "18 Aug 2025",
+      "cost": 10813,
+      "opening_value": 0,
+      "purchases": 10813,
+      "disposals": 0,
+      "depreciation": 10813,
+      "closing_value": 0
+     }
+    ]
+   }
+  ]
+ }
+}

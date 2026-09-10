@@ -1,0 +1,1332 @@
+{
+ "_source": "2026 Financial Report - Frontier Travel Pty Ltd (13 pages + FuseSign audit trail). Large travel agency: trust monies (client control account), provisions, personnel-related items, current related-party loan in its own Financial Liabilities note, income tax + franked dividends, reserves, a direct (125,000) retained earnings adjustment, report order P&L -> Movements in Equity -> Balance Sheet, landscape asset-register style Depreciation Schedule.",
+ "entity": {
+  "name": "Frontier Travel Pty Ltd",
+  "abn": "46 141 576 696",
+  "type": "company",
+  "fy_end": "2026-06-30",
+  "directors": [
+   "Roland Howlett",
+   "Michael Ebied"
+  ]
+ },
+ "options": {
+  "sort": "alpha",
+  "report_order": [
+   "pnl",
+   "equity",
+   "bs",
+   "notes",
+   "depreciation",
+   "declaration",
+   "compilation"
+  ],
+  "depreciation_layout": "register",
+  "include_inventory_policy": false
+ },
+ "equity": {
+  "opening_py": 962653
+ },
+ "equity_movements": [
+  {
+   "label": "Other Increases",
+   "py": -5000
+  }
+ ],
+ "accounts": [
+  {
+   "name": "BAC Wage Subsidies",
+   "type": "Revenue",
+   "report_code": "REV.TRA",
+   "cy": 2780,
+   "py": 9056
+  },
+  {
+   "name": "Commissions collected",
+   "type": "Revenue",
+   "report_code": "REV.TRA",
+   "cy": 1566113,
+   "py": 1558094
+  },
+  {
+   "name": "FBT employee contribution",
+   "type": "Other Income",
+   "report_code": "REV.OTH",
+   "cy": 584,
+   "py": 499
+  },
+  {
+   "name": "Interest received",
+   "type": "Other Income",
+   "report_code": "REV.OTH",
+   "cy": 93928,
+   "py": 118030
+  },
+  {
+   "name": "Other income & refunds",
+   "type": "Other Income",
+   "report_code": "REV.OTH",
+   "cy": 96317,
+   "py": 62132
+  },
+  {
+   "name": "Overrides",
+   "type": "Other Income",
+   "report_code": "REV.OTH",
+   "cy": 621534,
+   "py": 541226
+  },
+  {
+   "name": "Accounting fees",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 12281,
+   "py": 13827
+  },
+  {
+   "name": "Advertising",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 58139,
+   "py": 28825
+  },
+  {
+   "name": "Amortisation - Leasehold improvements",
+   "type": "Depreciation",
+   "report_code": "EXP.OPE",
+   "cy": 646,
+   "py": 0
+  },
+  {
+   "name": "Bank charges",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 4765,
+   "py": 4598
+  },
+  {
+   "name": "Bonus to Employee",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 0,
+   "py": 4483
+  },
+  {
+   "name": "Business promotions",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 0,
+   "py": 2850
+  },
+  {
+   "name": "Capital Loss carry forward",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 0,
+   "py": -5000
+  },
+  {
+   "name": "Client gifts",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 6665,
+   "py": 5874
+  },
+  {
+   "name": "Client Meetings",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 4089,
+   "py": 3029
+  },
+  {
+   "name": "Commissions paid",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 0,
+   "py": 11812
+  },
+  {
+   "name": "Computer expenses",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 14950,
+   "py": 15846
+  },
+  {
+   "name": "Consulting fees",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 66618,
+   "py": 180478
+  },
+  {
+   "name": "Depreciation - Furniture and fittings",
+   "type": "Depreciation",
+   "report_code": "EXP.OPE",
+   "cy": 49966,
+   "py": 94475
+  },
+  {
+   "name": "Depreciation - Office equipment",
+   "type": "Depreciation",
+   "report_code": "EXP.OPE",
+   "cy": 37860,
+   "py": 0
+  },
+  {
+   "name": "Depreciation - Plant and equipment",
+   "type": "Depreciation",
+   "report_code": "EXP.OPE",
+   "cy": 970,
+   "py": 2146
+  },
+  {
+   "name": "Depreciation - Vehicles",
+   "type": "Depreciation",
+   "report_code": "EXP.OPE",
+   "cy": 4977,
+   "py": 6125
+  },
+  {
+   "name": "Discounts given",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 0,
+   "py": 0,
+   "keep": true
+  },
+  {
+   "name": "Donation",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 10205,
+   "py": 0
+  },
+  {
+   "name": "Dues and subscriptions",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 34084,
+   "py": 34198
+  },
+  {
+   "name": "Electricity",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 2981,
+   "py": 472
+  },
+  {
+   "name": "Entertainment",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 7628,
+   "py": 0
+  },
+  {
+   "name": "Filing fees",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 329,
+   "py": 627
+  },
+  {
+   "name": "Franchise fees",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 50955,
+   "py": 52613
+  },
+  {
+   "name": "Goodwill Written off",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 0,
+   "py": 5000
+  },
+  {
+   "name": "Holiday pay",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 15673,
+   "py": -51548
+  },
+  {
+   "name": "Insurance",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 9238,
+   "py": 5660
+  },
+  {
+   "name": "IT Expenses",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 43384,
+   "py": 15578
+  },
+  {
+   "name": "Legal services",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 5000,
+   "py": 0
+  },
+  {
+   "name": "License fees",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 0,
+   "py": 2937
+  },
+  {
+   "name": "Merchant fees",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 26974,
+   "py": 41720
+  },
+  {
+   "name": "MV - Other vehicle expenses",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 3981,
+   "py": 3740
+  },
+  {
+   "name": "Office supplies",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 8818,
+   "py": 31619
+  },
+  {
+   "name": "Parental Leave Payment",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 0,
+   "py": -18316
+  },
+  {
+   "name": "Postage",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 642,
+   "py": 1298
+  },
+  {
+   "name": "Printing and stationery",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 1206,
+   "py": 1043
+  },
+  {
+   "name": "Rates and taxes",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 0,
+   "py": 12628
+  },
+  {
+   "name": "Rental expenses",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 187853,
+   "py": 145420
+  },
+  {
+   "name": "Repairs and maintenance",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 31447,
+   "py": 0
+  },
+  {
+   "name": "Staff amenities",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 5891,
+   "py": 3486
+  },
+  {
+   "name": "Staff Recruitment expenses",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 6544,
+   "py": 7271
+  },
+  {
+   "name": "Staff training and welfare",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 30747,
+   "py": 8586
+  },
+  {
+   "name": "Sundry expense",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 109,
+   "py": 14483
+  },
+  {
+   "name": "Superannuation contributions - Employees",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 89445,
+   "py": 95732
+  },
+  {
+   "name": "Telephone, mobile and internet",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 9600,
+   "py": 9906
+  },
+  {
+   "name": "Travel - National",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 79120,
+   "py": 161476
+  },
+  {
+   "name": "Wages - Staff",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 741288,
+   "py": 884491
+  },
+  {
+   "name": "Waste disposal",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 0,
+   "py": 37
+  },
+  {
+   "name": "Website expense",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 42786,
+   "py": 78852
+  },
+  {
+   "name": "Workcover",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 4950,
+   "py": 4724
+  },
+  {
+   "name": "Income tax",
+   "type": "Expense",
+   "report_code": "EXP.TAX",
+   "cy": 176513,
+   "py": 86593
+  },
+  {
+   "name": "Fully franked dividends paid",
+   "type": "Equity",
+   "report_code": "EQU.DIV",
+   "cy": 135000,
+   "py": 95000
+  },
+  {
+   "name": "Virtuoso Credits",
+   "type": "Bank",
+   "report_code": "ASS.CUR.CAS.BAN",
+   "cy": 0,
+   "py": 264
+  },
+  {
+   "name": "Trust Account Loan (Client Booking)",
+   "type": "Bank",
+   "report_code": "ASS.CUR.CAS.BAN",
+   "cy": 0,
+   "py": 60847
+  },
+  {
+   "name": "General account - Online saver # 276738",
+   "type": "Bank",
+   "report_code": "ASS.CUR.CAS.BAN",
+   "cy": 21014,
+   "py": 906149
+  },
+  {
+   "name": "General account # 484743",
+   "type": "Bank",
+   "report_code": "ASS.CUR.CAS.BAN",
+   "cy": 114554,
+   "py": 26776
+  },
+  {
+   "name": "Trust account - Booking report",
+   "type": "Bank",
+   "report_code": "ASS.CUR.CAS.BAN",
+   "cy": 2917921,
+   "py": 2847176
+  },
+  {
+   "name": "ANZ Account",
+   "type": "Bank",
+   "report_code": "ASS.CUR.CAS.BAN",
+   "cy": 1443157,
+   "py": 0
+  },
+  {
+   "name": "Trade debtors",
+   "type": "Current Asset",
+   "report_code": "ASS.CUR.REC",
+   "cy": 3546,
+   "py": 4576
+  },
+  {
+   "name": "Short term deposits - Mount St Bank Guarantee",
+   "type": "Current Asset",
+   "report_code": "ASS.CUR.FIN",
+   "cy": 58376,
+   "py": 58376
+  },
+  {
+   "name": "Leasehold Improvements at Cost",
+   "type": "Fixed Asset",
+   "report_code": "ASS.NCA.PPE.LEA",
+   "cy": 44638,
+   "py": 0
+  },
+  {
+   "name": "Accumulated Amortisation of Leasehold Improvements",
+   "type": "Fixed Asset",
+   "report_code": "ASS.NCA.PPE.LEA",
+   "cy": -646,
+   "py": 0
+  },
+  {
+   "name": "Plant and Equipment at Cost",
+   "type": "Fixed Asset",
+   "report_code": "ASS.NCA.PPE.PLA",
+   "cy": 292373,
+   "py": 206344
+  },
+  {
+   "name": "Accumulated Depreciation of Plant and Equipment",
+   "type": "Fixed Asset",
+   "report_code": "ASS.NCA.PPE.PLA",
+   "cy": -220112,
+   "py": -131316
+  },
+  {
+   "name": "Motor Vehicles at Cost",
+   "type": "Fixed Asset",
+   "report_code": "ASS.NCA.PPE.MOT",
+   "cy": 118364,
+   "py": 118364
+  },
+  {
+   "name": "Accumulated Depreciation of Motor Vehicles",
+   "type": "Fixed Asset",
+   "report_code": "ASS.NCA.PPE.MOT",
+   "cy": -96798,
+   "py": -91821
+  },
+  {
+   "name": "Provision for Employee Bonuses",
+   "type": "Current Liability",
+   "report_code": "LIA.CUR.PRO",
+   "cy": 0,
+   "py": 4483
+  },
+  {
+   "name": "Provision for holiday pay",
+   "type": "Current Liability",
+   "report_code": "LIA.CUR.PRO",
+   "cy": 69115,
+   "py": 53442
+  },
+  {
+   "name": "Provision for Rent Expense",
+   "type": "Current Liability",
+   "report_code": "LIA.CUR.PRO",
+   "cy": 10313,
+   "py": 0
+  },
+  {
+   "name": "Bankwest World Mastercard",
+   "type": "Current Liability",
+   "report_code": "LIA.CUR.PAY",
+   "cy": 9686,
+   "py": 0
+  },
+  {
+   "name": "Revenue Owned - Luxury Brand",
+   "type": "Current Liability",
+   "report_code": "LIA.CUR.PAY",
+   "cy": 127076,
+   "py": 0
+  },
+  {
+   "name": "AMEX platinum credit card",
+   "type": "Current Liability",
+   "report_code": "LIA.CUR.PAY",
+   "cy": 3604,
+   "py": -1159
+  },
+  {
+   "name": "Client control account",
+   "type": "Current Liability",
+   "report_code": "LIA.CUR.PAY",
+   "cy": 2917921,
+   "py": 2847176
+  },
+  {
+   "name": "Trade creditors",
+   "type": "Current Liability",
+   "report_code": "LIA.CUR.PAY",
+   "cy": 0,
+   "py": 42062
+  },
+  {
+   "name": "ATO Integrated Client account",
+   "type": "Current Liability",
+   "report_code": "LIA.CUR.PAY",
+   "cy": 0,
+   "py": 3154
+  },
+  {
+   "name": "Superannuation payable",
+   "type": "Current Liability",
+   "report_code": "LIA.CUR.EMP",
+   "cy": 30458,
+   "py": 22587
+  },
+  {
+   "name": "GST payments / refunds",
+   "type": "Current Liability",
+   "report_code": "LIA.CUR.TAX",
+   "cy": -15021,
+   "py": -4488
+  },
+  {
+   "name": "Income tax payable",
+   "type": "Current Liability",
+   "report_code": "LIA.CUR.TAX",
+   "cy": 89921,
+   "py": -59414
+  },
+  {
+   "name": "PAYG instalment payable",
+   "type": "Current Liability",
+   "report_code": "LIA.CUR.TAX",
+   "cy": 21648,
+   "py": 36502
+  },
+  {
+   "name": "PAYG withholding payable",
+   "type": "Current Liability",
+   "report_code": "LIA.CUR.TAX",
+   "cy": 31382,
+   "py": 24944
+  },
+  {
+   "name": "Loans - Related party",
+   "type": "Current Liability",
+   "report_code": "LIA.CUR.FIN",
+   "cy": 26350,
+   "py": -105548
+  },
+  {
+   "name": "Retained Earnings",
+   "type": "Equity",
+   "report_code": "EQU.RET",
+   "cy": 1004995,
+   "py": 945652
+  },
+  {
+   "name": "Reserves",
+   "type": "Equity",
+   "report_code": "EQU.RES",
+   "cy": -38000,
+   "py": -38000
+  },
+  {
+   "name": "Share Capital",
+   "type": "Equity",
+   "report_code": "EQU.SHA",
+   "cy": 50000,
+   "py": 50000
+  }
+ ],
+ "depreciation": {
+  "layout": "register",
+  "groups": [
+   {
+    "name": "Furniture and fittings at cost",
+    "assets": [
+     {
+      "name": "Artwork - Art Mob Pty Ltd 25293 1440509",
+      "asset_number": "FA-0029",
+      "asset_type": "Furniture and fittings",
+      "purchased": "26 May 2026",
+      "cost": 9697,
+      "opening_accum": 0,
+      "opening_value": 0,
+      "purchases": 9697,
+      "disposals": 0,
+      "depreciation": 9697,
+      "closing_accum": 9697,
+      "closing_value": 0,
+      "effective_life": "",
+      "dep_start": "26 May 2026"
+     },
+     {
+      "name": "Chair Oak",
+      "asset_number": "FA-0040",
+      "asset_type": "Furniture and fittings",
+      "purchased": "26 Sept 2025",
+      "cost": 1779,
+      "opening_accum": 0,
+      "opening_value": 0,
+      "purchases": 1779,
+      "disposals": 0,
+      "depreciation": 1779,
+      "closing_accum": 1779,
+      "closing_value": 0,
+      "effective_life": "",
+      "dep_start": "26 Sept 2025"
+     },
+     {
+      "name": "Coffee Table - Reimbursements",
+      "asset_number": "FA-0020",
+      "asset_type": "Furniture and fittings",
+      "purchased": "10 Oct 2025",
+      "cost": 2459,
+      "opening_accum": 0,
+      "opening_value": 0,
+      "purchases": 2459,
+      "disposals": 0,
+      "depreciation": 2459,
+      "closing_accum": 2459,
+      "closing_value": 0,
+      "effective_life": "",
+      "dep_start": "10 Oct 2025"
+     },
+     {
+      "name": "Curtains",
+      "asset_number": "FA-0022",
+      "asset_type": "Furniture and fittings",
+      "purchased": "30 Jan 2026",
+      "cost": 3353,
+      "opening_accum": 0,
+      "opening_value": 0,
+      "purchases": 3353,
+      "disposals": 0,
+      "depreciation": 3353,
+      "closing_accum": 3353,
+      "closing_value": 0,
+      "effective_life": "",
+      "dep_start": "30 Jan 2026"
+     },
+     {
+      "name": "Fit-out",
+      "asset_number": "FA-0012",
+      "asset_type": "Furniture and fittings",
+      "purchased": "5 Dec 2023",
+      "cost": 36642,
+      "opening_accum": 1439,
+      "opening_value": 35203,
+      "purchases": 0,
+      "disposals": 0,
+      "depreciation": 916,
+      "closing_accum": 2355,
+      "closing_value": 34287,
+      "effective_life": "",
+      "dep_start": "5 Dec 2023"
+     },
+     {
+      "name": "Floor Lamp - FREEDOM FURNITURE AUSTR SYDNEY (Sales) [Card: 2018]",
+      "asset_number": "FA-0024",
+      "asset_type": "Furniture and fittings",
+      "purchased": "6 Apr 2026",
+      "cost": 1462,
+      "opening_accum": 0,
+      "opening_value": 0,
+      "purchases": 1462,
+      "disposals": 0,
+      "depreciation": 1462,
+      "closing_accum": 1462,
+      "closing_value": 0,
+      "effective_life": "",
+      "dep_start": "6 Apr 2026"
+     },
+     {
+      "name": "Frames & Desks - HBA Office Furniture",
+      "asset_number": "FA-0027",
+      "asset_type": "Furniture and fittings",
+      "purchased": "15 Apr 2026",
+      "cost": 7609,
+      "opening_accum": 0,
+      "opening_value": 0,
+      "purchases": 7609,
+      "disposals": 0,
+      "depreciation": 7609,
+      "closing_accum": 7609,
+      "closing_value": 0,
+      "effective_life": "",
+      "dep_start": "15 Apr 2026"
+     },
+     {
+      "name": "Furniture - FREEDOM FURNITURE AUSTR SYDNEY (Sales) [Card: 2018]",
+      "asset_number": "FA-0025",
+      "asset_type": "Furniture and fittings",
+      "purchased": "7 Apr 2026",
+      "cost": 1797,
+      "opening_accum": 0,
+      "opening_value": 0,
+      "purchases": 1797,
+      "disposals": 0,
+      "depreciation": 1797,
+      "closing_accum": 1797,
+      "closing_value": 0,
+      "effective_life": "",
+      "dep_start": "7 Apr 2026"
+     },
+     {
+      "name": "Furniture & fittings",
+      "asset_number": "FA-0015",
+      "asset_type": "Furniture and fittings",
+      "purchased": "31 Dec 2024",
+      "cost": 3204,
+      "opening_accum": 3204,
+      "opening_value": 0,
+      "purchases": 0,
+      "disposals": 0,
+      "depreciation": 0,
+      "closing_accum": 3204,
+      "closing_value": 0,
+      "effective_life": "",
+      "dep_start": "31 Dec 2024"
+     },
+     {
+      "name": "Hobart Office Fitout",
+      "asset_number": "FA-0017",
+      "asset_type": "Furniture and fittings",
+      "purchased": "20 Nov 2024",
+      "cost": 35822,
+      "opening_accum": 547,
+      "opening_value": 35275,
+      "purchases": 0,
+      "disposals": 0,
+      "depreciation": 882,
+      "closing_accum": 1429,
+      "closing_value": 34393,
+      "effective_life": "",
+      "dep_start": "20 Nov 2024"
+     },
+     {
+      "name": "Hobart Office Fitout",
+      "asset_number": "FA-0016",
+      "asset_type": "Furniture and fittings",
+      "purchased": "23 Dec 2024",
+      "cost": 56270,
+      "opening_accum": 56270,
+      "opening_value": 0,
+      "purchases": 0,
+      "disposals": 0,
+      "depreciation": 0,
+      "closing_accum": 56270,
+      "closing_value": 0,
+      "effective_life": "",
+      "dep_start": "23 Dec 2024"
+     },
+     {
+      "name": "Hobart Office Fitout",
+      "asset_number": "FA-0013",
+      "asset_type": "Furniture and fittings",
+      "purchased": "14 May 2025",
+      "cost": 33537,
+      "opening_accum": 33537,
+      "opening_value": 0,
+      "purchases": 0,
+      "disposals": 0,
+      "depreciation": 0,
+      "closing_accum": 33537,
+      "closing_value": 0,
+      "effective_life": "",
+      "dep_start": "14 May 2025"
+     },
+     {
+      "name": "Leather Sofa - TEMPLE & WEBSTER ST PETERS (Sales) [Card: 1002]",
+      "asset_number": "FA-0030",
+      "asset_type": "Furniture and fittings",
+      "purchased": "2 June 2026",
+      "cost": 4289,
+      "opening_accum": 0,
+      "opening_value": 0,
+      "purchases": 4289,
+      "disposals": 0,
+      "depreciation": 4289,
+      "closing_accum": 4289,
+      "closing_value": 0,
+      "effective_life": "",
+      "dep_start": "2 June 2026"
+     },
+     {
+      "name": "Lighting - TFR Westpac Bus Lighting 1074912",
+      "asset_number": "FA-0021",
+      "asset_type": "Furniture and fittings",
+      "purchased": "7 Jan 2026",
+      "cost": 1391,
+      "opening_accum": 0,
+      "opening_value": 0,
+      "purchases": 1391,
+      "disposals": 0,
+      "depreciation": 1391,
+      "closing_accum": 1391,
+      "closing_value": 0,
+      "effective_life": "",
+      "dep_start": "7 Jan 2026"
+     },
+     {
+      "name": "Marine Rug - NICK SCALI NORTH RYDE (Sales) [Card: 2018]",
+      "asset_number": "FA-0019",
+      "asset_type": "Furniture and fittings",
+      "purchased": "27 Sept 2025",
+      "cost": 1520,
+      "opening_accum": 0,
+      "opening_value": 0,
+      "purchases": 1520,
+      "disposals": 0,
+      "depreciation": 1520,
+      "closing_accum": 1520,
+      "closing_value": 0,
+      "effective_life": "",
+      "dep_start": "27 Sept 2025"
+     },
+     {
+      "name": "Office Furnishing",
+      "asset_number": "FA-0018",
+      "asset_type": "Furniture and fittings",
+      "purchased": "2 July 2025",
+      "cost": 3703,
+      "opening_accum": 0,
+      "opening_value": 0,
+      "purchases": 3703,
+      "disposals": 0,
+      "depreciation": 3703,
+      "closing_accum": 3703,
+      "closing_value": 0,
+      "effective_life": "",
+      "dep_start": "2 July 2025"
+     },
+     {
+      "name": "Power Point Installation - Launceston Electrical HBA Electrical 44616 1789011",
+      "asset_number": "FA-0039",
+      "asset_type": "Furniture and fittings",
+      "purchased": "29 May 2026",
+      "cost": 945,
+      "opening_accum": 0,
+      "opening_value": 0,
+      "purchases": 945,
+      "disposals": 0,
+      "depreciation": 945,
+      "closing_accum": 945,
+      "closing_value": 0,
+      "effective_life": "",
+      "dep_start": "29 May 2026"
+     },
+     {
+      "name": "Reception Desk - Tasmanian Custom Joinery P/L HBA Reception 1907573",
+      "asset_number": "FA-0028",
+      "asset_type": "Furniture and fittings",
+      "purchased": "27 Apr 2026",
+      "cost": 4528,
+      "opening_accum": 0,
+      "opening_value": 0,
+      "purchases": 4528,
+      "disposals": 0,
+      "depreciation": 4528,
+      "closing_accum": 4528,
+      "closing_value": 0,
+      "effective_life": "",
+      "dep_start": "27 Apr 2026"
+     },
+     {
+      "name": "Table & Chair - HARVEY NORMAN FURNITURE CAMBRIDGE PARK (Sales) [Card: 1002]",
+      "asset_number": "FA-0033",
+      "asset_type": "Furniture and fittings",
+      "purchased": "8 Apr 2026",
+      "cost": 3636,
+      "opening_accum": 0,
+      "opening_value": 0,
+      "purchases": 3636,
+      "disposals": 0,
+      "depreciation": 3636,
+      "closing_accum": 3636,
+      "closing_value": 0,
+      "effective_life": "",
+      "dep_start": "8 Apr 2026"
+     }
+    ]
+   },
+   {
+    "name": "Leasehold Improvements",
+    "assets": [
+     {
+      "name": "Bathroom Rennovations - HBA Fitout",
+      "asset_number": "FA-0036",
+      "asset_type": "Leasehold Improvements",
+      "purchased": "2 Aug 2025",
+      "cost": 6790,
+      "opening_accum": 0,
+      "opening_value": 0,
+      "purchases": 6790,
+      "disposals": 0,
+      "depreciation": 155,
+      "closing_accum": 155,
+      "closing_value": 6636,
+      "effective_life": "",
+      "dep_start": "2 Aug 2025"
+     },
+     {
+      "name": "Carpet Flooring - MODRN LVNG CARPETCOURT MOONAH (Sales) [Card: 1002]",
+      "asset_number": "FA-0038",
+      "asset_type": "Leasehold Improvements",
+      "purchased": "3 Nov 2025",
+      "cost": 3768,
+      "opening_accum": 0,
+      "opening_value": 0,
+      "purchases": 3768,
+      "disposals": 0,
+      "depreciation": 62,
+      "closing_accum": 62,
+      "closing_value": 3706,
+      "effective_life": "",
+      "dep_start": "3 Nov 2025"
+     },
+     {
+      "name": "Flooring Installment - HBA Office",
+      "asset_number": "FA-0026",
+      "asset_type": "Leasehold Improvements",
+      "purchased": "15 Apr 2026",
+      "cost": 16201,
+      "opening_accum": 0,
+      "opening_value": 0,
+      "purchases": 16201,
+      "disposals": 0,
+      "depreciation": 85,
+      "closing_accum": 85,
+      "closing_value": 16115,
+      "effective_life": "",
+      "dep_start": "15 Apr 2026"
+     },
+     {
+      "name": "Room renovations - HBA Fitout",
+      "asset_number": "FA-0035",
+      "asset_type": "Leasehold Improvements",
+      "purchased": "7 July 2025",
+      "cost": 5518,
+      "opening_accum": 0,
+      "opening_value": 0,
+      "purchases": 5518,
+      "disposals": 0,
+      "depreciation": 136,
+      "closing_accum": 136,
+      "closing_value": 5382,
+      "effective_life": "",
+      "dep_start": "7 July 2025"
+     },
+     {
+      "name": "Window Fabrics",
+      "asset_number": "FA-0023",
+      "asset_type": "Leasehold Improvements",
+      "purchased": "18 Mar 2026",
+      "cost": 3455,
+      "opening_accum": 0,
+      "opening_value": 0,
+      "purchases": 3455,
+      "disposals": 0,
+      "depreciation": 25,
+      "closing_accum": 25,
+      "closing_value": 3430,
+      "effective_life": "",
+      "dep_start": "18 Mar 2026"
+     },
+     {
+      "name": "Windows & Door Installations - HBA Fitout",
+      "asset_number": "FA-0034",
+      "asset_type": "Leasehold Improvements",
+      "purchased": "3 July 2025",
+      "cost": 2969,
+      "opening_accum": 0,
+      "opening_value": 0,
+      "purchases": 2969,
+      "disposals": 0,
+      "depreciation": 74,
+      "closing_accum": 74,
+      "closing_value": 2895,
+      "effective_life": "",
+      "dep_start": "3 July 2025"
+     },
+     {
+      "name": "Windows & Door Installations - HBA Office Fitout",
+      "asset_number": "FA-0037",
+      "asset_type": "Leasehold Improvements",
+      "purchased": "6 Oct 2025",
+      "cost": 5937,
+      "opening_accum": 0,
+      "opening_value": 0,
+      "purchases": 5937,
+      "disposals": 0,
+      "depreciation": 109,
+      "closing_accum": 109,
+      "closing_value": 5829,
+      "effective_life": "",
+      "dep_start": "6 Oct 2025"
+     }
+    ]
+   },
+   {
+    "name": "Motor vehicles at cost",
+    "assets": [
+     {
+      "name": "Land Rover DGB27",
+      "asset_number": "FA-0001",
+      "asset_type": "Motor Vehicles",
+      "purchased": "27 Feb 2018",
+      "cost": 118364,
+      "opening_accum": 91821,
+      "opening_value": 26543,
+      "purchases": 0,
+      "disposals": 0,
+      "depreciation": 4977,
+      "closing_accum": 96798,
+      "closing_value": 21566,
+      "effective_life": "",
+      "dep_start": "27 Feb 2018"
+     }
+    ]
+   },
+   {
+    "name": "Office equipment at cost",
+    "assets": [
+     {
+      "name": "Led TV",
+      "asset_number": "FA-0032",
+      "asset_type": "Office Equipment",
+      "purchased": "24 June 2026",
+      "cost": 19117,
+      "opening_accum": 0,
+      "opening_value": 0,
+      "purchases": 19117,
+      "disposals": 0,
+      "depreciation": 19117,
+      "closing_accum": 19117,
+      "closing_value": 0,
+      "effective_life": "",
+      "dep_start": "24 June 2026"
+     },
+     {
+      "name": "LED TV - Video Display Hire Pty Ltd HBA TVs Deposit 1238183",
+      "asset_number": "FA-0031",
+      "asset_type": "Office Equipment",
+      "purchased": "20 Mar 2026",
+      "cost": 18743,
+      "opening_accum": 0,
+      "opening_value": 0,
+      "purchases": 18743,
+      "disposals": 0,
+      "depreciation": 18743,
+      "closing_accum": 18743,
+      "closing_value": 0,
+      "effective_life": "",
+      "dep_start": "20 Mar 2026"
+     }
+    ]
+   },
+   {
+    "name": "Plant and equipment at cost",
+    "assets": [
+     {
+      "name": "Armani Cabinetry",
+      "asset_number": "FA-0011",
+      "asset_type": "Plant and equipment",
+      "purchased": "9 June 2017",
+      "cost": 11200,
+      "opening_accum": 10096,
+      "opening_value": 1104,
+      "purchases": 0,
+      "disposals": 0,
+      "depreciation": 276,
+      "closing_accum": 10372,
+      "closing_value": 828,
+      "effective_life": "",
+      "dep_start": "9 June 2017"
+     },
+     {
+      "name": "Del laptop",
+      "asset_number": "FA-0005",
+      "asset_type": "Plant and equipment",
+      "purchased": "20 Apr 2015",
+      "cost": 1726,
+      "opening_accum": 1680,
+      "opening_value": 46,
+      "purchases": 0,
+      "disposals": 0,
+      "depreciation": 14,
+      "closing_accum": 1694,
+      "closing_value": 32,
+      "effective_life": "",
+      "dep_start": "20 Apr 2015"
+     },
+     {
+      "name": "Furniture",
+      "asset_number": "FA-0004",
+      "asset_type": "Plant and equipment",
+      "purchased": "1 Jan 2013",
+      "cost": 2484,
+      "opening_accum": 2484,
+      "opening_value": 0,
+      "purchases": 0,
+      "disposals": 0,
+      "depreciation": 0,
+      "closing_accum": 2484,
+      "closing_value": 0,
+      "effective_life": "",
+      "dep_start": "1 Jan 2013"
+     },
+     {
+      "name": "Koala and Tree",
+      "asset_number": "FA-0007",
+      "asset_type": "Plant and equipment",
+      "purchased": "14 Feb 2017",
+      "cost": 1447,
+      "opening_accum": 1223,
+      "opening_value": 224,
+      "purchases": 0,
+      "disposals": 0,
+      "depreciation": 45,
+      "closing_accum": 1267,
+      "closing_value": 180,
+      "effective_life": "",
+      "dep_start": "14 Feb 2017"
+     },
+     {
+      "name": "Meeting table",
+      "asset_number": "FA-0008",
+      "asset_type": "Plant and equipment",
+      "purchased": "9 Apr 2017",
+      "cost": 873,
+      "opening_accum": 735,
+      "opening_value": 138,
+      "purchases": 0,
+      "disposals": 0,
+      "depreciation": 28,
+      "closing_accum": 763,
+      "closing_value": 110,
+      "effective_life": "",
+      "dep_start": "9 Apr 2017"
+     },
+     {
+      "name": "Office Equipment",
+      "asset_number": "FA-0003",
+      "asset_type": "Plant and equipment",
+      "purchased": "30 June 2018",
+      "cost": 2405,
+      "opening_accum": 2175,
+      "opening_value": 230,
+      "purchases": 0,
+      "disposals": 0,
+      "depreciation": 46,
+      "closing_accum": 2221,
+      "closing_value": 184,
+      "effective_life": "",
+      "dep_start": "30 June 2018"
+     },
+     {
+      "name": "Office Equipment At Cost",
+      "asset_number": "FA-0014",
+      "asset_type": "Plant and equipment",
+      "purchased": "23 Jan 2025",
+      "cost": 908,
+      "opening_accum": 908,
+      "opening_value": 0,
+      "purchases": 0,
+      "disposals": 0,
+      "depreciation": 0,
+      "closing_accum": 908,
+      "closing_value": 0,
+      "effective_life": "",
+      "dep_start": "23 Jan 2025"
+     },
+     {
+      "name": "Office Furniture",
+      "asset_number": "FA-0010",
+      "asset_type": "Plant and equipment",
+      "purchased": "19 May 2017",
+      "cost": 8393,
+      "opening_accum": 7027,
+      "opening_value": 1367,
+      "purchases": 0,
+      "disposals": 0,
+      "depreciation": 273,
+      "closing_accum": 7300,
+      "closing_value": 1093,
+      "effective_life": "",
+      "dep_start": "19 May 2017"
+     },
+     {
+      "name": "Office Furniture",
+      "asset_number": "FA-0002",
+      "asset_type": "Plant and equipment",
+      "purchased": "30 June 2018",
+      "cost": 2585,
+      "opening_accum": 2467,
+      "opening_value": 118,
+      "purchases": 0,
+      "disposals": 0,
+      "depreciation": 24,
+      "closing_accum": 2490,
+      "closing_value": 95,
+      "effective_life": "",
+      "dep_start": "30 June 2018"
+     },
+     {
+      "name": "Office Furniture",
+      "asset_number": "FA-0006",
+      "asset_type": "Plant and equipment",
+      "purchased": "19 Jan 2017",
+      "cost": 8393,
+      "opening_accum": 7142,
+      "opening_value": 1251,
+      "purchases": 0,
+      "disposals": 0,
+      "depreciation": 250,
+      "closing_accum": 7392,
+      "closing_value": 1001,
+      "effective_life": "",
+      "dep_start": "19 Jan 2017"
+     },
+     {
+      "name": "Office Tables",
+      "asset_number": "FA-0009",
+      "asset_type": "Plant and equipment",
+      "purchased": "22 Apr 2017",
+      "cost": 455,
+      "opening_accum": 382,
+      "opening_value": 73,
+      "purchases": 0,
+      "disposals": 0,
+      "depreciation": 15,
+      "closing_accum": 397,
+      "closing_value": 58,
+      "effective_life": "",
+      "dep_start": "22 Apr 2017"
+     }
+    ]
+   }
+  ]
+ }
+}

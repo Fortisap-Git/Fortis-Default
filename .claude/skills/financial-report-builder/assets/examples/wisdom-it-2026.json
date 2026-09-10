@@ -1,0 +1,71 @@
+{
+  "_source": "2026 Financial Reports - Wisdom IT Pty Ltd (Fortis pack, 10 pages). Small service company, nil retained earnings after dividends, director loan shown inside the Payables note, nil-balance Intangibles note still printed, simple Accounting Depreciation Schedule.",
+  "entity": {
+    "name": "Wisdom IT Pty Ltd",
+    "abn": "64 165 361 553",
+    "type": "company",
+    "fy_end": "2026-06-30",
+    "directors": ["Frank Grippi"]
+  },
+  "options": {
+    "sort": "source",
+    "include_inventory_policy": true,
+    "depreciation_layout": "simple"
+  },
+  "equity": {"opening_py": 85089},
+  "accounts": [
+    {"code": "200", "name": "Sales", "type": "Revenue", "report_code": "REV.TRA", "cy": 0, "py": 77000},
+    {"code": "260", "name": "Consulting Fees Collected", "type": "Other Income", "report_code": "REV.OTH", "cy": 0, "py": 128750},
+    {"code": "270", "name": "FBT Employee Contributions", "type": "Other Income", "report_code": "REV.OTH", "cy": 0, "py": 494},
+
+    {"code": "412", "name": "Accounting & Consulting", "type": "Expense", "report_code": "EXP.OPE", "cy": 4276, "py": 4700},
+    {"code": "400", "name": "Advertising & Marketing", "type": "Expense", "report_code": "EXP.OPE", "cy": 221, "py": 635},
+    {"code": "404", "name": "Bank Fees", "type": "Expense", "report_code": "EXP.OPE", "cy": 146, "py": 145},
+    {"code": "410", "name": "Computer Expenses", "type": "Expense", "report_code": "EXP.OPE", "cy": 2837, "py": 154},
+    {"code": "416", "name": "Depreciation", "type": "Depreciation", "report_code": "EXP.OPE", "cy": 3020, "py": 922},
+    {"code": "424", "name": "Filing Fees", "type": "Expense", "report_code": "EXP.OPE", "cy": 329, "py": 321},
+    {"code": "433", "name": "Insurance", "type": "Expense", "report_code": "EXP.OPE", "cy": 163, "py": 1197},
+    {"code": "437", "name": "Interest Expense", "type": "Expense", "report_code": "EXP.OPE", "cy": 18, "py": 583},
+    {"code": "449", "name": "Motor Vehicle Expenses", "type": "Expense", "report_code": "EXP.OPE", "cy": 363, "py": 2614},
+    {"code": "453", "name": "Office Expenses", "type": "Expense", "report_code": "EXP.OPE", "cy": 2609, "py": 1431},
+    {"code": "485", "name": "Subscriptions", "type": "Expense", "report_code": "EXP.OPE", "cy": 668, "py": 3722},
+    {"code": "477", "name": "Wages and Salaries", "type": "Expense", "report_code": "EXP.OPE", "cy": 0, "py": 206348},
+    {"code": "478", "name": "Superannuation", "type": "Expense", "report_code": "EXP.OPE", "cy": 0, "py": 23730},
+    {"code": "489", "name": "Telephone & Internet", "type": "Expense", "report_code": "EXP.OPE", "cy": 2049, "py": 3970},
+    {"code": "493", "name": "Travel - National", "type": "Expense", "report_code": "EXP.OPE", "cy": 0, "py": 35},
+
+    {"code": "961", "name": "Fully Franked Dividends Paid", "type": "Equity", "report_code": "EQU.DIV", "cy": 3253, "py": 12500},
+    {"code": "962", "name": "Unfranked Dividends Paid", "type": "Equity", "report_code": "EQU.DIV", "cy": 8225, "py": 0},
+
+    {"code": "090", "name": "Business Transaction Account***4799", "type": "Bank", "report_code": "ASS.CUR.CAS.BAN", "cy": 8877, "py": 51219},
+    {"code": "091", "name": "Mastercard***0401", "type": "Bank", "report_code": "ASS.CUR.CAS.BAN", "cy": -584, "py": 1310},
+
+    {"code": "710", "name": "Plant and Equipment at Cost", "type": "Fixed Asset", "report_code": "ASS.NCA.PPE.PLA", "cy": 10335, "py": 8007},
+    {"code": "711", "name": "Accumulated Depreciation of Plant and Equipment", "type": "Fixed Asset", "report_code": "ASS.NCA.PPE.PLA", "cy": -10335, "py": -8007},
+    {"code": "720", "name": "Motor Vehicles at Cost", "type": "Fixed Asset", "report_code": "ASS.NCA.PPE.MOT", "cy": 0, "py": 15751},
+    {"code": "721", "name": "Accumulated Depreciation of Motor Vehicles", "type": "Fixed Asset", "report_code": "ASS.NCA.PPE.MOT", "cy": 0, "py": -12984},
+    {"code": "750", "name": "Formation Costs", "type": "Non-current Asset", "report_code": "ASS.NCA.INT.OTH", "cy": 489, "py": 489},
+    {"code": "751", "name": "Less Accumulated Amortisation Formation Costs", "type": "Non-current Asset", "report_code": "ASS.NCA.INT.OTH", "cy": -489, "py": -489},
+
+    {"code": "880", "name": "Loan - Frank Grippi", "type": "Current Liability", "report_code": "LIA.CUR.PAY.FIN", "cy": 9691, "py": 437},
+    {"code": "820", "name": "GST", "type": "Current Liability", "report_code": "LIA.CUR.TAX", "cy": -1547, "py": 8787},
+    {"code": "825", "name": "PAYG Withholdings Payable", "type": "Current Liability", "report_code": "LIA.CUR.TAX", "cy": 0, "py": 17745},
+
+    {"code": "960", "name": "Retained Earnings", "type": "Equity", "report_code": "EQU.RET", "cy": 28177, "py": 84940},
+    {"code": "970", "name": "Share Capital", "type": "Equity", "report_code": "EQU.SHA", "cy": 150, "py": 150}
+  ],
+  "depreciation": {
+    "layout": "simple",
+    "groups": [
+      {"name": "Motor Vehicle", "assets": [
+        {"name": "Mercedes Benz", "cost": 15751, "opening_value": 2767, "purchases": 0, "disposals": 2075, "depreciation": 692, "closing_value": 0}
+      ]},
+      {"name": "Office Equipment", "assets": [
+        {"name": "Bambu - Printer", "cost": 2540, "opening_value": 0, "purchases": 0, "disposals": 0, "depreciation": 0, "closing_value": 0},
+        {"name": "LG - Laptop", "cost": 3541, "opening_value": 0, "purchases": 0, "disposals": 0, "depreciation": 0, "closing_value": 0},
+        {"name": "Mwave Computers", "cost": 2328, "opening_value": 0, "purchases": 2328, "disposals": 0, "depreciation": 2328, "closing_value": 0},
+        {"name": "Office Equipment", "cost": 1927, "opening_value": 0, "purchases": 0, "disposals": 0, "depreciation": 0, "closing_value": 0}
+      ]}
+    ]
+  }
+}

@@ -1,0 +1,254 @@
+{
+ "_source": "2025 Financial Reports - Capstone Brokers Pty Ltd (9 pages). Trading company with opening/closing stock, 'Cost of Goods Sold' heading, receivables listed without a Current heading, PAYG instalment as the only tax liability, director loan disclosed as 'Loan from Shareholders/Associates', negative equity, no depreciation schedule.",
+ "entity": {
+  "name": "Capstone Brokers Pty Ltd",
+  "abn": "66 620 266 024",
+  "type": "company",
+  "fy_end": "2025-06-30",
+  "directors": [
+   "Sharad Chawla",
+   "Archana Chawla"
+  ]
+ },
+ "options": {
+  "sort": "alpha",
+  "cost_of_sales_label": "Cost of Goods Sold",
+  "show_current_heading": false
+ },
+ "equity": {
+  "opening_py": -8186
+ },
+ "accounts": [
+  {
+   "name": "Sale of products",
+   "type": "Revenue",
+   "report_code": "REV.TRA",
+   "cy": 901355,
+   "py": 726494
+  },
+  {
+   "name": "Opening stock",
+   "type": "Direct Costs",
+   "report_code": "EXP.COS",
+   "cy": 127727,
+   "py": 0
+  },
+  {
+   "name": "Purchases",
+   "type": "Direct Costs",
+   "report_code": "EXP.COS",
+   "cy": 1029049,
+   "py": 851785
+  },
+  {
+   "name": "Closing stock",
+   "type": "Direct Costs",
+   "report_code": "EXP.COS",
+   "cy": -246364,
+   "py": -127727
+  },
+  {
+   "name": "Interest received",
+   "type": "Other Income",
+   "report_code": "REV.OTH",
+   "cy": 5,
+   "py": 0
+  },
+  {
+   "name": "Accounting fees",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 3640,
+   "py": 3480
+  },
+  {
+   "name": "Advertising",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 0,
+   "py": 30
+  },
+  {
+   "name": "Bank charges",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 45,
+   "py": 35
+  },
+  {
+   "name": "Client Meeting",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 0,
+   "py": 140
+  },
+  {
+   "name": "Dues and subscriptions",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 90,
+   "py": 0
+  },
+  {
+   "name": "Electricity",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 264,
+   "py": 0
+  },
+  {
+   "name": "Filing fees",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 321,
+   "py": 310
+  },
+  {
+   "name": "Fines and penalties",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 0,
+   "py": 93
+  },
+  {
+   "name": "Insurance",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 0,
+   "py": 861
+  },
+  {
+   "name": "Office supplies",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 51,
+   "py": 1550
+  },
+  {
+   "name": "Printing and stationery",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 111,
+   "py": 0
+  },
+  {
+   "name": "Rental expenses",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 19600,
+   "py": 18909
+  },
+  {
+   "name": "Telephone, mobile and internet",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 55,
+   "py": 86
+  },
+  {
+   "name": "Travel - National",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 641,
+   "py": 1735
+  },
+  {
+   "name": "CBA bank account***2575",
+   "type": "Bank",
+   "report_code": "ASS.CUR.CAS.OTH",
+   "cy": 2057,
+   "py": 19609
+  },
+  {
+   "name": "ATO Integrated Client Account",
+   "type": "Current Asset",
+   "report_code": "ASS.CUR.REC",
+   "cy": 38,
+   "py": 38
+  },
+  {
+   "name": "Deposit paid",
+   "type": "Current Asset",
+   "report_code": "ASS.CUR.REC",
+   "cy": 140,
+   "py": 0
+  },
+  {
+   "name": "GST payments/refunds",
+   "type": "Current Asset",
+   "report_code": "ASS.CUR.REC",
+   "cy": 16841,
+   "py": 10127
+  },
+  {
+   "name": "Provision for income tax",
+   "type": "Current Asset",
+   "report_code": "ASS.CUR.REC",
+   "cy": 4804,
+   "py": 1201
+  },
+  {
+   "name": "Inventory",
+   "type": "Inventory",
+   "report_code": "ASS.CUR.INV.INV",
+   "cy": 246364,
+   "py": 127727
+  },
+  {
+   "name": "Plant and Equipment at Cost",
+   "type": "Fixed Asset",
+   "report_code": "ASS.NCA.PPE.PLA",
+   "cy": 7920,
+   "py": 7920
+  },
+  {
+   "name": "Accumulated Depreciation of Plant and Equipment",
+   "type": "Fixed Asset",
+   "report_code": "ASS.NCA.PPE.PLA",
+   "cy": -7920,
+   "py": -7920
+  },
+  {
+   "name": "Formation costs",
+   "type": "Non-current Asset",
+   "report_code": "ASS.NCA.INT.OTH",
+   "cy": 529,
+   "py": 529
+  },
+  {
+   "name": "Formation costs - Accumulated amortisation",
+   "type": "Non-current Asset",
+   "report_code": "ASS.NCA.INT.OTH",
+   "cy": -529,
+   "py": -529
+  },
+  {
+   "name": "PAYG instalment payable",
+   "type": "Current Liability",
+   "report_code": "LIA.CUR.TAX",
+   "cy": 1201,
+   "py": 1201
+  },
+  {
+   "name": "Loan from director",
+   "type": "Non-current Liability",
+   "report_code": "LIA.NCA.SHA",
+   "cy": 335891,
+   "py": 190480
+  },
+  {
+   "name": "Retained Earnings",
+   "type": "Equity",
+   "report_code": "EQU.RET",
+   "cy": -33078,
+   "py": -8286
+  },
+  {
+   "name": "Share Capital",
+   "type": "Equity",
+   "report_code": "EQU.SHA",
+   "cy": 100,
+   "py": 100
+  }
+ ]
+}

@@ -1,0 +1,336 @@
+{
+ "_source": "2026 Financial Reports - Complex Communicators Pty Ltd (10 pages). Single director, PSI company, 'Cost of Sales' heading, income tax expense section, share capital issued in the prior year (PY equity movement), nil-total PPE note printed, no depreciation schedule. Source pack prints the nil PPE note last (Note 6) - the engine prints it in canonical order (Note 4).",
+ "entity": {
+  "name": "Complex Communicators Pty Ltd",
+  "abn": "97 682 870 793",
+  "type": "company",
+  "fy_end": "2026-06-30",
+  "directors": [
+   "Abigal R Williams"
+  ]
+ },
+ "options": {
+  "sort": "alpha",
+  "cost_of_sales_label": "Cost of Sales",
+  "include_inventory_policy": true
+ },
+ "equity": {
+  "opening_py": 0
+ },
+ "equity_movements": [
+  {
+   "label": "Share Capital",
+   "py": 100
+  }
+ ],
+ "accounts": [
+  {
+   "name": "Sales",
+   "type": "Revenue",
+   "report_code": "REV.TRA",
+   "cy": 829,
+   "py": 1006
+  },
+  {
+   "name": "Test",
+   "type": "Revenue",
+   "report_code": "REV.TRA",
+   "cy": 259240,
+   "py": 116655
+  },
+  {
+   "name": "Assessment Program",
+   "type": "Direct Costs",
+   "report_code": "EXP.COS",
+   "cy": 318,
+   "py": 2958
+  },
+  {
+   "name": "Consultant",
+   "type": "Direct Costs",
+   "report_code": "EXP.COS",
+   "cy": 327,
+   "py": 3643
+  },
+  {
+   "name": "Therapy Resource",
+   "type": "Direct Costs",
+   "report_code": "EXP.COS",
+   "cy": 34256,
+   "py": 15146
+  },
+  {
+   "name": "Interest Income",
+   "type": "Other Income",
+   "report_code": "REV.OTH",
+   "cy": 234,
+   "py": 0
+  },
+  {
+   "name": "Advertising",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 1241,
+   "py": 0
+  },
+  {
+   "name": "Bad Debts Expenses",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 9495,
+   "py": 0
+  },
+  {
+   "name": "Bank Fees",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 231,
+   "py": 0
+  },
+  {
+   "name": "Consulting & Accounting",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 10689,
+   "py": 1968
+  },
+  {
+   "name": "Depreciation",
+   "type": "Depreciation",
+   "report_code": "EXP.OPE",
+   "cy": 6731,
+   "py": 0
+  },
+  {
+   "name": "Donation",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 406,
+   "py": 0
+  },
+  {
+   "name": "Filing Fees",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 433,
+   "py": 0
+  },
+  {
+   "name": "Instant Write-Off Assets",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 3681,
+   "py": 0
+  },
+  {
+   "name": "Insurance",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 1769,
+   "py": 190
+  },
+  {
+   "name": "Interest Expense",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 438,
+   "py": 0
+  },
+  {
+   "name": "Light, Power, Heating",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 557,
+   "py": 0
+  },
+  {
+   "name": "Office Expenses",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 0,
+   "py": 6920
+  },
+  {
+   "name": "Printing & Stationery",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 771,
+   "py": 1293
+  },
+  {
+   "name": "PSI Attribution",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 39111,
+   "py": 5829
+  },
+  {
+   "name": "Stripe Fees",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 582,
+   "py": 0
+  },
+  {
+   "name": "Subscriptions",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 3788,
+   "py": 1396
+  },
+  {
+   "name": "Superannuation",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 15000,
+   "py": 7942
+  },
+  {
+   "name": "Telephone & Internet",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 796,
+   "py": 64
+  },
+  {
+   "name": "Training",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 4123,
+   "py": 940
+  },
+  {
+   "name": "Wages and Salaries",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 125000,
+   "py": 69058
+  },
+  {
+   "name": "Website Hosting and Maintenance",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 559,
+   "py": 222
+  },
+  {
+   "name": "Workers Compensation",
+   "type": "Expense",
+   "report_code": "EXP.OPE",
+   "cy": 0,
+   "py": 91
+  },
+  {
+   "name": "Income Tax Expense",
+   "type": "Expense",
+   "report_code": "EXP.TAX",
+   "cy": 109,
+   "py": 1986
+  },
+  {
+   "name": "Business Account",
+   "type": "Bank",
+   "report_code": "ASS.CUR.CAS.BAN",
+   "cy": 2667,
+   "py": 45782
+  },
+  {
+   "name": "Westpac AU 034070787756#001",
+   "type": "Bank",
+   "report_code": "ASS.CUR.CAS.BAN",
+   "cy": 40234,
+   "py": 0
+  },
+  {
+   "name": "Westpac Business Cash Reserve",
+   "type": "Bank",
+   "report_code": "ASS.CUR.CAS.BAN",
+   "cy": 0,
+   "py": 1
+  },
+  {
+   "name": "Cash in hand",
+   "type": "Bank",
+   "report_code": "ASS.CUR.CAS.OTH",
+   "cy": 100,
+   "py": 100
+  },
+  {
+   "name": "Accounts Receivable",
+   "type": "Current Asset",
+   "report_code": "ASS.CUR.REC",
+   "cy": 8618,
+   "py": 5315
+  },
+  {
+   "name": "Superannuation Payable",
+   "type": "Current Liability",
+   "report_code": "LIA.CUR.EMP",
+   "cy": 0,
+   "py": 7942
+  },
+  {
+   "name": "Income Tax Payable",
+   "type": "Current Liability",
+   "report_code": "LIA.CUR.TAX",
+   "cy": -1955,
+   "py": 1986
+  },
+  {
+   "name": "PAYG Installment Payable",
+   "type": "Current Liability",
+   "report_code": "LIA.CUR.TAX",
+   "cy": 516,
+   "py": 0
+  },
+  {
+   "name": "GST",
+   "type": "Current Liability",
+   "report_code": "LIA.CUR.TAX",
+   "cy": -1551,
+   "py": -1691
+  },
+  {
+   "name": "PAYG Withholdings Payable",
+   "type": "Current Liability",
+   "report_code": "LIA.CUR.TAX",
+   "cy": 10586,
+   "py": 23997
+  },
+  {
+   "name": "Loan - Abi Williams",
+   "type": "Non-current Liability",
+   "report_code": "LIA.NCA.FIN.UNS",
+   "cy": 46018,
+   "py": 20850
+  },
+  {
+   "name": "Plant and Equipment at Cost",
+   "type": "Fixed Asset",
+   "report_code": "ASS.NCA.PPE.PLA",
+   "cy": 6731,
+   "py": 0
+  },
+  {
+   "name": "Accumulated Depreciation of Plant and Equipment",
+   "type": "Fixed Asset",
+   "report_code": "ASS.NCA.PPE.PLA",
+   "cy": -6731,
+   "py": 0
+  },
+  {
+   "name": "Retained Earnings",
+   "type": "Equity",
+   "report_code": "EQU.RET",
+   "cy": -1986,
+   "py": 0
+  },
+  {
+   "name": "Share Capital",
+   "type": "Equity",
+   "report_code": "EQU.SHA",
+   "cy": 100,
+   "py": 100
+  }
+ ]
+}

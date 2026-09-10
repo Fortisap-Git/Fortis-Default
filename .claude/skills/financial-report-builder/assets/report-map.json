@@ -1,0 +1,404 @@
+{
+  "_comment": "Report-code hierarchy that drives the Financial Reports pack. Modelled on Xero's report codes (REV/EXP/ASS/LIA/EQU). Every account in the ledger carries one report_code; the engine derives the P&L sections, Balance Sheet lines, Note numbers and Note sub-groups from this file. Edit labels/order here rather than in the scripts.",
+  "pnl_sections": [
+    {
+      "key": "income",
+      "code": "REV.TRA",
+      "heading": "Income",
+      "total": "Total Income"
+    },
+    {
+      "key": "cos",
+      "code": "EXP.COS",
+      "heading": "Cost of Sales",
+      "total": "Total Cost of Sales",
+      "alt_headings": {
+        "Cost of Goods Sold": "Total Cost of Goods Sold"
+      }
+    },
+    {
+      "key": "gross",
+      "computed": true,
+      "label": "Gross Profit from Trading"
+    },
+    {
+      "key": "other",
+      "code": "REV.OTH",
+      "heading": "Other Income",
+      "total": "Total Other Income"
+    },
+    {
+      "key": "total_income",
+      "computed": true,
+      "label": "Total Income"
+    },
+    {
+      "key": "expenses",
+      "code": "EXP.OPE",
+      "heading": "Expenses",
+      "total": "Total Expenses"
+    },
+    {
+      "key": "pbt",
+      "computed": true,
+      "label": "Profit/(Loss) before Taxation"
+    },
+    {
+      "key": "tax",
+      "code": "EXP.TAX",
+      "heading": "Income Tax Expense",
+      "total": "Total Income Tax Expense",
+      "hide_if_nil": true
+    },
+    {
+      "key": "npat",
+      "computed": true,
+      "label": "Net Profit After Tax"
+    },
+    {
+      "key": "dividends",
+      "code": "EQU.DIV",
+      "heading": "Dividend Paid",
+      "total": "Total Dividend Paid",
+      "hide_if_nil": true
+    },
+    {
+      "key": "npat_div",
+      "computed": true,
+      "label": "Net Profit After Tax & Dividend"
+    }
+  ],
+  "balance_sheet": {
+    "assets": {
+      "heading": "Assets",
+      "current": {
+        "heading": "Current Assets",
+        "total": "Total Current Assets",
+        "prefix": "ASS.CUR"
+      },
+      "non_current": {
+        "heading": "Non-Current Assets",
+        "total": "Total Non-Current Assets",
+        "prefix": "ASS.NCA"
+      },
+      "total": "Total Assets"
+    },
+    "liabilities": {
+      "heading": "Liabilities",
+      "current": {
+        "heading": "Current Liabilities",
+        "total": "Total Current Liabilities",
+        "prefix": "LIA.CUR"
+      },
+      "non_current": {
+        "heading": "Non-Current Liabilities",
+        "total": "Total Non-Current Liabilities",
+        "prefix": "LIA.NCA"
+      },
+      "total": "Total Liabilities"
+    },
+    "net_assets": "Net Assets",
+    "equity": {
+      "heading": "Equity",
+      "total": "Total Equity",
+      "prefix": "EQU"
+    }
+  },
+  "_bs_lines_comment": "Balance Sheet line = the 3-segment code (e.g. ASS.CUR.CAS). Each line points to the note it is disclosed in. Lines with a nil total in both years are suppressed; the note still prints if any account inside it is non-nil.",
+  "bs_lines": {
+    "ASS.CUR.CAS": {
+      "label": "Cash and Cash Equivalents",
+      "note": "cash"
+    },
+    "ASS.CUR.REC": {
+      "label": "Receivables",
+      "note": "receivables"
+    },
+    "ASS.CUR.INV": {
+      "label": "Inventory",
+      "note": "inventory"
+    },
+    "ASS.CUR.PRE": {
+      "label": "Prepayments",
+      "note": "prepayments"
+    },
+    "ASS.CUR.FIN": {
+      "label": "Financial Assets",
+      "note": "financial_assets"
+    },
+    "ASS.CUR.OTH": {
+      "label": "Other Current Assets",
+      "note": "other_assets"
+    },
+    "ASS.NCA.PPE": {
+      "label": "Property, Plant and Equipment",
+      "note": "ppe"
+    },
+    "ASS.NCA.INT": {
+      "label": "Intangibles",
+      "note": "intangibles"
+    },
+    "ASS.NCA.FIN": {
+      "label": "Financial Assets",
+      "note": "financial_assets"
+    },
+    "ASS.NCA.REC": {
+      "label": "Receivables",
+      "note": "receivables"
+    },
+    "ASS.NCA.INV": {
+      "label": "Investments",
+      "note": "investments"
+    },
+    "ASS.NCA.OTH": {
+      "label": "Other Non-Current Assets",
+      "note": "other_assets"
+    },
+    "LIA.CUR.PAY": {
+      "label": "Payables",
+      "note": "payables"
+    },
+    "LIA.CUR.PAY.FIN": {
+      "label": "Financial Liabilities",
+      "note": "payables",
+      "_comment": "Wisdom IT variant: a current loan disclosed inside the Payables note as a 'Financial Liabilities' sub-group but shown on the Balance Sheet as Financial Liabilities."
+    },
+    "LIA.CUR.EMP": {
+      "label": "Personnel-related items",
+      "note": "payables"
+    },
+    "LIA.CUR.TAX": {
+      "label": "Taxation",
+      "note": "payables"
+    },
+    "LIA.CUR.PRO": {
+      "label": "Provisions",
+      "note": "provisions"
+    },
+    "LIA.CUR.FIN": {
+      "label": "Financial Liabilities",
+      "note": "financial_liabilities"
+    },
+    "LIA.CUR.OTH": {
+      "label": "Other Current Liabilities",
+      "note": "other_liabilities"
+    },
+    "LIA.NCA.FIN": {
+      "label": "Financial Liabilities",
+      "note": "financial_liabilities"
+    },
+    "LIA.NCA.SHA": {
+      "label": "Financial Liabilities",
+      "note": "shareholder_loans"
+    },
+    "LIA.NCA.PRO": {
+      "label": "Provisions",
+      "note": "provisions"
+    },
+    "LIA.NCA.PAY": {
+      "label": "Payables",
+      "note": "payables"
+    },
+    "LIA.NCA.OTH": {
+      "label": "Other Non-Current Liabilities",
+      "note": "other_liabilities"
+    },
+    "EQU.RET": {
+      "label": "Retained Earnings"
+    },
+    "EQU.RES": {
+      "label": "Reserves"
+    },
+    "EQU.SHA": {
+      "label": "Share Capital"
+    },
+    "EQU.DRA": {
+      "label": "Drawings"
+    },
+    "EQU.CAP": {
+      "label": "Capital Accounts"
+    },
+    "EQU.OTH": {
+      "label": "Other Equity"
+    }
+  },
+  "_notes_comment": "Notes print in this order, numbered from 2 (Note 1 is always the accounting policies). 'levels' says how the sub-headings inside the note are derived from the report code: 'cur_ncu' = Current / Non Current from the 3rd segment; 'class' = the 4th segment via 'classes'; 'flat' = no sub-heading. 'level2' adds a third tier (e.g. Unsecured) from the 5th segment.",
+  "notes_order": [
+    "cash",
+    "receivables",
+    "inventory",
+    "prepayments",
+    "ppe",
+    "intangibles",
+    "financial_assets",
+    "investments",
+    "other_assets",
+    "provisions",
+    "payables",
+    "financial_liabilities",
+    "shareholder_loans",
+    "other_liabilities"
+  ],
+  "notes": {
+    "cash": {
+      "title": "Cash and Cash Equivalents",
+      "total": "Total Cash and Cash Equivalents",
+      "levels": "class",
+      "classes": {
+        "BAN": "Bank Accounts",
+        "OTH": "Other Cash Items",
+        "TRM": "Term Deposits"
+      },
+      "default_class": "BAN"
+    },
+    "receivables": {
+      "title": "Receivables",
+      "total": "Total Receivables",
+      "levels": "cur_ncu",
+      "cur_label": "Current",
+      "ncu_label": "Non Current"
+    },
+    "inventory": {
+      "title": "Inventory",
+      "total": "Total Inventory",
+      "levels": "class",
+      "classes": {
+        "INV": "Inventories",
+        "WIP": "Work in Progress"
+      },
+      "default_class": "INV"
+    },
+    "prepayments": {
+      "title": "Prepayments",
+      "total": "Total Prepayments",
+      "levels": "flat"
+    },
+    "ppe": {
+      "title": "Property Plant and Equipment",
+      "total": "Total Property Plant and Equipment",
+      "levels": "class",
+      "classes": {
+        "LAN": "Land and Buildings",
+        "LEA": "Leasehold Improvements",
+        "PLA": "Plant and Equipment",
+        "MOT": "Motor Vehicles",
+        "FUR": "Furniture & Fixtures",
+        "OFF": "Office Equipment",
+        "COM": "Computer Equipment",
+        "LVP": "Low Value Pool",
+        "OTH": "Other Fixed Assets"
+      },
+      "default_class": "PLA"
+    },
+    "intangibles": {
+      "title": "Intangibles",
+      "total": "Total Intangibles",
+      "levels": "class",
+      "classes": {
+        "GOO": "Goodwill",
+        "OTH": "Other Intangible Assets",
+        "FOR": "Formation Costs"
+      },
+      "default_class": "OTH"
+    },
+    "financial_assets": {
+      "title": "Financial Assets",
+      "total": "Total Financial Assets",
+      "levels": "cur_ncu",
+      "cur_label": "Current",
+      "ncu_label": "Non Current"
+    },
+    "investments": {
+      "title": "Investments",
+      "total": "Total Investments",
+      "levels": "flat"
+    },
+    "other_assets": {
+      "title": "Other Assets",
+      "total": "Total Other Assets",
+      "levels": "cur_ncu",
+      "cur_label": "Current",
+      "ncu_label": "Non Current"
+    },
+    "provisions": {
+      "title": "Provisions",
+      "total": "Total Provisions",
+      "levels": "flat"
+    },
+    "payables": {
+      "title": "Payables",
+      "total": "Total Payables",
+      "levels": "payables",
+      "subgroups": {
+        "LIA.CUR.PAY": "Current",
+        "LIA.NCA.PAY": "Non Current",
+        "LIA.CUR.PAY.FIN": "Financial Liabilities",
+        "LIA.CUR.EMP": "Personnel-related items",
+        "LIA.CUR.TAX": "Tax liabilities"
+      },
+      "subgroup_order": [
+        "LIA.CUR.PAY",
+        "LIA.NCA.PAY",
+        "LIA.CUR.PAY.FIN",
+        "LIA.CUR.EMP",
+        "LIA.CUR.TAX"
+      ]
+    },
+    "financial_liabilities": {
+      "title": "Financial Liabilities",
+      "total": "Total Financial Liabilities",
+      "levels": "cur_ncu",
+      "cur_label": "Current",
+      "ncu_label": "Non Current",
+      "level2": {
+        "SEC": "Secured",
+        "UNS": "Unsecured"
+      }
+    },
+    "shareholder_loans": {
+      "title": "Loan from Shareholders/Associates",
+      "total": "Total Loan from Shareholders/Associates",
+      "levels": "flat"
+    },
+    "other_liabilities": {
+      "title": "Other Liabilities",
+      "total": "Total Other Liabilities",
+      "levels": "cur_ncu",
+      "cur_label": "Current",
+      "ncu_label": "Non Current"
+    }
+  },
+  "_type_defaults_comment": "Fallback report code when the chart of accounts gives only a Xero account type. Name-keyword rules in fr_engine.py refine these (e.g. 'GST' -> LIA.CUR.TAX).",
+  "type_defaults": {
+    "Revenue": "REV.TRA",
+    "Sales": "REV.TRA",
+    "Other Income": "REV.OTH",
+    "Direct Costs": "EXP.COS",
+    "Expense": "EXP.OPE",
+    "Overheads": "EXP.OPE",
+    "Depreciation": "EXP.OPE",
+    "Bank": "ASS.CUR.CAS.BAN",
+    "Current Asset": "ASS.CUR.REC",
+    "Inventory": "ASS.CUR.INV.INV",
+    "Prepayment": "ASS.CUR.PRE",
+    "Fixed Asset": "ASS.NCA.PPE.PLA",
+    "Non-current Asset": "ASS.NCA.OTH",
+    "Current Liability": "LIA.CUR.PAY",
+    "Liability": "LIA.CUR.PAY",
+    "Non-current Liability": "LIA.NCA.FIN.UNS",
+    "Equity": "EQU.OTH"
+  },
+  "equity_statement": {
+    "title": "Movements in Equity",
+    "heading": "Equity",
+    "opening": "Opening Balance",
+    "increases": "Increases",
+    "profit": "Profit for the Period",
+    "total_increases": "Total Increases",
+    "total": "Total Equity"
+  },
+  "footers": {
+    "statements": "The accompanying notes form part of these financial statements. These statements should be read in conjunction with the attached compilation report.",
+    "notes": "These notes should be read in conjunction with the attached compilation report."
+  }
+}
