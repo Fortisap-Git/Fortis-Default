@@ -5,7 +5,7 @@
                                        [--recalc] [--no-fidelity]
 
 Checks (each prints PASS/FAIL/SKIP):
-  vba        xl/vbaProject.bin present
+  vba        the file is a macro-enabled .xlsm and xl/vbaProject.bin is present
   links      every internal hyperlink targets an existing sheet; FYI links carry a
              go.fyi.app URL with the entity id
   fidelity   check_template_fidelity.py against the bundled master
@@ -367,7 +367,9 @@ def main():
     wb = openpyxl.load_workbook(path, keep_vba=True)
     entity_id = (spec or {}).get("client", {}).get("entity_id")
 
-    report("vba", h.verify_vba(path))
+    macro_ext = path.suffix.lower() == ".xlsm"
+    report("vba", macro_ext and h.verify_vba(path),
+           "" if macro_ext else f"not a macro-enabled workbook ('{path.suffix}'); rebuild as .xlsm")
     check_links(wb, entity_id)
     if "--no-fidelity" not in args:
         check_fidelity(path)

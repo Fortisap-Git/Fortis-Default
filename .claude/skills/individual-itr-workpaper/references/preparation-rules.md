@@ -5,7 +5,12 @@ Everything here was learned on a real client run (De Celis FY2026). Ignore at yo
 ## Naming & filing conventions
 
 - Workpaper: `{Y} ITR Workpaper - First Last` · Pre-fill: `{Y} Pre-Filling Report - First Last`.
-- Filed in FYI under Client > Work Papers > {year} category.
+- The workpaper is a **macro-enabled `.xlsm`** from build to delivery to filing. It carries
+  `xl/vbaProject.bin`; a `.xlsx` copy is a broken workpaper, not a convenience.
+- Filed in FYI under Client > Work Papers > {year} category, linked to the entity (both spouses on
+  a joint file) and the annual compliance job. Upload with `fyi_get_upload_url` + POST of the raw
+  bytes, content type `application/vnd.ms-excel.sheet.macroEnabled.12`. Confirm with the user
+  before the upload — it writes to production — and file again after a Phase E rebuild.
 - Client name replaces the "1" placeholder on Summary and Deductions tabs (C3 / B3) and in the
   two sheet names.
 - FYI stable document URL: `https://go.fyi.app/search/0/{entity_id}/0/documents/{doc_uuid}/preview`
@@ -101,6 +106,7 @@ You do not re-solve any of that. What is still yours:
    zero introduced errors; leave the firm's pro-forma formulas alone.
 4. Cloned tabs lose their hyperlinks — cite every source again through `cells`, in the Hyperlink column.
 5. Never hand-edit the `.xlsm`. A fix is a spec change and a rebuild.
+6. `output` in the spec ends in `.xlsm`; the build refuses anything else.
 
 ## Verification checklist (Phase C)
 

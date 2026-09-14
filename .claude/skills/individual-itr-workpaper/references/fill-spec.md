@@ -14,7 +14,7 @@ Keep the spec at `work/<client>/spec.json`. It is the audit trail of the build.
 | `client2` | optional second taxpayer `{"name"}` for the `- 2` tabs (joint files) |
 | `template` | path to the client's rolled-forward template from FYI, or `null` for the bundled master |
 | `prior_workpaper` | prior-year `.xlsm` path (needed for `prior_sheet` clones), or `null` |
-| `output` | where to save — `work/<client>/{Y} ITR Workpaper - First Last.xlsm` |
+| `output` | where to save — `work/<client>/{Y} ITR Workpaper - First Last.xlsm`. Must end in `.xlsm`: the workpaper is macro-enabled and is delivered and filed to FYI exactly as built |
 | `unhide` | hidden master tabs the return actually uses, e.g. `["Share Register", "Foreign Income"]` |
 | `clones` | new working tabs (see below) |
 | `sources` | the FYI documents you cite: `[{"id", "doc", "label"}]` — `doc` is the FYI document uuid from `fyi_find_documents`; `label` is the FYI document name. Declaring a source does **not** link it anywhere on its own: a document is linked only where a cell cites it, in that tab's Hyperlink column |

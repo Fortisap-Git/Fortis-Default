@@ -1,6 +1,6 @@
 ---
 name: individual-itr-workpaper
-description: Prepares AND reviews the Fortis Individual ITR Excel workpaper from documents filed in FYI, on the bundled master template with structure, fonts and colours untouched. Data-driven: you write a JSON fill spec, bundled scripts build, verify and dump the workbook in seconds. Rolls forward the prior year (or builds comparatives from the prior-year signed ITR for a new client), parses the ATO pre-fill, populates income/deductions/rental/CGT/ESS/foreign workings, raises client queries, runs a tiered review (one reviewer for simple returns, four blind lenses for complex ones), and writes the review summary and findings register into the Review Notes tab. ALWAYS trigger for "prepare workpaper", "prepare the workpaper for [client]", "start [client]'s tax return", "do [client]'s ITR", "[year] workpaper for [client]", "finalise the workpaper", or "review [client]'s ITR workpaper". Do NOT trigger for company/trust/SMSF jobs, BAS/IAS, pre-June planning, or the cover letter alone.
+description: Prepares AND reviews the Fortis Individual ITR Excel workpaper from documents filed in FYI, on the bundled master template with structure, fonts and colours untouched. Data-driven: you write a JSON fill spec, bundled scripts build, verify and dump the workbook in seconds. Rolls forward the prior year (or builds comparatives from the prior-year signed ITR for a new client), parses the ATO pre-fill, populates income/deductions/rental/CGT/ESS/foreign workings, raises client queries, runs a tiered review (one reviewer for simple returns, four blind lenses for complex ones), writes the review summary and findings register into the Review Notes tab, and files the finished macro-enabled `.xlsm` to FYI (Work Papers, year category) after confirmation. ALWAYS trigger for "prepare workpaper", "prepare the workpaper for [client]", "start [client]'s tax return", "do [client]'s ITR", "[year] workpaper for [client]", "finalise the workpaper", or "review [client]'s ITR workpaper". Do NOT trigger for company/trust/SMSF jobs, BAS/IAS, pre-June planning, or the cover letter alone.
 ---
 
 # Individual ITR Workpaper — Prepare & Review
@@ -134,11 +134,25 @@ recalculates on open (`fullCalcOnLoad` is set) and the tax-table cells are confi
    one or two sentences.
 2. Rebuild once, verify once (`--spec`, and `--claims` for the fixed cells). The engine flags every
    register cell with a comment "Review Notes row N".
-3. Deliver the `.xlsm`. In chat, two lines at most: findings count, dollars at stake, sign-off
+3. Deliver the `.xlsm` the engine built, unchanged. The workpaper carries VBA: it is macro-enabled
+   `.xlsm` at every step — never converted to `.xlsx`, never re-saved through another tool, never
+   handed over as a stripped copy. `verify_workpaper.py` fails the file if the extension or the
+   macros are gone. In chat, two lines at most: findings count, dollars at stake, sign-off
    readiness. Everything else lives in the file.
-4. Offer — never do without explicit approval, these write to production: file the workpaper to FYI
-   (`fyi_get_upload_url` + POST) and draft the client query email (Outlook draft).
-5. Master-template defects belong to the Y2K master — report them, do not fix the copy.
+4. **File the workpaper to FYI.** Part of the job, not an optional extra — the build is not
+   delivered until it is on the client's file. It writes to production, so SUGGEST → CONFIRM: one
+   line naming the file, cabinet and categories, then upload on a yes.
+   - Name `{Y} ITR Workpaper - First Last.xlsm`, linked to the entity (both spouses on a joint
+     file) and to the annual compliance job if one exists.
+   - Cabinet **Work Papers**, categories **Year = {Y}** (plus the firm's ITR category where the
+     cabinet uses one). Replace the admin-rolled-forward copy rather than filing a second document.
+   - `fyi_get_upload_url`, then POST the raw bytes with content type
+     `application/vnd.ms-excel.sheet.macroEnabled.12`. `fyi_file_document` with `file_base64` is
+     only for files under ~50 KB — a workpaper never is.
+   - Rebuilt in Phase E after review fixes? File that version, so FYI holds the reviewed file and
+     not the pre-review one.
+5. Offer the client query email (Outlook draft) — draft only, never send.
+6. Master-template defects belong to the Y2K master — report them, do not fix the copy.
 
 ## Judgment principles
 

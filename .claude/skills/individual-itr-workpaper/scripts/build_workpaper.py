@@ -12,7 +12,7 @@ Spec format: see references/fill-spec.md. Minimal example:
   "client":   {"name": "Jane Smith", "entity_id": 12345, "year": 2026},
   "template": null,                       # null -> bundled master
   "prior_workpaper": "work/2025 ITR Workpaper - Jane Smith.xlsm",   # or null
-  "output":   "work/2026 ITR Workpaper - Jane Smith.xlsm",
+  "output":   "work/2026 ITR Workpaper - Jane Smith.xlsm",   # must be .xlsm (macro-enabled)
   "unhide":   ["Share Register"],
   "clones":   [{"prior_sheet": "Rental Property - 12 Smith St", "as": "Rental Property - 12 Smith St",
                 "after": "Rental Property", "roll": {"first_row": 7, "last_row": 56}}],
@@ -316,6 +316,9 @@ class Build:
 
     def save(self):
         out = Path(self.spec["output"])
+        if out.suffix.lower() != ".xlsm":
+            raise ValueError(f"output must be a macro-enabled .xlsm workbook, got '{out.name}'. "
+                             f"The deliverable filed to FYI is this file, macros and all.")
         out.parent.mkdir(parents=True, exist_ok=True)
         if out.resolve() == MASTER.resolve():
             raise ValueError("refusing to overwrite the bundled master")
@@ -350,6 +353,10 @@ def validate(spec):
             errs.append(f"missing '{k}'")
     if "client" in spec and "name" not in spec["client"]:
         errs.append("client.name missing")
+    out = spec.get("output")
+    if out and not str(out).lower().endswith(".xlsm"):
+        errs.append(f"output '{out}' must end in .xlsm — the workpaper carries VBA and is "
+                    f"delivered and filed macro-enabled")
     ids = {s["id"] for s in spec.get("sources", [])}
     for e in spec.get("cells", []) + spec.get("rev", []):
         if "sheet" not in e or "cell" not in e:
