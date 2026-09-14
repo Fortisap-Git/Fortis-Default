@@ -24,6 +24,11 @@ Checks (each prints PASS/FAIL/SKIP):
              is a value, a formula string, "blank", or "nonblank"
 
 Exit 0 = all PASS/SKIP, 1 = a FAIL, 2 = could not run.
+
+The vba, links and fidelity checks assume a workbook this engine built from the bundled
+master. Run against a client workpaper of another lineage they report that difference, not a
+defect in anyone's work.
+
 """
 import json
 import re

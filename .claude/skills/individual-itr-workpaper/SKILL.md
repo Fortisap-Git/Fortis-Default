@@ -45,6 +45,16 @@ year is normally an **update**, not a new build — decide which before anything
   changing anything, and file it this time.
 - An untouched roll-forward from admin — current-year columns empty, no queries — is not a build
   in progress. That is a new build: Phase A.
+- **A worked workpaper that is not of the master's lineage** — a different tab set (its own rental
+  tabs, extra schedules), a Queries tab with different columns, an `.xlsx` with no VBA, or a
+  fidelity check that fails on styles and widths rather than on anything you did. Check before you
+  plan a rebuild: `verify_workpaper.py <file> --no-fidelity` on the `vba` line, and the tab list
+  against the master. The engine cannot rebuild such a file — its landmarks, its Queries columns
+  and the fidelity check are all defined against the bundled master, and a rebuild would restate a
+  file someone has worked for days. **Do not rebuild it, do not convert it to `.xlsm`, and do not
+  hand-edit it.** Do the Phase A′ assessment and hand the preparer the list: query by query, what
+  the client answered, which cells it touches and what each one should become. Say plainly in chat
+  that the file is outside the engine's lineage, so the update is theirs to key in.
 
 **Never** start a second workpaper for a job that already has one, and never rebuild from the
 master when a build exists. The client's answers, the review register, the preparer's remarks and
@@ -81,7 +91,9 @@ every judgment call already made live in that file.
    figure does not. Findings in untouched areas stand as they are.
 8. **Deliver and re-file** per Phase E — same name, replacing the version on file, spec beside it.
    In chat: what arrived, what changed and by how many dollars, which queries closed, which are
-   still open.
+   still open. On a file outside the engine's lineage there is nothing to rebuild or re-file: the
+   assessment itself is the deliverable, and the attachments still get filed to FYI so the
+   preparer can link them.
 
 **Never close a query silently.** One answered with "nothing to add" is closed with the client's
 own words recorded; one that is still open stays open and stays on the list for the next chase.
@@ -196,7 +208,8 @@ recalculates on open (`fullCalcOnLoad` is set) and the tax-table cells are confi
 3. Deliver the `.xlsm` the engine built, unchanged. The workpaper carries VBA: it is macro-enabled
    `.xlsm` at every step — never converted to `.xlsx`, never re-saved through another tool, never
    handed over as a stripped copy. `verify_workpaper.py` fails the file if the extension or the
-   macros are gone. In chat, two lines at most: findings count, dollars at stake, sign-off
+   macros are gone. (This governs what the engine builds. A client file of another lineage already
+   on foot as `.xlsx` is not converted — see Phase 0.) In chat, two lines at most: findings count, dollars at stake, sign-off
    readiness. Everything else lives in the file.
 4. **File the workpaper to FYI.** Part of the job, not an optional extra — the build is not
    delivered until it is on the client's file. It writes to production, so SUGGEST → CONFIRM: one

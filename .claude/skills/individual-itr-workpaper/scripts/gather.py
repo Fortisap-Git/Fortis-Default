@@ -14,7 +14,8 @@ manifest.json is a list produced from fyi_find_documents + fyi_download_document
 For each entry the script writes  <workdir>/docs/<id>__<safe name>  (the file) and
 <workdir>/text/<id>.txt  (extracted text) and skips both if they already exist.
 PDF text: pdftotext -layout if on PATH, else PyMuPDF, else pypdf. Excel: every
-sheet's cells as "A1 = value" lines. Word: python-docx if installed.
+sheet's cells as "A1 = value" lines. Word: python-docx if installed. Email (.eml):
+headers, attachment names and the plain-text body.
 
 Prints a summary table (id, name, pages/chars, extractor) and writes
 <workdir>/gather_index.json for the build step.
@@ -75,6 +76,35 @@ def xlsx_text(path):
     return "\n".join(out), "openpyxl"
 
 
+def eml_text(path):
+    """Filed FYI emails. Client replies arrive as .eml — the update run reads them
+    for the answers to open queries, so the body must come out as plain text with
+    the attachment names listed (an attachment is filed to FYI before it is cited)."""
+    import email
+    from email import policy
+    msg = email.message_from_bytes(path.read_bytes(), policy=policy.default)
+    head = [f"{h}: {msg.get(h)}" for h in ("From", "To", "Cc", "Subject", "Date") if msg.get(h)]
+    body, attachments = "", []
+    for part in msg.walk():
+        disp = (part.get_content_disposition() or "")
+        ctype = part.get_content_type()
+        if disp == "attachment" or (part.get_filename() and ctype != "text/plain"):
+            attachments.append(part.get_filename() or ctype)
+            continue
+        if ctype == "text/plain" and not body:
+            body = part.get_content()
+    if not body:  # html-only mail: strip the tags rather than return nothing
+        for part in msg.walk():
+            if part.get_content_type() == "text/html":
+                body = re.sub(r"<[^>]+>", " ", part.get_content())
+                body = re.sub(r"[ \t]{2,}", " ", body)
+                break
+    out = "\n".join(head)
+    if attachments:
+        out += "\nAttachments: " + "; ".join(attachments)
+    return out + "\n\n" + (body or ""), "email"
+
+
 def docx_text(path):
     try:
         import docx
@@ -99,6 +129,8 @@ def extract(path, textdir, doc_id):
         txt, how = xlsx_text(path)
     elif ext == ".docx":
         txt, how = docx_text(path)
+    elif ext == ".eml":
+        txt, how = eml_text(path)
     elif ext in (".csv", ".txt"):
         txt, how = path.read_text(errors="replace"), "raw"
     else:

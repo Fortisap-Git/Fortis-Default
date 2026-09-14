@@ -114,6 +114,9 @@ You do not re-solve any of that. What is still yours:
 6. `output` in the spec ends in `.xlsm`; the build refuses anything else.
 7. On an update run, amend the filed spec and rebuild. Never start a second workpaper for a job
    that already has one, and never rebuild from the master over a build in progress.
+8. The engine only rebuilds files of the bundled master's lineage. A worked workpaper with its own
+   tab set, its own Queries columns or no VBA is not one: assess it, hand the preparer the changes,
+   and leave the file alone (Phase 0).
 
 ## Verification checklist (Phase C)
 
