@@ -20,7 +20,9 @@ Spec format: see references/fill-spec.md. Minimal example:
                                           # cited per figure; links land in the Hyperlink column only
   "cells":    [{"sheet": "Summary", "cell": "H16", "value": 1234.56, "source": "prefill",
                 "remark": "Per pre-fill; re-run before lodgement"}],
-  "queries":  [{"issue": "Interest", "description": "...", "reference": {"sheet": "Summary", "cell": "H16"}}],
+  "queries":  [{"issue": "Interest", "description": "...", "reference": {"sheet": "Summary", "cell": "H16"},
+                "client_reply": null, "reply": null}],   # replies filled in on an update run
+  "run":      {"round": 1, "built": "2026-09-14"},       # bump each update run; the spec is the state
   "review_notes": ["Ownership split 50/50 per prior return schedule"],
   "rev":      [],                          # Phase E overrides, same shape as cells
   "review":   null                         # Phase E {summary, sections} -> Review Notes register
@@ -252,6 +254,11 @@ class Build:
             r = rows[i]
             ws[f"{cols['issue']}{r}"] = q.get("issue", "")
             ws[f"{cols['description']}{r}"] = q.get("description", "")
+            # update runs: what the client came back with, and our response to it
+            if q.get("client_reply") is not None:
+                ws[f"{cols['client_reply']}{r}"] = q["client_reply"]
+            if q.get("reply") is not None:
+                ws[f"{cols['reply']}{r}"] = q["reply"]
             ref = q.get("reference")
             if isinstance(ref, dict):
                 real = self.alias.get(ref["sheet"], ref["sheet"])
@@ -269,7 +276,7 @@ class Build:
             self.query_row_of[i + 1] = r
         # clear any leftover numbered rows below the last query
         for r in rows[len(qs):]:
-            for c in ("issue", "description", "reference"):
+            for c in ("issue", "description", "reference", "client_reply", "reply"):
                 ws[f"{cols[c]}{r}"] = None
         self.log.append(f"queries: {len(qs)}")
 
@@ -333,6 +340,9 @@ class Build:
         return out
 
     def run(self):
+        meta = self.spec.get("run") or {}
+        if meta:
+            self.log.append("run: " + ", ".join(f"{k}={v}" for k, v in meta.items()))
         self.load()
         self.rename()
         self.neutralize()

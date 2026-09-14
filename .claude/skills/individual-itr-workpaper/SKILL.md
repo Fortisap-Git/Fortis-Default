@@ -1,6 +1,6 @@
 ---
 name: individual-itr-workpaper
-description: Prepares AND reviews the Fortis Individual ITR Excel workpaper from documents filed in FYI, on the bundled master template with structure, fonts and colours untouched. Data-driven: you write a JSON fill spec, bundled scripts build, verify and dump the workbook in seconds. Rolls forward the prior year (or builds comparatives from the prior-year signed ITR for a new client), parses the ATO pre-fill, populates income/deductions/rental/CGT/ESS/foreign workings, raises client queries, runs a tiered review (one reviewer for simple returns, four blind lenses for complex ones), writes the review summary and findings register into the Review Notes tab, and files the finished macro-enabled `.xlsm` to FYI (Work Papers, year category) after confirmation. ALWAYS trigger for "prepare workpaper", "prepare the workpaper for [client]", "start [client]'s tax return", "do [client]'s ITR", "[year] workpaper for [client]", "finalise the workpaper", or "review [client]'s ITR workpaper". Do NOT trigger for company/trust/SMSF jobs, BAS/IAS, pre-June planning, or the cover letter alone.
+description: Prepares AND reviews the Fortis Individual ITR Excel workpaper from documents filed in FYI, on the bundled master template with structure, fonts and colours untouched. Data-driven: you write a JSON fill spec, bundled scripts build, verify and dump the workbook in seconds. Rolls forward the prior year (or builds comparatives from the prior-year signed ITR for a new client), parses the ATO pre-fill, populates income/deductions/rental/CGT/ESS/foreign workings, raises client queries, runs a tiered review (one reviewer for simple returns, four blind lenses for complex ones), writes the review summary and findings register into the Review Notes tab, and files the finished macro-enabled `.xlsm` to FYI (Work Papers, year category) after confirmation. Invoked again for a client whose current-year workpaper this skill already built, it updates that file rather than starting a second one: it reads the filed spec, gathers what has arrived in FYI and in Outlook since the last build, re-runs the pre-fill, answers the open queries, and rebuilds and re-files. ALWAYS trigger for "prepare workpaper", "prepare the workpaper for [client]", "start [client]'s tax return", "do [client]'s ITR", "[year] workpaper for [client]", "finalise the workpaper", "review [client]'s ITR workpaper", "update [client]'s workpaper", "[client] has sent their information", "[client] has replied to the queries", "add the new documents to [client]'s workpaper", or "refresh [client]'s workpaper". Do NOT trigger for company/trust/SMSF jobs, BAS/IAS, pre-June planning, or the cover letter alone.
 ---
 
 # Individual ITR Workpaper — Prepare & Review
@@ -28,6 +28,64 @@ Only a client name (and optionally a year — default: the most recent 30 June).
 comes from FYI. If the FYI connector is down, stop and say so — never prepare from memory or
 invent figures.
 
+## Phase 0 — New build, or update the one already on foot?
+
+A client's information arrives in instalments. The first build almost always ships with open
+queries, and the answers land days or weeks later. So a second invocation on the same client and
+year is normally an **update**, not a new build — decide which before anything else.
+
+**Detect.** `fyi_find_documents` by `entity_id` for the current year's Work Papers:
+
+- `{Y} ITR Workpaper - First Last.xlsm` **with its spec beside it** (`{Y} ITR Workpaper Spec -
+  First Last.json`) → a build by this skill. The spec is the state of that build: sources cited,
+  cells written, queries raised, review register, `run.round` and `run.built`. Work from it.
+- The workpaper is populated (current-year columns filled, Queries rows, a Review Notes register)
+  but no spec is filed → built in a session that did not file its spec. Reconstruct the spec from
+  the file (`dump_workpaper.py --changed` gives every cell, formula, link and comment) before
+  changing anything, and file it this time.
+- An untouched roll-forward from admin — current-year columns empty, no queries — is not a build
+  in progress. That is a new build: Phase A.
+
+**Never** start a second workpaper for a job that already has one, and never rebuild from the
+master when a build exists. The client's answers, the review register, the preparer's remarks and
+every judgment call already made live in that file.
+
+## Phase A′ — Update run (what has arrived, and what it changes)
+
+1. **Cut-off.** The last build: `run.built` in the spec, else the filed date of the workpaper in
+   FYI. Everything after it is new information.
+2. **FYI.** `fyi_find_documents` by `entity_id` again. New is anything filed or modified since the
+   cut-off, plus anything the prior spec's `sources` does not already carry. Download and extract
+   with `gather.py` exactly as in Phase A — the cache makes already-seen documents free.
+3. **Outlook — in scope on an update run** (the one exception to Phase A step 5; the client's reply
+   is the whole point). Search the client's address and the query-email thread since the cut-off.
+   An emailed document is **not a source until it is in FYI**: a workpaper hyperlink needs a stable
+   FYI target, so file the attachment first (SUGGEST → CONFIRM, same cabinet rules as the
+   workpaper) and cite the FYI id. Where the answer is prose and no document exists, record the
+   client's words in the query's `client_reply` and in the cell remark, and say on the face of the
+   workpaper that the figure rests on the client's statement.
+4. **Re-run the pre-fill.** It fills in through the year — bank interest, dividends and health
+   cover that were absent in July are usually there by October. Reconcile the new pre-fill against
+   what is already in the file before touching anything else.
+5. **Assess, item by item.** For every open query: answered, partly answered, or still open? For
+   every new document: which cells does it touch, and does it confirm a figure, change one, or add
+   one? Does anything contradict a remark, a PROVISIONAL position, or a review finding? A document
+   that changes nothing is still worth a source link on the figure it supports.
+6. **Apply to the same spec, in place.** Add the new `sources`; add or amend `cells`; set
+   `client_reply` (and `reply` where we answered) on the queries that came back; leave unanswered
+   queries standing. Move review findings the new information resolves to FIXED and add rows for
+   anything it raises. Bump `run.round` and set `run.built`. Then Phase B's one command, Phase C's
+   verify — a rebuild, not a patch.
+7. **Re-review in proportion.** Re-run only the lenses whose domains the new information touches: a
+   rental agent summary or a share sale confirmation earns its full lens, a confirmed interest
+   figure does not. Findings in untouched areas stand as they are.
+8. **Deliver and re-file** per Phase E — same name, replacing the version on file, spec beside it.
+   In chat: what arrived, what changed and by how many dollars, which queries closed, which are
+   still open.
+
+**Never close a query silently.** One answered with "nothing to add" is closed with the client's
+own words recorded; one that is still open stays open and stays on the list for the next chase.
+
 ## Phase A — Gather (target: under 3 minutes)
 
 1. Resolve the client: `fyi_list_clients` (search surname). Note entity id, manager, partner. On a
@@ -44,9 +102,10 @@ invent figures.
    by document id, so a re-run is free. Read the `text/*.txt` files, not the PDFs.
 4. Judge each document's **tax year by its event dates, not its filename** — a "July 2026 Share
    Sale" executed 24/07/2025 is an FY2026 CGT event.
-5. Outlook is **not** part of the default gather. Check it only when the user asks or a document
-   the pre-fill implies is clearly absent from FYI. Anything found unfiled is a flag to the
-   manager, never a working source.
+5. Outlook is **not** part of the default gather on a first build. Check it when the user asks,
+   when a document the pre-fill implies is clearly absent from FYI, or on an update run, where the
+   client's reply is the point (Phase A′). Anything found unfiled is a flag to the manager, and
+   never a working source until it is filed in FYI.
 6. Data the prior year expected that has not arrived (owner rental expenses, deduction evidence)
    becomes a Query — never a silent zero, never an estimate.
 
@@ -151,6 +210,9 @@ recalculates on open (`fullCalcOnLoad` is set) and the tax-table cells are confi
      only for files under ~50 KB — a workpaper never is.
    - Rebuilt in Phase E after review fixes? File that version, so FYI holds the reviewed file and
      not the pre-review one.
+   - **File `spec.json` beside it** as `{Y} ITR Workpaper Spec - First Last.json`, same cabinet and
+     categories. It is the audit trail of the build and the state the next run reads (Phase 0):
+     without it, a later session has to reconstruct the build from the workbook.
 5. Offer the client query email (Outlook draft) — draft only, never send.
 6. Master-template defects belong to the Y2K master — report them, do not fix the copy.
 
@@ -177,6 +239,7 @@ recalculates on open (`fullCalcOnLoad` is set) and the tax-table cells are confi
 | Phase | Expected | If it runs longer |
 |---|---|---|
 | A gather | 2-3 min | you are reading PDFs instead of `text/*.txt`, or downloading serially |
+| A′ update | 3-5 min | you are rebuilding from the master instead of editing the filed spec |
 | B spec + build | 5-10 min thinking, 2 s build | you are exploring the workbook instead of using the cell map |
 | C verify | 30 s per loop, 1-3 loops | you are patching the file instead of the spec |
 | D review | 3-5 min simple, 6-10 min complex | reviewers were handed file paths instead of the dump |

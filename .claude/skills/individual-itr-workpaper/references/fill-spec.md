@@ -24,6 +24,7 @@ Keep the spec at `work/<client>/spec.json`. It is the audit trail of the build.
 | `review_notes` | plain judgment rows for the Review Notes tab (Phase B) |
 | `rev` | Phase E overrides — same shape as `cells`, applied after them |
 | `review` | Phase E register `{"summary", "sections"}` — replaces `review_notes` (fold them in) |
+| `run` | build stamp `{"round": 1, "built": "2026-09-14"}` — bump `round` and reset `built` on every update run. `built` is the cut-off an update run measures new FYI documents and client emails against |
 
 Sheet names: use the alias `Summary` / `Deductions` for the client-1 tabs (the engine resolves the
 rename), `Summary2` / `Deductions2` for client 2, otherwise the exact sheet name including the
@@ -117,11 +118,17 @@ depth it supports and head B4 "FY {Y-1} (per signed ITR)" via a cell entry.
 
 ```json
 {"issue": "Interest income", "description": "Pre-fill carries no bank data. Please confirm interest received in FY26 (PY $412).",
- "reference": {"sheet": "Summary", "cell": "H16"}}
+ "reference": {"sheet": "Summary", "cell": "H16"},
+ "client_reply": "CBA saver closed Oct 25; $118 to closure — statement attached",
+ "reply": "Agreed to statement; H16 updated 14/09/26"}
 ```
 The engine writes the row, links column D to the awaiting cell, and writes a `Query n` back-link
 into that cell's source column (Summary I / Rental H) if it is empty. Set `"backlink": false` or
 `"backlink_cell"` to override.
+
+`client_reply` (Queries column E) and `reply` (column F) are what an update run fills in: the
+client's answer in their own words, and what we did with it. A query stays in the list once
+answered — it is the record of how the figure got there. Leave both out on a first build.
 
 ## Review (Phase E)
 
@@ -143,6 +150,14 @@ into that cell's source column (Summary I / Rental H) if it is empty. Set `"back
 Empty sections are skipped. Every finding with a sheet and cell gets a cell comment "Review Notes
 row N". Phase B `review_notes` rows are ignored once `review` is present — fold them into the
 matching section as `NOTE` rows.
+
+## Update runs
+
+The spec is the state of the build, not a one-shot input. On a second (or fifth) pass for the same
+client and year, **edit the spec that was filed to FYI** rather than writing a new one: add
+`sources`, add or amend `cells`, fill `client_reply` on the queries that came back, move resolved
+findings to FIXED in `review`, bump `run`. Then the same one command. A spec rewritten from scratch
+loses the remarks, the review register and the reasoning the file already carries.
 
 ## Commands
 

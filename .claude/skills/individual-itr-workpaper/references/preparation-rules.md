@@ -11,6 +11,11 @@ Everything here was learned on a real client run (De Celis FY2026). Ignore at yo
   a joint file) and the annual compliance job. Upload with `fyi_get_upload_url` + POST of the raw
   bytes, content type `application/vnd.ms-excel.sheet.macroEnabled.12`. Confirm with the user
   before the upload — it writes to production — and file again after a Phase E rebuild.
+- The spec is filed beside it as `{Y} ITR Workpaper Spec - First Last.json` (content type
+  `application/json`). It is how the next run picks the job up where this one left off; a workpaper
+  filed without its spec costs the next session a reconstruction from the workbook.
+- A document the client emails is not a source until it is in FYI — file it, then cite the FYI id.
+  A figure resting only on what the client wrote in an email is recorded as that, in the remark.
 - Client name replaces the "1" placeholder on Summary and Deductions tabs (C3 / B3) and in the
   two sheet names.
 - FYI stable document URL: `https://go.fyi.app/search/0/{entity_id}/0/documents/{doc_uuid}/preview`
@@ -107,6 +112,8 @@ You do not re-solve any of that. What is still yours:
 4. Cloned tabs lose their hyperlinks — cite every source again through `cells`, in the Hyperlink column.
 5. Never hand-edit the `.xlsm`. A fix is a spec change and a rebuild.
 6. `output` in the spec ends in `.xlsm`; the build refuses anything else.
+7. On an update run, amend the filed spec and rebuild. Never start a second workpaper for a job
+   that already has one, and never rebuild from the master over a build in progress.
 
 ## Verification checklist (Phase C)
 
