@@ -1,0 +1,177 @@
+{
+ "client": {
+  "name": "Jane Smith",
+  "entity_id": 12345,
+  "year": 2026
+ },
+ "template": null,
+ "prior_workpaper": null,
+ "output": "work/Jane Smith/2026 ITR Workpaper - Jane Smith.xlsm",
+ "unhide": [
+  "Share Register"
+ ],
+ "clones": [
+  {
+   "template_sheet": "Rental Property",
+   "as": "Rental Property - 12 Smith St",
+   "after": "Rental Property"
+  }
+ ],
+ "sources": [
+  {
+   "id": "prefill",
+   "doc": "aaaaaaaa-1111-2222-3333-444444444444",
+   "label": "2026 ATO Pre-filling report - Jane Smith"
+  },
+  {
+   "id": "agent",
+   "doc": "bbbbbbbb-1111-2222-3333-444444444444",
+   "label": "2026 Rental Summary - 12 Smith St"
+  }
+ ],
+ "cells": [
+  {
+   "sheet": "Summary",
+   "cell": "H12",
+   "value": 98000,
+   "source": "prefill",
+   "remark": "STP finalised"
+  },
+  {
+   "sheet": "Summary",
+   "cell": "G12",
+   "value": 24000,
+   "overwrite_formula": true
+  },
+  {
+   "sheet": "Summary",
+   "cell": "H16",
+   "source": "prefill",
+   "remark": "Early pre-fill carries no bank data; re-run before lodgement",
+   "clear": true
+  },
+  {
+   "sheet": "Rental Property - 12 Smith St",
+   "cell": "F7",
+   "formula": "=3900+2600+2600+2600",
+   "source": "agent"
+  },
+  {
+   "sheet": "Rental Property - 12 Smith St",
+   "cell": "F27",
+   "formula": "=280+190+190+190",
+   "source": "agent",
+   "remark": "7.3% mgmt fee"
+  },
+  {
+   "sheet": "Rental Property - 12 Smith St",
+   "cell": "E55",
+   "formula": "=+E54*50%",
+   "overwrite_formula": true
+  },
+  {
+   "sheet": "Summary",
+   "cell": "H36",
+   "formula": "='Rental Property - 12 Smith St'!E52",
+   "source": {
+    "sheet": "Rental Property - 12 Smith St",
+    "cell": "E52"
+   }
+  }
+ ],
+ "queries": [
+  {
+   "issue": "Interest income",
+   "description": "Pre-fill has no bank data. Please confirm interest received FY26 (PY $412).",
+   "reference": {
+    "sheet": "Summary",
+    "cell": "H16"
+   }
+  },
+  {
+   "issue": "Council rates - 12 Smith St",
+   "description": "PY $1,840. Please send FY26 notices.",
+   "reference": {
+    "sheet": "Rental Property - 12 Smith St",
+    "cell": "G17"
+   }
+  }
+ ],
+ "review_notes": [
+  "Ownership 100% per prior return rental schedule.",
+  "Pre-fill dated 14 Jul 2026; re-run before lodgement."
+ ],
+ "controls": [
+  {
+   "sheet": "Rental Property - 12 Smith St",
+   "cell": "E10",
+   "expect": 11700
+  },
+  {
+   "sheet": "Summary",
+   "cell": "H84",
+   "expect": 0
+  }
+ ],
+ "rev": [
+  {
+   "sheet": "Rental Property - 12 Smith St",
+   "cell": "F27",
+   "formula": "=280+190+190+190+190",
+   "source": "agent",
+   "remark": "7.3% mgmt fee; May statement was missed"
+  }
+ ],
+ "review": {
+  "summary": {
+   "bottom_line": "Not ready to sign off: two client items outstanding.",
+   "waiting": "Interest income and council rates (about $1,840 of deductions).",
+   "fixed": "Management fee sum was missing the May statement (+$190).",
+   "outside": "Master template D10 total sums the non-deductible GIC row."
+  },
+  "sections": [
+   {
+    "title": "INCOME \u2014 by label",
+    "findings": [
+     {
+      "sheet": "Summary",
+      "cell": "H16",
+      "point": "Interest nil per early pre-fill; PY $412.",
+      "action": "Await client reply (Query 1).",
+      "status": "QUERY",
+      "impact": "~$130 tax",
+      "source": "2026 ATO Pre-filling report"
+     }
+    ]
+   },
+   {
+    "title": "RENTAL PROPERTY \u2014 in rental schedule order",
+    "findings": [
+     {
+      "sheet": "Rental Property - 12 Smith St",
+      "cell": "F27",
+      "point": "Management fee in-cell sum omitted the May statement ($190).",
+      "action": "Fixed in rev.",
+      "status": "FIXED",
+      "impact": "$190",
+      "source": "2026 Rental Summary"
+     }
+    ]
+   },
+   {
+    "title": "OUTSIDE THIS FILE",
+    "findings": [
+     {
+      "sheet": "",
+      "cell": "",
+      "point": "D10 total sums the ATO GIC row.",
+      "action": "Raise with master owner.",
+      "status": "NOTE",
+      "impact": "",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ }
+}

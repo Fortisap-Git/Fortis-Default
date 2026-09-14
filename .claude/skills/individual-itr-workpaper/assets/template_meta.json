@@ -1,0 +1,1391 @@
+{
+ "source": "2026_ITR_Workpaper_-_Individual_Name.xlsm",
+ "sheets": [
+  {
+   "name": "Review Notes",
+   "state": "visible"
+  },
+  {
+   "name": "Queries",
+   "state": "visible"
+  },
+  {
+   "name": "Summary - 1 Client name ",
+   "state": "visible"
+  },
+  {
+   "name": "Deductions - 1 Client name ",
+   "state": "visible"
+  },
+  {
+   "name": "Distributions",
+   "state": "hidden"
+  },
+  {
+   "name": "Summary - 2 Client name ",
+   "state": "visible"
+  },
+  {
+   "name": "Deductions - 2 Client name ",
+   "state": "visible"
+  },
+  {
+   "name": "Home Office Expenses",
+   "state": "visible"
+  },
+  {
+   "name": "Depreciation schedule",
+   "state": "visible"
+  },
+  {
+   "name": "Dividend Summary Ind",
+   "state": "hidden"
+  },
+  {
+   "name": "Income",
+   "state": "hidden"
+  },
+  {
+   "name": "Share Register",
+   "state": "hidden"
+  },
+  {
+   "name": "Motor Vehicle ",
+   "state": "hidden"
+  },
+  {
+   "name": "Business Summary",
+   "state": "visible"
+  },
+  {
+   "name": "Rental Property",
+   "state": "visible"
+  },
+  {
+   "name": "CGT Summary",
+   "state": "visible"
+  },
+  {
+   "name": "CGT Property",
+   "state": "visible"
+  },
+  {
+   "name": "Other Reconciliation",
+   "state": "hidden"
+  },
+  {
+   "name": "Dividend Summary Joint",
+   "state": "hidden"
+  },
+  {
+   "name": "BAS Summary",
+   "state": "hidden"
+  },
+  {
+   "name": "Client Data",
+   "state": "visible"
+  },
+  {
+   "name": "Foreign Income",
+   "state": "hidden"
+  }
+ ],
+ "external_names": [
+  "ATOLower_List",
+  "ATOMid_List",
+  "ATOUpper_List",
+  "ATO_Allowances",
+  "Acqdate",
+  "Addition",
+  "Amounts",
+  "Assessable",
+  "BasicDaily",
+  "BonusDaily",
+  "BonusSalary",
+  "Book",
+  "CARRY_FORWARD_NOTES_Next_Year",
+  "CARRY_FORWARD_NOTES_This_Year",
+  "CHECKLIST_At_Call_Loan_Documentation",
+  "CHECKLIST_Division_7A",
+  "CHECKLIST_Family_Trust_Election",
+  "CHECKLIST_Partnership_Documentation",
+  "CHECKLIST_Service_Entity",
+  "CHECKLIST_Trust_Deed_Review",
+  "CHECKLIST_Workers_Compensation",
+  "CLIENT_FILE_NOTE",
+  "CLIENT_RISK_ASSESSMENT_CHECKLIST",
+  "CWDV",
+  "CarType1",
+  "CarType2",
+  "Cash_or_accruals?",
+  "Categories",
+  "CategoryAmounts",
+  "CategoryListLarge",
+  "Cl_Name",
+  "Claim_input_tax_credits?",
+  "CommutesPerMonth",
+  "Contingent_rentals?",
+  "Cost",
+  "Daysheld",
+  "Deductible",
+  "Depn",
+  "Dispdate",
+  "EEE",
+  "END_OF_ENGAGEMENT_CHECKLIST",
+  "EntityName",
+  "Entity_Type",
+  "ExchRateAED",
+  "ExchRateUSD",
+  "FirstBonus",
+  "First_bal_date",
+  "GROUP_PRINTING_CHECKLIST",
+  "GST_amount",
+  "GST_amount_incl_lux_limit",
+  "GST_entity",
+  "GST_paid_or_financed?",
+  "GeeCollChild2",
+  "GeeCollFees",
+  "INTERVIEW_SHEET",
+  "ITR_COVER_SHEET",
+  "Input?",
+  "Interest_table",
+  "Interest_type",
+  "JOURNALS",
+  "Last_stamp_duty_payment",
+  "Lease_identification",
+  "Life",
+  "MBF",
+  "Max_Dates",
+  "Method",
+  "MoneyHistory",
+  "New_Interest",
+  "NitesPerTrip",
+  "Number_of_stamp_duty_payments",
+  "OWDV",
+  "PV_comparison",
+  "Partner",
+  "Penalty_label",
+  "Period",
+  "PeriodEndDate",
+  "PeriodsInYear",
+  "PreparedBy",
+  "Proceeds",
+  "PumpAverageDhs",
+  "Purchase_price_net",
+  "QA_CHECKLIST",
+  "QA_CHECKLIST_INDIVIDUAL_BUSINESS",
+  "QA_CHECKLIST_PARTNERSHIP",
+  "QA_CHECKLIST_TRUST",
+  "REVIEW_QUERY_ISSUES_SHEET",
+  "RMName",
+  "RULE78",
+  "Rate",
+  "Residual",
+  "ReviewedBy",
+  "SBE",
+  "STS",
+  "STS_Sheet",
+  "STS_WORKSHEET",
+  "STS_WORKSHEET_WORKPAPER",
+  "Spec",
+  "Stamp_duty_amount",
+  "Stamp_duty_in_HP?",
+  "Start_Checklist_BAS_End_Row",
+  "Start_Checklist_BAS_Section",
+  "Start_Checklist_BAS_Start_Row",
+  "Status",
+  "StatusDescriptions",
+  "Sub_lease?",
+  "SuperRate",
+  "SydAccomCost",
+  "SydFlightCost",
+  "TAX_RECONCILIATION_PP",
+  "TRS_Item11FrCr",
+  "TRS_Item14NetPSI",
+  "TRS_Item16NPP",
+  "TRS_Item16PP",
+  "TRS_Item20ExemptForeignInc",
+  "TRS_Item20NetForeignRent",
+  "TRS_Item21NetRent",
+  "TRS_OtherIncCat1",
+  "TRS_OtherIncCat2",
+  "TRS_TaxableIncome",
+  "TaxRates_MCareLowerInc",
+  "TaxRates_MCareMidInc1",
+  "TaxRates_MCareMidInc2",
+  "TaxRates_MCareMidPercentage",
+  "TaxRates_MCareUpperInc",
+  "TaxRates_MCareUpperPercentage",
+  "TaxRates_PersonalInc1",
+  "TaxRates_PersonalInc2b",
+  "TaxRates_PersonalInc3a",
+  "TaxRates_PersonalInc3b",
+  "TaxRates_PersonalInc4a",
+  "TaxRates_PersonalInc4b",
+  "TaxRates_PersonalInc5",
+  "TaxRates_PersonalRate2",
+  "TaxRates_PersonalRate3",
+  "TaxRates_PersonalRate4",
+  "TaxRates_PersonalRate5",
+  "TaxRates_PersonalTax2",
+  "TaxRates_PersonalTax3",
+  "TaxRates_PersonalTax4",
+  "Tax_Reconciliation",
+  "Track?",
+  "TrainingDaily",
+  "V_Allow_Stations",
+  "V_Exch_Rates",
+  "Valuedep",
+  "VbPayDate",
+  "Voluntary_disclosure",
+  "WCWDFY",
+  "WP_AWB_Loan",
+  "WP_Bank_Rec_2",
+  "WP_Bank_Rec_3",
+  "WP_FMD_Record",
+  "WP_Farm_Income_Split",
+  "WP_Franking_Acc_Rec",
+  "WP_Franking_Account_Rec",
+  "WP_HP",
+  "WP_JOURNALS",
+  "WP_Livestock",
+  "WP_Mains_Electricity_Write_Off",
+  "WP_Profit_Allocation_Estimates",
+  "WP_Provision_for_Tax",
+  "WP_STS_Av_Group_Turnover",
+  "WP_STS_Worksheet",
+  "WP_Water_Improvements_Write_Off",
+  "WhenList",
+  "WhereList",
+  "Yearend",
+  "Yearstart",
+  "acquisition_purchase_no",
+  "acquisition_sale_no",
+  "amount_financed",
+  "au_totals_non_trust_3",
+  "au_totals_non_trust_6",
+  "au_totals_non_trust_7",
+  "au_totals_trust_2",
+  "au_totals_trust_3",
+  "au_totals_trust_4",
+  "au_totals_trust_5",
+  "au_totals_trust_6",
+  "au_totals_trust_7",
+  "au_totals_trust_8",
+  "bar_pur_option",
+  "beg_date",
+  "beginning_or_end",
+  "cfn_next_year",
+  "cg",
+  "cpi",
+  "div7a_range",
+  "dividend_summary_selection",
+  "down_paymt",
+  "edp",
+  "end_date",
+  "entity_state",
+  "fair_value",
+  "final_payment",
+  "first_stamp_duty_payment",
+  "frequency",
+  "fsdate",
+  "guarntd_res_value",
+  "income_PSI_indiv_specific",
+  "lease_paymts",
+  "loan_statement_na_value",
+  "loan_statement_no",
+  "luxury_car?",
+  "luxury_vehicle_limit",
+  "ly",
+  "min_lease_paymts",
+  "name",
+  "nasar",
+  "net_inv",
+  "nites",
+  "num",
+  "pc",
+  "pp",
+  "present_value",
+  "print_index",
+  "private_car_logbook_no",
+  "private_car_no",
+  "purchase_price",
+  "rm",
+  "sc",
+  "sdp",
+  "sgc",
+  "tax",
+  "term",
+  "total_cost",
+  "ttlEatingOut",
+  "type",
+  "v_lookup_car_limit",
+  "vtable_amort",
+  "wages_rec_nbr_employees",
+  "Rental Property!amount_financed",
+  "Rental Property!au_totals_non_trust_6",
+  "Rental Property!au_totals_non_trust_7",
+  "Rental Property!CHECKLIST_At_Call_Loan_Documentation",
+  "Rental Property!CHECKLIST_Division_7A",
+  "Rental Property!CHECKLIST_Family_Trust_Election",
+  "Rental Property!CHECKLIST_Partnership_Documentation",
+  "Rental Property!CHECKLIST_Service_Entity",
+  "Rental Property!entity_state",
+  "Rental Property!Entity_Type",
+  "Rental Property!GROUP_PRINTING_CHECKLIST",
+  "Rental Property!GST_entity",
+  "Rental Property!INTERVIEW_SHEET",
+  "Rental Property!ITR_COVER_SHEET",
+  "Rental Property!nites",
+  "Rental Property!PeriodsInYear",
+  "Rental Property!print_index",
+  "Rental Property!private_car_logbook_no",
+  "Rental Property!private_car_no",
+  "Rental Property!Spec",
+  "Rental Property!total_cost",
+  "Rental Property!WCWDFY",
+  "Rental Property!WhenList",
+  "CGT Property!amount_financed",
+  "CGT Property!au_totals_non_trust_3",
+  "CGT Property!au_totals_non_trust_6",
+  "CGT Property!au_totals_non_trust_7",
+  "CGT Property!au_totals_trust_2",
+  "CGT Property!au_totals_trust_3",
+  "CGT Property!au_totals_trust_4",
+  "CGT Property!au_totals_trust_5",
+  "CGT Property!CARRY_FORWARD_NOTES_Next_Year",
+  "CGT Property!CARRY_FORWARD_NOTES_This_Year",
+  "CGT Property!CarType1",
+  "CGT Property!CarType2",
+  "CGT Property!CHECKLIST_At_Call_Loan_Documentation",
+  "CGT Property!CHECKLIST_Division_7A",
+  "CGT Property!CHECKLIST_Family_Trust_Election",
+  "CGT Property!CHECKLIST_Partnership_Documentation",
+  "CGT Property!CHECKLIST_Service_Entity",
+  "CGT Property!CHECKLIST_Trust_Deed_Review",
+  "CGT Property!CHECKLIST_Workers_Compensation",
+  "CGT Property!entity_state",
+  "CGT Property!Entity_Type",
+  "CGT Property!GROUP_PRINTING_CHECKLIST",
+  "CGT Property!ITR_COVER_SHEET",
+  "CGT Property!loan_statement_na_value",
+  "CGT Property!loan_statement_no",
+  "CGT Property!PeriodsInYear",
+  "CGT Property!print_index",
+  "CGT Property!private_car_logbook_no",
+  "CGT Property!private_car_no",
+  "CGT Property!sdp",
+  "CGT Property!Spec",
+  "CGT Property!ttlEatingOut",
+  "CGT Property!WCWDFY",
+  "CGT Property!WhenList"
+ ],
+ "baked_values": {},
+ "landmarks": {
+  "summary": {
+   "header_row": 10,
+   "label_col": "B",
+   "desc_col": "C",
+   "credit_col": "G",
+   "value_col": "H",
+   "source_col": "I",
+   "remark_col": "J",
+   "signoff_col": "K",
+   "py_marker": "I8",
+   "source_index_anchor": "J1",
+   "client_cell": "C3"
+  },
+  "deductions": {
+   "header_row": 9,
+   "desc_col": "B",
+   "items_col": "C",
+   "total_col": "D",
+   "client_cell": "B3"
+  },
+  "rental": {
+   "py_cols": [
+    "B",
+    "C",
+    "D"
+   ],
+   "cy_cols": [
+    "E",
+    "F",
+    "G"
+   ],
+   "total_col": "E",
+   "agency_col": "F",
+   "owner_col": "G",
+   "source_col": "H",
+   "remark_col": "I",
+   "year_row": 4,
+   "first_data_row": 7,
+   "control_row": 56
+  },
+  "queries": {
+   "header_row": 7,
+   "cols": {
+    "sr": "A",
+    "issue": "B",
+    "description": "C",
+    "reference": "D",
+    "client_reply": "E",
+    "reply": "F"
+   }
+  },
+  "review_notes": {
+   "first_row": 8,
+   "num_col": "B",
+   "text_col": "C"
+  },
+  "share_register": {
+   "header_rows": [
+    11,
+    12
+   ],
+   "first_data_row": 14
+  },
+  "foreign_income": {
+   "header_row": 9,
+   "first_data_row": 10
+  },
+  "dividends": {
+   "header_row": 7,
+   "first_data_row": 13
+  },
+  "home_office": {
+   "client1_cols": [
+    "A",
+    "B",
+    "C"
+   ],
+   "client2_cols": [
+    "E",
+    "F",
+    "G"
+   ]
+  }
+ },
+ "labels": {
+  "summary": [
+   {
+    "row": 11,
+    "label": null,
+    "desc": "INCOME",
+    "formula": null
+   },
+   {
+    "row": 12,
+    "label": "1",
+    "desc": "Salary",
+    "formula": null
+   },
+   {
+    "row": 13,
+    "label": "1",
+    "desc": "Salary",
+    "formula": null
+   },
+   {
+    "row": 14,
+    "label": "2",
+    "desc": "Allowance",
+    "formula": null
+   },
+   {
+    "row": 16,
+    "label": "10",
+    "desc": "Interest",
+    "formula": null
+   },
+   {
+    "row": 17,
+    "label": "11",
+    "desc": "Dividend Income",
+    "formula": "='Dividend Summary Ind'!D52+'Dividend Summary Ind'!C52"
+   },
+   {
+    "row": 18,
+    "label": "11",
+    "desc": "Dividend Income",
+    "formula": null
+   },
+   {
+    "row": 19,
+    "label": "12",
+    "desc": "Employee share scheme",
+    "formula": null
+   },
+   {
+    "row": 21,
+    "label": "13",
+    "desc": "Partnerships/Trust Distributions",
+    "formula": null
+   },
+   {
+    "row": 23,
+    "label": "13",
+    "desc": "Partnerships/Trust Distributions",
+    "formula": null
+   },
+   {
+    "row": 26,
+    "label": "15",
+    "desc": "Business Schedule (Income & Expenses)",
+    "formula": "='Share Register'!E69"
+   },
+   {
+    "row": 27,
+    "label": "16",
+    "desc": "Non-Commercial Losses",
+    "formula": null
+   },
+   {
+    "row": 29,
+    "label": "18",
+    "desc": "Capital Gains - Trust Distribution",
+    "formula": null
+   },
+   {
+    "row": 30,
+    "label": "18",
+    "desc": "Capital Gains - Shares",
+    "formula": "='Share Register'!E72"
+   },
+   {
+    "row": 31,
+    "label": "18",
+    "desc": "Capital Gains - Property",
+    "formula": null
+   },
+   {
+    "row": 33,
+    "label": "20",
+    "desc": "Foreign Income - Trust Distribution",
+    "formula": null
+   },
+   {
+    "row": 34,
+    "label": "20",
+    "desc": "Foreign Income - Other",
+    "formula": "='Foreign Income'!E19"
+   },
+   {
+    "row": 36,
+    "label": "21",
+    "desc": "Rental Income",
+    "formula": null
+   },
+   {
+    "row": 37,
+    "label": "21",
+    "desc": "Rental Income",
+    "formula": null
+   },
+   {
+    "row": 39,
+    "label": "24",
+    "desc": "Other Income",
+    "formula": null
+   },
+   {
+    "row": 40,
+    "label": null,
+    "desc": "Rounding",
+    "formula": null
+   },
+   {
+    "row": 41,
+    "label": null,
+    "desc": "TOTAL INCOME",
+    "formula": "=ROUND((SUM(H12:H40)+G17),0)+G18"
+   },
+   {
+    "row": 43,
+    "label": null,
+    "desc": "DEDUCTIONS",
+    "formula": null
+   },
+   {
+    "row": 44,
+    "label": "D1",
+    "desc": "Work related car expenses",
+    "formula": "='Deductions - 1 Client name '!D21"
+   },
+   {
+    "row": 45,
+    "label": "D2",
+    "desc": "Work related travel expenses",
+    "formula": "='Deductions - 1 Client name '!D28"
+   },
+   {
+    "row": 46,
+    "label": "D3",
+    "desc": "Work related uniform, occupation specific or protective clothing, laundry and dry cleaning expenses",
+    "formula": "='Deductions - 1 Client name '!D33"
+   },
+   {
+    "row": 47,
+    "label": "D4",
+    "desc": "Work-Related Self Education Expenses",
+    "formula": "='Deductions - 1 Client name '!D38"
+   },
+   {
+    "row": 48,
+    "label": "D5",
+    "desc": "Other work related expenses",
+    "formula": "='Deductions - 1 Client name '!D49"
+   },
+   {
+    "row": 49,
+    "label": "D6",
+    "desc": "Low value pool deduction",
+    "formula": "='Deductions - 1 Client name '!D54"
+   },
+   {
+    "row": 50,
+    "label": "D7",
+    "desc": "Interest deductions",
+    "formula": "='Deductions - 1 Client name '!D59"
+   },
+   {
+    "row": 51,
+    "label": "D8",
+    "desc": "Dividend deductions",
+    "formula": "='Deductions - 1 Client name '!D64"
+   },
+   {
+    "row": 52,
+    "label": "D9",
+    "desc": "Donations",
+    "formula": "='Deductions - 1 Client name '!D69"
+   },
+   {
+    "row": 53,
+    "label": "D10",
+    "desc": "Cost of managing tax affairs",
+    "formula": "='Deductions - 1 Client name '!D74"
+   },
+   {
+    "row": 54,
+    "label": "D11",
+    "desc": "Deductible FP or Annuity",
+    "formula": "='Deductions - 1 Client name '!D78"
+   },
+   {
+    "row": 55,
+    "label": "D12",
+    "desc": "Personal Super",
+    "formula": "='Deductions - 1 Client name '!D81"
+   },
+   {
+    "row": 56,
+    "label": "D13",
+    "desc": "Project Pool",
+    "formula": "='Deductions - 1 Client name '!D84"
+   },
+   {
+    "row": 57,
+    "label": "D14",
+    "desc": "Forestry",
+    "formula": "='Deductions - 1 Client name '!D87"
+   },
+   {
+    "row": 58,
+    "label": "D15",
+    "desc": "Other deductions",
+    "formula": "='Deductions - 1 Client name '!D92"
+   },
+   {
+    "row": 59,
+    "label": null,
+    "desc": "Rounding",
+    "formula": null
+   },
+   {
+    "row": 60,
+    "label": null,
+    "desc": "TOTAL DEDUCTIONS",
+    "formula": "=SUM(H44:H59)"
+   },
+   {
+    "row": 62,
+    "label": null,
+    "desc": "TAXABLE INCOME",
+    "formula": "=ROUND(H41-H60,0)"
+   },
+   {
+    "row": 64,
+    "label": null,
+    "desc": "Tax Payable",
+    "formula": null
+   },
+   {
+    "row": 65,
+    "label": null,
+    "desc": "Tax Payable",
+    "formula": null
+   },
+   {
+    "row": 66,
+    "label": null,
+    "desc": "Medicare Levy",
+    "formula": "=H62*0.02"
+   },
+   {
+    "row": 67,
+    "label": null,
+    "desc": "Medicare Levy Surcharge",
+    "formula": null
+   },
+   {
+    "row": 68,
+    "label": null,
+    "desc": "Excess PHI",
+    "formula": null
+   },
+   {
+    "row": 69,
+    "label": null,
+    "desc": "Total Tax Payable",
+    "formula": "=SUM(H65:H68)"
+   },
+   {
+    "row": 71,
+    "label": null,
+    "desc": "Less:",
+    "formula": null
+   },
+   {
+    "row": 72,
+    "label": null,
+    "desc": "PAYG Withholding",
+    "formula": "=G12+G13"
+   },
+   {
+    "row": 73,
+    "label": null,
+    "desc": "Withholding Tax",
+    "formula": "=G16"
+   },
+   {
+    "row": 74,
+    "label": null,
+    "desc": "PAYG Instalments",
+    "formula": null
+   },
+   {
+    "row": 75,
+    "label": null,
+    "desc": "Franking Credits",
+    "formula": "=G17+G18+G21+G22+G23+G24"
+   },
+   {
+    "row": 76,
+    "label": null,
+    "desc": "Foreign Tax Credits",
+    "formula": "=G34+G33"
+   },
+   {
+    "row": 77,
+    "label": null,
+    "desc": "Low Income Tax Offset",
+    "formula": null
+   },
+   {
+    "row": 78,
+    "label": null,
+    "desc": "Low and Middle Income Tax Offset",
+    "formula": null
+   },
+   {
+    "row": 79,
+    "label": null,
+    "desc": "PHI Rebate",
+    "formula": null
+   },
+   {
+    "row": 80,
+    "label": null,
+    "desc": "Total Tax Credits",
+    "formula": "=SUM(H72:H79)"
+   },
+   {
+    "row": 82,
+    "label": null,
+    "desc": "Tax Payable / (Refund)",
+    "formula": "=H69-H80"
+   },
+   {
+    "row": 83,
+    "label": null,
+    "desc": "per ITR",
+    "formula": null
+   },
+   {
+    "row": 84,
+    "label": null,
+    "desc": "Variance",
+    "formula": "=H82-H83"
+   },
+   {
+    "row": 86,
+    "label": null,
+    "desc": "Other Disclosure Items",
+    "formula": null
+   },
+   {
+    "row": 87,
+    "label": null,
+    "desc": "Reportable Super Contributions",
+    "formula": null
+   },
+   {
+    "row": 88,
+    "label": null,
+    "desc": "Reportable Fringe Benefits",
+    "formula": null
+   },
+   {
+    "row": 90,
+    "label": "M2",
+    "desc": "Private Health Insurance",
+    "formula": null
+   },
+   {
+    "row": 92,
+    "label": "PHI",
+    "desc": "Premium",
+    "formula": null
+   },
+   {
+    "row": 93,
+    "label": null,
+    "desc": "Rebate",
+    "formula": null
+   },
+   {
+    "row": 95,
+    "label": "M1",
+    "desc": "Number of dependent children and students",
+    "formula": null
+   },
+   {
+    "row": 96,
+    "label": "IT8",
+    "desc": "Number of dependent children",
+    "formula": null
+   },
+   {
+    "row": 97,
+    "label": "M2",
+    "desc": "Number of days not liable for surcharge",
+    "formula": null
+   },
+   {
+    "row": 100,
+    "label": "Bank Details Added?",
+    "desc": null,
+    "formula": null
+   }
+  ],
+  "deductions_total_row": 95,
+  "deductions": [
+   {
+    "label": "D1",
+    "title": "D1 - Work-Related Car Expenses",
+    "row": 11,
+    "lines": [
+     {
+      "row": 11,
+      "desc": "Work Usage %"
+     },
+     {
+      "row": 12,
+      "desc": "Fuel & Petrol"
+     },
+     {
+      "row": 13,
+      "desc": "Insurance"
+     },
+     {
+      "row": 14,
+      "desc": "Registration"
+     },
+     {
+      "row": 15,
+      "desc": "Repair & Maintanance"
+     },
+     {
+      "row": 16,
+      "desc": "Interest"
+     },
+     {
+      "row": 17,
+      "desc": "Depreciation"
+     },
+     {
+      "row": 18,
+      "desc": "Other"
+     }
+    ],
+    "total_row": 21
+   },
+   {
+    "label": "D2",
+    "title": "D2 - Travel Expenses",
+    "row": 23,
+    "lines": [
+     {
+      "row": 24,
+      "desc": "Public Transport"
+     },
+     {
+      "row": 25,
+      "desc": "Work-related Travel - Flights & Public Transport"
+     },
+     {
+      "row": 26,
+      "desc": "Work-related Travel - Accommodation"
+     },
+     {
+      "row": 27,
+      "desc": "Work-related Travel - Meals"
+     }
+    ],
+    "total_row": 28
+   },
+   {
+    "label": "D3",
+    "title": "D3 - Uniform Expenses",
+    "row": 30,
+    "lines": [],
+    "total_row": 33
+   },
+   {
+    "label": "D4",
+    "title": "D4 - Self Education Expenses",
+    "row": 35,
+    "lines": [],
+    "total_row": 38
+   },
+   {
+    "label": "D5",
+    "title": "D5 - Other Work-Related Expenses",
+    "row": 40,
+    "lines": [
+     {
+      "row": 41,
+      "desc": "Internet Expenses"
+     },
+     {
+      "row": 42,
+      "desc": "Phone & Mobile Expenses"
+     },
+     {
+      "row": 43,
+      "desc": "Work Tools & Supplies"
+     },
+     {
+      "row": 44,
+      "desc": "Printing & Stationery"
+     },
+     {
+      "row": 45,
+      "desc": "Professional Subscriptions"
+     },
+     {
+      "row": 46,
+      "desc": "Depreciation"
+     }
+    ],
+    "total_row": 49
+   },
+   {
+    "label": "D6",
+    "title": "D6 - Low Value Pool",
+    "row": 51,
+    "lines": [],
+    "total_row": 54
+   },
+   {
+    "label": "D7",
+    "title": "D7 - Interest Deductions",
+    "row": 56,
+    "lines": [],
+    "total_row": 59
+   },
+   {
+    "label": "D8",
+    "title": "D8 - Dividend Deductions",
+    "row": 61,
+    "lines": [],
+    "total_row": 64
+   },
+   {
+    "label": "D9",
+    "title": "D9 - Donations",
+    "row": 66,
+    "lines": [],
+    "total_row": 69
+   },
+   {
+    "label": "D10",
+    "title": "D10 - Tax Affairs",
+    "row": 71,
+    "lines": [
+     {
+      "row": 71,
+      "desc": "ATO GIC - NON DEDUCTIBLE"
+     },
+     {
+      "row": 72,
+      "desc": "Litigation Costs"
+     },
+     {
+      "row": 73,
+      "desc": "Tax Agent Fees"
+     }
+    ],
+    "total_row": 74
+   },
+   {
+    "label": "D11",
+    "title": "D11 - Deductible FP or Annuity",
+    "row": 76,
+    "lines": [],
+    "total_row": 78
+   },
+   {
+    "label": "D12",
+    "title": "D12 - Personal Super",
+    "row": 80,
+    "lines": [
+     {
+      "row": 80,
+      "desc": "Personal Concessional Contributions"
+     }
+    ],
+    "total_row": 81
+   },
+   {
+    "label": "D13",
+    "title": "D13 - Project Pool",
+    "row": 83,
+    "lines": [],
+    "total_row": 84
+   },
+   {
+    "label": "D14",
+    "title": "D14 - Forestry",
+    "row": 86,
+    "lines": [],
+    "total_row": 87
+   },
+   {
+    "label": "D15",
+    "title": "D15 - Other deductions incl Insurance",
+    "row": 89,
+    "lines": [
+     {
+      "row": 90,
+      "desc": "Income Protection Insurance"
+     }
+    ],
+    "total_row": 95
+   }
+  ],
+  "rental": [
+   {
+    "row": 6,
+    "desc": "Income",
+    "control": false
+   },
+   {
+    "row": 7,
+    "desc": "Rental Income",
+    "control": false
+   },
+   {
+    "row": 8,
+    "desc": "Other Income",
+    "control": false
+   },
+   {
+    "row": 10,
+    "desc": "Total Income",
+    "control": false
+   },
+   {
+    "row": 11,
+    "desc": "Less:",
+    "control": false
+   },
+   {
+    "row": 12,
+    "desc": "Expenses",
+    "control": false
+   },
+   {
+    "row": 13,
+    "desc": "Advertising & Marketing",
+    "control": false
+   },
+   {
+    "row": 14,
+    "desc": "Body Corporate Fees (Strata Levies)",
+    "control": false
+   },
+   {
+    "row": 15,
+    "desc": "Borrowing Costs",
+    "control": false
+   },
+   {
+    "row": 16,
+    "desc": "Cleaning",
+    "control": false
+   },
+   {
+    "row": 17,
+    "desc": "Council Rates",
+    "control": false
+   },
+   {
+    "row": 18,
+    "desc": "Capital Allowances/Depreciation on Plant - Tax Dep. Report",
+    "control": false
+   },
+   {
+    "row": 19,
+    "desc": "Capital Allowances/Depreciation on Plant - Per XPM",
+    "control": false
+   },
+   {
+    "row": 20,
+    "desc": "Gardening/Lawn Mowing",
+    "control": false
+   },
+   {
+    "row": 21,
+    "desc": "Insurance",
+    "control": false
+   },
+   {
+    "row": 22,
+    "desc": "Interest on Loan 1 - XXX Loan Acct***",
+    "control": false
+   },
+   {
+    "row": 23,
+    "desc": "Interest on Loan 2 - XXX Loan Acct***",
+    "control": false
+   },
+   {
+    "row": 24,
+    "desc": "Land Tax",
+    "control": false
+   },
+   {
+    "row": 25,
+    "desc": "Legal Fees (Debt Collection)",
+    "control": false
+   },
+   {
+    "row": 26,
+    "desc": "Pest Control",
+    "control": false
+   },
+   {
+    "row": 27,
+    "desc": "Property Agent Commission/Management Fees",
+    "control": false
+   },
+   {
+    "row": 28,
+    "desc": "Repairs & Maintenance - General",
+    "control": false
+   },
+   {
+    "row": 29,
+    "desc": "Repairs & Maintenance - Electrical",
+    "control": false
+   },
+   {
+    "row": 30,
+    "desc": "Repairs & Maintenance - Locksmith",
+    "control": false
+   },
+   {
+    "row": 31,
+    "desc": "Repairs & Maintenance - Plumbing",
+    "control": false
+   },
+   {
+    "row": 32,
+    "desc": "Repairs & Maintenance - Bathroom",
+    "control": false
+   },
+   {
+    "row": 33,
+    "desc": "Repairs & Maintenance - Smoke Alarms",
+    "control": false
+   },
+   {
+    "row": 34,
+    "desc": "Capital Works Deduction/Special Building w/off Allowance - Tax Dep. Report",
+    "control": false
+   },
+   {
+    "row": 35,
+    "desc": "Capital Works Deduction/Special Building w/off Allowance - XPM",
+    "control": false
+   },
+   {
+    "row": 36,
+    "desc": "Stationery, Tel & Postages",
+    "control": false
+   },
+   {
+    "row": 37,
+    "desc": "Travel Expenses (Only deductible if client is running a business)",
+    "control": false
+   },
+   {
+    "row": 38,
+    "desc": "Water Charges",
+    "control": false
+   },
+   {
+    "row": 39,
+    "desc": "Sundries",
+    "control": false
+   },
+   {
+    "row": 40,
+    "desc": "- Bank Charges",
+    "control": false
+   },
+   {
+    "row": 41,
+    "desc": "- Pest Inspection Fees",
+    "control": false
+   },
+   {
+    "row": 42,
+    "desc": "- Annual Package Fees",
+    "control": false
+   },
+   {
+    "row": 43,
+    "desc": "- Letting Fees",
+    "control": false
+   },
+   {
+    "row": 44,
+    "desc": "- Lease Renewal Fees",
+    "control": false
+   },
+   {
+    "row": 45,
+    "desc": "- Lease Preparation Fees",
+    "control": false
+   },
+   {
+    "row": 46,
+    "desc": "- GST on Fees",
+    "control": false
+   },
+   {
+    "row": 47,
+    "desc": "- Admin Fees",
+    "control": false
+   },
+   {
+    "row": 48,
+    "desc": "- EOFY Report",
+    "control": false
+   },
+   {
+    "row": 49,
+    "desc": "- Sundry Fees",
+    "control": false
+   },
+   {
+    "row": 50,
+    "desc": "Total Expenses",
+    "control": false
+   },
+   {
+    "row": 51,
+    "desc": "(+)/(-) Adjustment",
+    "control": false
+   },
+   {
+    "row": 52,
+    "desc": "Net Rent per Tax Return",
+    "control": false
+   },
+   {
+    "row": 53,
+    "desc": "Low value pool (Label D6)",
+    "control": false
+   },
+   {
+    "row": 54,
+    "desc": "Net Rent after Low Value Pool",
+    "control": false
+   },
+   {
+    "row": 55,
+    "desc": "XXX (50%)",
+    "control": false
+   },
+   {
+    "row": 56,
+    "desc": "XXX (50%)",
+    "control": true
+   }
+  ],
+  "query_rows": [
+   8,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33
+  ],
+  "review_rows": [
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17
+  ]
+ },
+ "external_link_count": 25
+}
