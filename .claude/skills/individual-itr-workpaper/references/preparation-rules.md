@@ -10,12 +10,20 @@ Everything here was learned on a real client run (De Celis FY2026). Ignore at yo
 - Filed in FYI under Client > Work Papers > {year} category, linked to the entity (both spouses on
   a joint file) and the annual compliance job. Upload with `fyi_get_upload_url` + POST of the raw
   bytes, content type `application/vnd.ms-excel.sheet.macroEnabled.12`. Confirm with the user
-  before the upload — it writes to production — and file again after a Phase E rebuild.
+  before the upload — it writes to production — and file again after a Phase E rebuild. Where the
+  session cannot reach the upload host, `fyi_file_document` + `file_base64` carries files under
+  ~50 KB; anything larger goes to the user to file, never silently skipped.
 - The spec is filed beside it as `{Y} ITR Workpaper Spec - First Last.json` (content type
   `application/json`). It is how the next run picks the job up where this one left off; a workpaper
   filed without its spec costs the next session a reconstruction from the workbook.
 - A document the client emails is not a source until it is in FYI — file it, then cite the FYI id.
   A figure resting only on what the client wrote in an email is recorded as that, in the remark.
+  Where the assertion *is* the evidence (the client confirming a policy or an account does not
+  exist), file a PDF of the email itself so the figure has something to link to, and say in the
+  remark that it rests on the client's statement. Check first whether the filing rule has already
+  filed the email and its attachments — do not file a second copy.
+- Email attachments filed automatically keep the sender's file name. Rename to house convention
+  before citing them.
 - Client name replaces the "1" placeholder on Summary and Deductions tabs (C3 / B3) and in the
   two sheet names.
 - FYI stable document URL: `https://go.fyi.app/search/0/{entity_id}/0/documents/{doc_uuid}/preview`

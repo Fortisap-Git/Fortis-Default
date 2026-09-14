@@ -221,6 +221,12 @@ recalculates on open (`fullCalcOnLoad` is set) and the tax-table cells are confi
    - `fyi_get_upload_url`, then POST the raw bytes with content type
      `application/vnd.ms-excel.sheet.macroEnabled.12`. `fyi_file_document` with `file_base64` is
      only for files under ~50 KB — a workpaper never is.
+   - **If the POST cannot leave the session** (a sandboxed or proxied session may refuse the upload
+     host outright: a 403 on CONNECT, not a bad URL — re-minting the URL will not help), say so
+     rather than pretending it filed. Small companion files (a query-email PDF, a client's emailed
+     receipt) still go up through `fyi_file_document` with `file_base64`; the workpaper itself is
+     too large for that, so hand it to the user to drop into FYI and name the cabinet, categories
+     and links they should set.
    - Rebuilt in Phase E after review fixes? File that version, so FYI holds the reviewed file and
      not the pre-review one.
    - **File `spec.json` beside it** as `{Y} ITR Workpaper Spec - First Last.json`, same cabinet and
