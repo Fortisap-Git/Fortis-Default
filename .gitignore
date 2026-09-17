@@ -1,0 +1,10 @@
+# Client working papers and source documents.
+#
+# Deliberately NOT tracked. This directory holds client tax working papers and
+# the source documents they are built from: ATO pre-filling reports, notices of
+# assessment, tax return summaries and client correspondence. Those contain tax
+# file numbers, dates of birth, residential addresses and income details.
+#
+# Client work belongs in FYI and XPM, which are access-controlled. It must not be
+# pushed to a code repository. Keep it out of git.
+work/
