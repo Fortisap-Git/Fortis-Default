@@ -1,0 +1,41 @@
+{
+  "_comment": "Illustrative inputs for 60 Wilga Street, Wacol QLD (Kateryna Vakulenko, FYI entity 214613933). Every figure is sourced: FYI depreciation schedule (construction $437,824, Div 40 $68,005, Div 43 $368,319 at $9,208 pa, settled 22 Mar 2023), FYI rates notice (land valuation $250,000 at 1 Jul 2024), FY25 ITR (taxable income ~$190k), client email 16 Sep 2026 (MV $1.475m, land and build $862,500, loans and rates, $79k broker costs). Acquisition costs (QLD duty on the land, legal) are NOT on file and are left out on purpose.",
+  "property": {
+    "name": "60 Wilga Street, Wacol QLD 4076 (5-room rooming house)",
+    "state": "QLD",
+    "market_value": 1475000,
+    "acquired": "2023-03-22",
+    "transfer_date": "2026-12-01",
+    "cost_base": {
+      "land": 424676,
+      "construction": 437824,
+      "less_depreciating_assets": 68005
+    },
+    "div43_claimed_to_date": 34000,
+    "land_value_unimproved": 250000,
+    "rooming_or_boarding_house": true
+  },
+  "owner": {
+    "type": "individual",
+    "other_taxable_income": 190000,
+    "other_land_in_state": 0,
+    "foreign_person": false
+  },
+  "target": {
+    "entity": "company",
+    "foreign": false,
+    "other_land_in_state": 0
+  },
+  "finance": {
+    "current_loan": 944000,
+    "current_rate": 0.0834,
+    "new_loan": 1032500,
+    "new_rate": 0.0694,
+    "transfer_costs_other": 79000,
+    "setup_cost": 3500,
+    "annual_extra_compliance": 4000
+  },
+  "assumptions": {
+    "cpi_uplift_to_transfer": 0.10
+  }
+}
