@@ -23,7 +23,7 @@ Katya's broker says the loan (about $944,000 with WLTH) would roll to about 8.34
 
 Two facts the first drafts missed: the property is in **Queensland**, and the file already held enough to build the cost base.
 
-Not on file: the settlement statement and duty receipt from the March 2023 land purchase (element 2 costs), a formal current valuation, and the broker's written terms.
+Not on file: the settlement statement and duty receipt from the June 2022 land purchase (element 2 costs), a formal current valuation, and the broker's written terms.
 
 ## 3. Fact base
 
@@ -67,7 +67,7 @@ Post 1 July 2027 sensitivity: if the transfer happened after that date the gain 
 - **Company holding the rooming house**: 30% on net rent (passive, fails the base rate entity test); losses trapped; no discount or indexation on the eventual sale, so a later sale from the company costs more than from her own name; any of the extra $88,500 the company borrows above the $944,000 that reaches Katya personally is a Div 7A loan at 8.77%.
 - **Discretionary trust**: from 1 July 2028 the announced 30% minimum tax at trustee level; QLD trustee threshold $350,000 so land tax starts once the land value grows; no rollover into a trust at all.
 - **Unit trust**: excluded from the trust minimum tax, but the same CGT, duty and lending profile, and losses trapped.
-- **Negative gearing**: the property is grandfathered in Katya's hands (acquired 2023). A new entity acquiring it in 2026 is an acquisition after Budget night, so any future net rental loss in the entity would be quarantined from 1 July 2027.
+- **Negative gearing**: the property is grandfathered in Katya's hands (land acquired 2022, first rented 2023). A new entity acquiring it in 2026 is an acquisition after Budget night, so any future net rental loss in the entity would be quarantined from 1 July 2027.
 - **GST**: a furnished five room rooming house let by the room through an agent may be commercial residential premises under GSTR 2012/6. With gross accommodation income around $99,000 the registration threshold is exceeded, and a transfer of commercial residential premises is a taxable supply unless a going concern. Katya's ABN was cancelled in June 2026. This needs a cited answer from tax-guru before the next return, regardless of the restructure.
 - **Depreciation**: the plant's written down value is about $26,637 ($68,005 less $41,368 claimed). If the contract allocates the plant at about that figure there is no balancing adjustment. The transferee could not claim Div 40 on the second-hand plant (s 40-27); Div 43 of $9,208 a year continues.
 - **Lending**: the rate gap (8.34% own name against 6.94% in an entity) is the whole case for the restructure and it has not been confirmed in writing; rooming houses are often priced as commercial security whoever the borrower is, so the same product may be available to Katya directly or a different lender may price her own name better.
