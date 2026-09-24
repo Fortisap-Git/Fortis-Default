@@ -21,7 +21,10 @@ A transfer of an asset from an individual to a company or trust they control is 
 Then the reductions:
 
 - **Div 43 capital works deducted or deductible** reduce the cost base and reduced cost base for assets acquired after 7.30pm on 13 May 1997 (s 110-45(2)). Sum every year's claim from the first rented date to the transfer date, including the part year. The depreciation schedule gives the annual figure (eg $9,208 a year on a $368,319 Div 43 base at 2.5 per cent). "Deductible" means amounts that could have been claimed even if they were not (TD 2005/47), so a client who skipped claims does not escape the reduction.
-- **Div 40 depreciating assets are separate CGT assets**, not part of the property's cost base. Take their cost out of the property cost base. On transfer each plant item has a balancing adjustment event (s 40-295): termination value (its share of the market value, or the agreed allocation) less adjustable value is assessable or deductible income, not a capital gain. For second-hand residential plant the 2017 rules deny the transferee entity any further Div 40 deductions on those existing items (s 40-27), so the new entity loses that deduction stream.
+- **Div 40 plant: the Fortis house method keeps it in the cost base.** Leave the plant inside the construction cost and deduct the Div 40 depreciation already claimed to the transfer date, year by year from the depreciation schedule and the returns, including the part year. The cost base then carries the plant at its written down value. This is how Rehman wants client figures presented, and it keeps the client email to one cost base.
+  - Technically each Div 40 item is a separate asset with its own balancing adjustment event (s 40-295): termination value less adjustable value is income or a deduction, not a capital gain. The workpaper still shows the plant split and the balancing adjustment line. If the contract allocates the plant at about its written down value there is no adjustment, and the two methods give the same total.
+  - If a reviewer or the ATO prefers the strict split, run the model with `"plant_method": "separate"`, which strips the full plant cost out and leaves the adjustment to be shown per item.
+  - For second-hand residential plant the transferee entity cannot claim Div 40 on those existing items (s 40-27), so the new entity loses that deduction stream.
 - **GST**: exclude input tax credits claimed from the cost base.
 
 Reduced cost base (for a loss) excludes element 3 and Div 43 amounts.
@@ -35,7 +38,7 @@ Capital gain = capital proceeds (market value) less cost base.
 - Complying super fund: one third discount.
 - Non-resident individuals: no discount for the period of non-residency after 8 May 2012.
 
-Tax: an individual's net gain sits on top of other taxable income and is taxed marginally, plus Medicare. A gain of $357,000 on top of $190,000 of other income is taxed at 47 per cent almost throughout. Model with `restructure_model.py`, which stacks it correctly.
+Tax: an individual's net gain sits on top of other taxable income and is taxed marginally, plus Medicare. A gain of $336,000 on top of $190,000 of other income is taxed at 47 per cent almost throughout. Model with `restructure_model.py`, which stacks it correctly.
 
 ## 4. Post 1 July 2027 (announced)
 
@@ -66,24 +69,24 @@ For each Div 40 item on the schedule: termination value less adjustable value. O
 Market value (s 116-30)                                      1,475,000
 Cost base
   Element 1  land                                              424,676
-  Element 1  construction (builder's contract and fit-out)     437,824
-  Element 2  duty, legal, valuation on acquisition          [settlement statement]
+  Element 1  construction incl. Div 40 plant                   437,824
+  Element 2  duty and legal on land purchase (estimate)         15,289
   Element 4  capital improvements since                     [invoices]
-  Less Div 40 plant (separate assets)                          (68,005)
-  Less Div 43 deducted or deductible to transfer date          (34,000)
-Cost base                                                      760,495
-Capital gain                                                   714,505
-Discount 50% (held > 12 months, individual, pre 1 July 2027)  (357,252)
-Net capital gain                                               357,252
-Tax at marginal rates plus Medicare on top of $190k income     167,909
-Div 40 balancing adjustments                                  [per item]
+  Less Div 43 deducted or deductible to transfer date          (33,628)
+  Less Div 40 depreciation claimed to transfer date            (41,368)
+Cost base                                                      802,793
+Capital gain                                                   672,207
+Discount 50% (held > 12 months, individual, pre 1 July 2027)  (336,104)
+Net capital gain                                               336,104
+Tax at marginal rates plus Medicare on top of $190k income     157,969
+Div 40 balancing adjustment (workpaper, per item)                  nil if plant allocated at WDV
 ```
 
 Every line carries the FYI document it came from. Where an element is missing, name the document that would supply it and give the figure as a range.
 
 ## 8. Common errors this file exists to stop
 
-- Using the client's "purchase price" without splitting out Div 40 plant and without the Div 43 reduction.
+- Using the client's "purchase price" without deducting the Div 40 and Div 43 already claimed.
 - Forgetting that a transfer to a family trust has no rollover.
 - Offering Subdiv 122-A without pointing out the permanent loss of the discount and indexation.
 - Assuming small business concessions on a passive rental.

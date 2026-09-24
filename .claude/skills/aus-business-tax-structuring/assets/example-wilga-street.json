@@ -1,17 +1,20 @@
 {
-  "_comment": "Illustrative inputs for 60 Wilga Street, Wacol QLD (Kateryna Vakulenko, FYI entity 214613933). Every figure is sourced: FYI depreciation schedule (construction $437,824, Div 40 $68,005, Div 43 $368,319 at $9,208 pa, settled 22 Mar 2023), FYI rates notice (land valuation $250,000 at 1 Jul 2024), FY25 ITR (taxable income ~$190k), client email 16 Sep 2026 (MV $1.475m, land and build $862,500, loans and rates, $79k broker costs). Acquisition costs (QLD duty on the land, legal) are NOT on file and are left out on purpose.",
+  "_comment": "Illustrative inputs for 60 Wilga Street, Wacol QLD (Kateryna Vakulenko, FYI entity 214613933). Sources: FYI depreciation schedule (construction $437,824 including Div 40 plant $68,005, Div 43 $9,208 pa, settled 22 Mar 2023), FYI rates notice (land valuation $250,000 at 1 Jul 2024), FY25 ITR (taxable income ~$190k), client email 16 Sep 2026 (MV $1.475m, land and build $862,500, loans and rates, $79k broker costs). Fortis house method: plant stays in the cost base and the Div 40 already claimed is deducted (FY23 $12,765, FY24 $11,165, FY25 $8,591, FY26 $6,848, FY27 to date). Div 43 claimed: FY23 $2,548, $9,208 a year after, FY27 to date. Acquisition costs are an ESTIMATE (QLD duty on the land plus $2,000 legals) until the settlement statement is on file. QLD transfer duty on the transfer is treated as inside the broker's $79k.",
   "property": {
     "name": "60 Wilga Street, Wacol QLD 4076 (5-room rooming house)",
     "state": "QLD",
     "market_value": 1475000,
-    "acquired": "2023-03-22",
+    "acquired": "2022-06-16",
     "transfer_date": "2026-12-01",
     "cost_base": {
       "land": 424676,
       "construction": 437824,
+      "acquisition_costs": 15289,
+      "plant_method": "in_cost_base",
+      "div40_claimed_to_date": 41368,
       "less_depreciating_assets": 68005
     },
-    "div43_claimed_to_date": 34000,
+    "div43_claimed_to_date": 33628,
     "land_value_unimproved": 250000,
     "rooming_or_boarding_house": true
   },
@@ -33,9 +36,10 @@
     "new_rate": 0.0694,
     "transfer_costs_other": 79000,
     "setup_cost": 3500,
-    "annual_extra_compliance": 4000
+    "annual_extra_compliance": 4000,
+    "duty_included_in_transfer_costs": true
   },
   "assumptions": {
-    "cpi_uplift_to_transfer": 0.10
+    "cpi_uplift_to_transfer": 0.1
   }
 }

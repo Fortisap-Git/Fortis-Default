@@ -215,9 +215,19 @@ def cgt(inputs):
     }
     missing = [k for k, v in elements.items() if v is None]
     gross = sum(v for v in elements.values() if v)
-    less_plant = cb.get("less_depreciating_assets", 0) or 0   # Div 40 assets are separate assets, not part of the property cost base
+    # Plant treatment. Fortis house method ("in_cost_base"): the Div 40 plant stays inside the construction cost
+    # and only the Div 40 depreciation already claimed is deducted, so the cost base reflects the plant's written
+    # down value. Alternative ("separate"): strip the plant cost out entirely and run each item's balancing
+    # adjustment (s 40-285) outside the CGT calculation. Either way the workpaper shows the plant split.
+    plant_method = cb.get("plant_method", "in_cost_base")
+    if plant_method == "separate":
+        less_plant = cb.get("less_depreciating_assets", 0) or 0
+        div40 = 0
+    else:
+        less_plant = 0
+        div40 = cb.get("div40_claimed_to_date", 0) or 0
     div43 = p.get("div43_claimed_to_date", 0) or 0            # s 110-45(2): reduce cost base by Div 43 deducted or deductible
-    cost_base = gross - less_plant - div43
+    cost_base = gross - less_plant - div43 - div40
     mv = p["market_value"]
     gain = mv - cost_base
     held_days = (parse_date(p["transfer_date"]) - parse_date(p["acquired"])).days
@@ -244,7 +254,9 @@ def cgt(inputs):
         "elements": elements,
         "missing_elements": missing,
         "gross_cost": gross,
+        "plant_method": plant_method,
         "less_depreciating_assets": less_plant,
+        "less_div40_claimed": div40,
         "less_div43_claimed": div43,
         "cost_base": cost_base,
         "capital_gain": gain,
@@ -304,7 +316,10 @@ def run(inputs):
         out["land_tax"] = {"land_value": lv, "current_owner_pa": cur_lt, "target_owner_pa": new_lt,
                            "extra_pa": round(extra_lt, 2), "note": new_note}
     f = inputs.get("finance", {})
-    upfront = (out["cgt"]["tax"] or 0) + (d or 0) + f.get("transfer_costs_other", 0) + f.get("setup_cost", 0)
+    duty_inside = f.get("duty_included_in_transfer_costs", False)
+    out["duty"]["included_in_transfer_costs"] = duty_inside
+    upfront = ((out["cgt"]["tax"] or 0) + (0 if duty_inside else (d or 0))
+               + f.get("transfer_costs_other", 0) + f.get("setup_cost", 0))
     out["finance"] = finance(inputs, upfront, extra_lt)
     out["flags"] = flags(inputs, out)
     return out
@@ -355,7 +370,10 @@ def report(out, inputs):
     lines.append(f"| Market value (deemed capital proceeds, s 116-30) | {money(c['market_value'])} |")
     for k, v in c["elements"].items():
         lines.append(f"| {k} | {money(v)} |")
-    lines.append(f"| Less Div 40 depreciating assets (separate assets) | ({money(c['less_depreciating_assets'])}) |")
+    if c["plant_method"] == "separate":
+        lines.append(f"| Less Div 40 depreciating assets (separate assets) | ({money(c['less_depreciating_assets'])}) |")
+    else:
+        lines.append(f"| Less Div 40 depreciation claimed to transfer date (plant kept in cost base) | ({money(c['less_div40_claimed'])}) |")
     lines.append(f"| Less Div 43 claimed to transfer date (s 110-45(2)) | ({money(c['less_div43_claimed'])}) |")
     lines.append(f"| **Cost base** | **{money(c['cost_base'])}** |")
     lines.append(f"| **Capital gain** | **{money(c['capital_gain'])}** |")
@@ -368,7 +386,8 @@ def report(out, inputs):
                  f"{money(s['minimum_tax_30pc'])}. {s['note']}\n")
     lines.append("## 2. Transfer duty\n")
     d = out["duty"]
-    lines.append(f"Duty in {out['state']}: {money(d['amount'])}. {d['note']}\n")
+    inside = " Treated as included in the broker's transfer costs, so not added again in the upfront total." if d.get("included_in_transfer_costs") else ""
+    lines.append(f"Duty in {out['state']}: {money(d['amount'])}. {(d['note'] + inside).strip()}\n")
     lines.append("## 3. Land tax, current owner vs target owner\n")
     lt = out["land_tax"]
     if "land_value" in lt:
@@ -389,7 +408,8 @@ def report(out, inputs):
     lines.append(f"| Less extra land tax per year | ({money(f['extra_land_tax_pa'])}) |")
     lines.append(f"| Less extra compliance per year | ({money(f['extra_compliance_pa'])}) |")
     lines.append(f"| **Net annual benefit** | **{money(f['net_annual_benefit'])}** |")
-    lines.append(f"| Upfront cost (CGT + duty + transfer costs + setup) | {money(f['upfront_total'])} |")
+    lbl = "CGT + transfer costs incl. duty + setup" if out["duty"].get("included_in_transfer_costs") else "CGT + duty + transfer costs + setup"
+    lines.append(f"| Upfront cost ({lbl}) | {money(f['upfront_total'])} |")
     pb = f["payback_years"]
     lines.append(f"| **Payback** | **{'never (net annual benefit is nil or negative)' if pb is None else str(pb) + ' years'}** |")
     lines.append("\n## 5. Flags\n")
