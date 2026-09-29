@@ -1,6 +1,6 @@
 # Click paths and logins
 
-Click-level instructions for every runbook step that touches a system. It is the same content as the "How, click by click" blocks in the [Fortis Client Onboarding Runbook](https://claude.ai/artifact/3acCndTsXsiRpbQbhRWzQg), which also carries the annotated screenshots. Checked on 29 September 2026 against the firm’s procedure documents (XPM - Adding an Entity, BGL - How to add an SMSF, Creating New Entities, ASIC & NI - Updating Details, ASIC - Business Name Search, Client Address Update Checklist) and the vendors’ help pages.
+Click-level instructions for every runbook step that touches a system. It is the same content as the "How, click by click" blocks in the [Fortis Client Onboarding Runbook](https://claude.ai/artifact/3acCndTsXsiRpbQbhRWzQg), which also carries the annotated screenshots. Checked on 29 September 2026 against the FAP Client Onboarding Guide 300926, the firm’s procedure documents (XPM - Adding an Entity, BGL - How to add an SMSF, Creating New Entities, ASIC & NI - Updating Details, ASIC - Business Name Search, Client Address Update Checklist) and the vendors’ help pages.
 
 How to use it: quote the path, the login and the owner when you hand a task to a person (SKILL.md steps 4, 8 and 9), or when someone asks how to do an onboarding step. Don’t invent a path that isn’t here; say it isn’t captured yet and point to the runbook step.
 
@@ -292,7 +292,7 @@ Passwords never go into an output, a chat or an email. Everyone uses their own l
 1. *(Documents list)* Tick two or more documents, then **Staple** in the toolbar.
 2. *(Documents list)* Click the staple icon on a document to see just that set; the yellow **Clear Staple Filter** brings back the full list.
 
-## Phase 4: Welcome pack
+## Phase 4: Information request and e-signs
 
 ### 4.1 Prepare a 362 for every company (Admin)
 
@@ -321,35 +321,38 @@ Passwords never go into an output, a chat or an email. Everyone uses their own l
 
 1. *(FYI, Work Papers)* Open the fund’s last annual return and find its electronic service address alias. BGLSF360 means SuperStream runs through BGL, usually the previous firm’s BGL.
 2. *(manager)* Tell the manager at once so the previous firm transfers the fund to FAP’s BGL before deleting it.
-3. *(financial statements)* Property in the assets plus a borrowing: add the bare trust question to the welcome email.
+3. *(financial statements)* Property in the assets plus a borrowing: add the bare trust question to the information request (4.3).
 - Nothing in the return? Check the fund’s details once it is on the ATO portal (6.2).
 
-### 4.3 Build the welcome email (Admin, Partner)
+### 4.3 Build the information request (Admin, Partner)
 
-**Create the email from the FYI template**. FYI Docs, your own FYI login (Microsoft 365).
+**Create the information request in FYI**. FYI Docs, your own FYI login (Microsoft 365).
 
 1. *(client file, tab)* Open the main entity, **Documents**.
 2. *(Documents list)* Tick the attachments: the 362(s) and CU form(s). Up to 10 attachments.
 3. *(toolbar)* **Share** ▾, **All documents**, **Share** *(label to confirm)* (the firm’s guide; FYI’s help calls this Send Attachments: Email). Or green **+**, **Email**.
 4. *(Create Email drawer)* Check **Recipients**: the client, plus admin@fortisap.com.au.
-5. *(Create Email drawer)* **Template**: type `Welcome` and pick the one that matches.
+5. *(Create Email drawer)* **Template**: type to search and pick the template for this email *(label to confirm)*. The **Welcome** template now goes with the welcome email at the end (6.7).
 6. *(Create Email drawer)* **Name** becomes the subject line. **Cabinet** Correspondence, **Year** 2027, category **Engagement letter**.
 7. *(Create Email drawer)* **Save or Send**: **Draft in Outlook**, then **Create**.
-8. *(Outlook)* Open the draft in the **FYI - Drafts** folder. Tidy the formatting, delete what doesn’t apply, attach **How to Appoint FAP as your Tax Agent** (FYI, Y2K Procedures and Policies, Permanent), copy admin@fortisap.com.au. The partner sends it.
+8. *(Outlook)* Open the draft in the **FYI - Drafts** folder. Tidy the formatting, delete what doesn’t apply, attach **How to Appoint FAP as your Tax Agent** (FYI, Y2K Procedures and Policies, Permanent). Send it from admin@fortisap.com.au, or the partner sends it with admin copied, so the follow-ups can be set.
 - Draft in Outlook marks the email as Sent in FYI straight away and it can’t come back to FYI. If the partner needs to review it in FYI, choose **Draft in FYI** instead.
 - Never move or rename the FYI - Drafts folder.
+- The guide calls this the response to the initial information gathering email (Part 4 step 3, Part 5 step 5).
 
-### 4.4 Send the e-signs with the email (Admin)
+### 4.4 Send the e-signs (Admin)
 
 **Send for e-signing from FYI**. FuseSign, sent from FYI with your FYI login.
 
-1. *(FYI, Documents list)* Tick the PDF(s) for one client (PDFs only).
+1. *(FYI, Documents list)* Once the information request (4.3) has gone and the partner has confirmed, tick the PDF(s) for one client (PDFs only).
 2. *(toolbar)* Click **Signature**, or right-click the document and choose **Signature**. It isn’t under Share or Delivery.
 3. *(Send for Signature drawer)* **Service**: FuseSign. **Recipients**: the client contact is the signer; add others as needed.
 4. *(Send for Signature drawer)* **Service Status**: **Send**. Choose **Draft** to finish the bundle in FuseSign, for example to set the signing order.
 5. *(check)* The document shows **Pending Client Signature** (list view **Workflow - Pend. Signature**).
 - Signers get an email link and then an SMS code. Both come from the XPM contact, so fix the email and mobile in XPM first.
-- The signed copy files itself back into FYI in the same cabinet and categories; the original stays.
+- The signed copy files itself back into FYI in the same cabinet and categories, and a copy goes to the admin mailbox; the original stays.
+- The signing name is the name on the recipient’s email, and the address is picked from the XPM contact: check the right one is chosen. You can add extra signatories and send reminders for unsigned documents.
+- When a CU form comes back signed, update XPM from it, then ask the partner whether the client can go on the ATO portal (6.2).
 
 ### 4.5 Diary the follow-ups (Admin)
 
@@ -372,7 +375,7 @@ Passwords never go into an output, a chat or an email. Everyone uses their own l
 5. *(list)* Tick the row, **Actions**, **Lodge Selected** (or open the form, **Lodge**).
 6. *(status)* Signed Successfully, then Your Message is Pending, Transmitted, Lodged.
 7. *(top bar)* **MENU**, **Notification Centre**: the accepted validation, **Expand**, open the Validation Report Accepted PDF. Save it with the 362 in FYI.
-- ASIC records the lodgement date as the signing date, so lodge promptly.
+- ASIC records the lodgement date as the signing date, and the ASIC to NowInfinity sync can be slow, so lodge each signed 362 as soon as it comes in.
 - NowInfinity then lodges an RA61 and RA71 and the company appears on the Corporate Messenger Companies list. Not there after 15 minutes: **Company List Refresh**.
 
 ### 5.2 Save the extract and debt report (Admin)
@@ -382,6 +385,7 @@ Passwords never go into an output, a chat or an email. Everyone uses their own l
 1. *(start)* Enter the ACN and choose **RA63 Request for individual company debt report**; submit *(label to confirm)*.
 2. *(Inbox)* The report arrives in the portal **Inbox**. Download it as `2027 - ASIC Debt Report DDMMYYYY - Company` and file it to Permanent, 2027, Entity Set Up.
 - A company with nothing owing is left off the report. Payments take 24 to 48 hours to show.
+- The company owes ASIC? Once the debt has synced from ASIC to NowInfinity, generate the ASIC invoice from NowInfinity (menu not captured yet) and attach it to the welcome email (6.7).
 
 **Current company extract**. ASIC Connect, no login to search.
 
@@ -399,7 +403,7 @@ Passwords never go into an output, a chat or an email. Everyone uses their own l
 1. *(top bar)* **MENU**, Corporate Messenger **Companies** *(label to confirm)*, click the company row, **See Full Profile**.
 2. *(profile)* Read the officers, shareholders and addresses. **Actions**, **Force data sync** refreshes it from ASIC.
 3. *(XPM)* **Edit details** for addresses; **Relationships** for officeholders and shareholders (3.7).
-4. *(list)* Note every address that differs from what the client told us for the ATO summary email (6.7).
+4. *(list)* Note every address that differs from what the client told us for the welcome email (6.7).
 
 ### 5.4 Update the registers (Admin)
 
@@ -411,7 +415,7 @@ Passwords never go into an output, a chat or an email. Everyone uses their own l
 **Trusts and the ASIC Register**. NowInfinity, your own NowInfinity login.
 
 1. *(NowInfinity)* Trust register: the menu name is not confirmed yet (see the runbook’s Screenshots to capture list).
-2. *(ASIC Register)* Add the company, any amount owing and the due dates to the firm’s ASIC Register document (where that document lives is still to confirm).
+2. *(ASIC Register)* Add the company, any amount owing and the due dates to the firm’s ASIC Register document. Ask admin for the link if you don’t have it.
 
 ## Phase 6: ATO and ABR
 
@@ -447,6 +451,7 @@ Passwords never go into an output, a chat or an email. Everyone uses their own l
 
 1. *(client)* Open the client, **Profile**, **Tax registrations**: note GST, PAYG withholding and PAYG instalments with their dates.
 2. *(client)* **Profile**, **Client details**: the mobile and email the ATO holds.
+3. *(SMSF)* Check the fund’s ESA in its details *(label to confirm)*. If it isn’t BGL, talk to the accountant about BGL issuing an updated ESA (7.3).
 
 **Update XPM**. XPM (Xero Practice Manager), your own Xero login.
 
@@ -481,16 +486,19 @@ Passwords never go into an output, a chat or an email. Everyone uses their own l
 3. *(amount owing)* **Payment options**: the payment reference (PRN), saved as PDF.
 4. *(Lodgments)* The last lodged return *(label to confirm)*, printed to PDF: `2025 - ITR Portal Copy - Entity` (CTR, TTR, PTR or SMSF AR to match).
 5. *(FYI)* Return copy to Work Papers, PBC. The summary and account statements aren’t in the filing map yet: confirm the cabinet with the manager.
+- The income tax and activity statement account PDFs are for our file only; they don’t go to the client.
 
-### 6.7 Send the ATO summary email (Admin, Manager)
+### 6.7 Send the welcome email (Admin, Manager)
 
-**Draft the ATO summary email**. FYI Docs, your own FYI login (Microsoft 365).
+**Draft the welcome email**. FYI Docs, your own FYI login (Microsoft 365).
 
-1. *(Documents list)* Tick the snapshot PDFs, the ASIC extract and the debt report.
+1. *(Documents list)* Tick the attachments: each company’s ASIC extract and debt report, any ASIC invoice, and any ATO payment plan or payment advice. Leave the account statements on file.
 2. *(toolbar)* **Share** ▾, the email option, as in 4.3.
-3. *(Create Email drawer)* **Template**: search for the ATO summary template *(label to confirm)*. **Name**, **Cabinet** Correspondence, 2027.
+3. *(Create Email drawer)* **Template**: type `Welcome` and pick the one that matches. **Name**, **Cabinet** Correspondence, 2027.
 4. *(Save or Send)* **Draft in Outlook** to finish in Outlook, or **Draft in FYI** if the accountant reviews it in FYI. **Create**.
-5. *(Outlook)* The accountant approves; send to the client if the partner said so, otherwise to the partner as a draft. Always copy admin.
+5. *(Outlook)* For each entity add a picture of the ATO portal summary and accounts summary, TFN redacted: save the page as PDF, redact the TFN, then snip the redacted PDF.
+6. *(Outlook)* The accountant approves; send to the client if the partner said so, otherwise to the partner as a draft. Always copy admin.
+- The guide calls this the welcome email (Part 4 step 9, Part 5 steps 16 and 17). It goes once every entity is on the ATO and ASIC portals and ID verification is final.
 
 ### 6.8 Check the portal against the proposal (Manager)
 
@@ -506,10 +514,10 @@ Passwords never go into an output, a chat or an email. Everyone uses their own l
 
 **Add the fund**. BGL Simple Fund 360, your own BGL login.
 
-1. *(before you start)* Open the fund and its members in XPM; you will copy from them.
+1. *(before you start)* Confirm with the partner or accountant that the fund is going into BGL. Open the fund and its members in XPM; you will copy from them.
 2. *(left rail HOME)* In **Search by Entity Label** type the fund name. Only if it isn’t there: **+ Add New Entity**.
 3. *(SMSF Setup)* **Entity Type** SMSF, **Select Badge** Fortis Badge, **SMSF Name** and **Entity Code**, **ABN** and **TFN**, **Are you entering opening balances?** No, **Date Formed** and **Financial Year**. Save *(label to confirm)*.
-4. *(SMSF Created)* Click **Enter SMSF Details**.
+4. *(SMSF Created)* Click **Enter SMSF Details**, or go back to **HOME** and search the new fund’s name to open its home page.
 5. *(fund page)* **FUND DETAILS**, the **SMSF address**, **Save changes**.
 6. *(later)* Once signed: **Trust Deed**, **Upload** for the deed and the member declarations. The auditor needs both.
 
@@ -538,6 +546,7 @@ Passwords never go into an output, a chat or an email. Everyone uses their own l
 1. *(left rail)* **CONNECT**, **SuperStream Dashboard**.
 2. *(dashboard)* **All Funds**, search the fund, tick it, **Register** at top left.
 3. *(pop-up)* John Kalachian as the accountant, validate. Diary a check for the next day.
+- The guide and the BGL procedure say **Register** is at the top right; the firm’s screenshot shows the blue **Register** button at the top left, next to **Change ESA**.
 
 **ESA letters**. BGL Simple Fund 360, your own BGL login.
 
@@ -545,7 +554,7 @@ Passwords never go into an output, a chat or an email. Everyone uses their own l
 2. *(Report Pack List)* **Download**: keep the Trustee Notification Letter, Employer Notification Letter and Super Standard Choice Form.
 3. *(FYI)* Name them `2027 - ESA Trustee Notification Letter - Fund` (Employer Notification Letter, Super Standard Choice Form likewise) and file them.
 4. *(email)* Send them on the same email chain as the set-up and ask the client to pass them to employers.
-- On the ATO portal, make sure BGL is the fund’s nominated SuperStream ESA. Where that setting sits is not confirmed yet.
+- On the ATO portal, make sure BGL is the fund’s nominated SuperStream ESA. The guide says it’s in the fund’s details on the portal *(label to confirm)*.
 
 ## Phase 8: Close-out
 
@@ -563,6 +572,7 @@ Passwords never go into an output, a chat or an email. Everyone uses their own l
 
 1. *(top bar)* **Reports**, then the **AML/CTF Report** among the saved reports *(label to confirm)*.
 2. *(report)* Run it and export it *(label to confirm)*, then update the register with new clients and any open CDD issues.
+- New set-ups count as new clients. Run the report regularly, not only at onboarding, so open CDD issues get closed.
 
 ### 8.3 File the structure chart (Admin)
 
