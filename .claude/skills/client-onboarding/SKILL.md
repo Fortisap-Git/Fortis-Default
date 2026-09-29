@@ -1,15 +1,15 @@
 ---
 name: "client-onboarding"
-description: "Onboards a new Fortis client (individual, company, trust, SMSF, partnership or group) step by step: brief, duplicate check, AML screening, ownership map, Ignition onboarding forms, XPM data sheet, proposal, welcome pack, ASIC, ATO and close-out."
+description: "Onboards a new Fortis client (individual, company, trust, SMSF, partnership or group) step by step: brief, duplicate check, AML screening, ownership map, Ignition onboarding forms, XPM data sheet, proposal, welcome pack, ASIC, ATO and close-out. Gives the owner, login and click-by-click path for the steps people do in XPM, FYI, Ignition, NowInfinity, BGL, ASIC and the ATO portal, and answers how-to questions about them."
 ---
 
 # Client Onboarding
 
 Brings a new client onto the Fortis books in the same order every time, with a stop at every point where a mistake is expensive. Claude does the looking-up, checking, maths and drafting; people do the verifying, signing and keying into systems Claude can't reach (XPM, ATO portal, ASIC, NowInfinity, BGL, FuseSign). Client information comes in through three Ignition onboarding forms, which Claude creates, sends on approval and reads back.
 
-The human version of this process is the **Fortis Client Onboarding Runbook** artifact: https://claude.ai/artifact/3acCndTsXsiRpbQbhRWzQg. Step numbers below (1.1, 2.4 ...) match it, so you can point staff to the exact step.
+The human version of this process is the **Fortis Client Onboarding Runbook** artifact: https://claude.ai/artifact/3acCndTsXsiRpbQbhRWzQg. Step numbers below (1.1, 2.4 ...) match it, so you can point staff to the exact step; a step links as `#s-3-3` (step 3.3) on the end of that URL. Each step has a "How, click by click" block: the login, every click and where it sits on screen, with annotated screenshots. The same clicks, without the pictures, are in `references/click-paths.md`.
 
-**Trigger for:** "onboard [client]", "new client", "new company coming on board", "set up [client] in XPM", "onboarding checklist for [client]", "what do we need from [new client]", a partner's meeting notes or a prospect's email with a request to get them set up.
+**Trigger for:** "onboard [client]", "new client", "new company coming on board", "set up [client] in XPM", "onboarding checklist for [client]", "what do we need from [new client]", a partner's meeting notes or a prospect's email with a request to get them set up, and "how do I [onboarding step] in XPM / FYI / NowInfinity / BGL / the ATO portal" (add a client in XPM, send the 362 for signing, lodge the 362, add a client on the portal).
 **Do not trigger for:** establishing a brand-new company, trust or SMSF (use `nowinfinity-setup`, then come back here for the onboarding); an existing client's annual pack (use `client-email-intake`); a single proposal (use `ignition-proposal-builder`).
 
 ## Hard rules (never broken, whatever the pressure)
@@ -23,6 +23,18 @@ The human version of this process is the **Fortis Client Onboarding Runbook** ar
 7. **Drafts only.** Proposals stop at draft, emails are Outlook drafts, nothing is lodged by Claude. The one client-facing send is the Ignition onboarding forms, and only when the approved plan lists them.
 8. **One plan, one "go".** Every write (FYI, Monday, Ignition, Outlook) is listed in the Onboarding Plan (step 4 below) and happens only after Rehman or the manager says go. Anything new that turns up later is raised, not done.
 9. House style for anything client-facing: Rehman's voice via `email-auto-drafter` and `humanizer`, "we" voice, flat numbered lists, Australian English, no em dashes.
+10. **Own logins only.** Name the system and whose login it needs, never the login itself: no password, username or myID detail in a plan, chat, email or file, even if someone pastes one. Everyone uses their own login; access to a system comes from the admin manager. Nobody logs in as the client. ATO and ABR portal work is Sydney staff only.
+
+## How-to questions
+
+When someone asks how to do one onboarding step, skip the workflow and answer from `references/click-paths.md`:
+
+1. The runbook step, who does it and the login it needs (system and whose login, per hard rule 10).
+2. The numbered clicks, each with where it sits on screen and the label in bold, as the file gives them.
+3. Any warning the file notes under the procedure (charges, expiry dates, "don't lodge").
+4. The link to the step in the runbook, which has the screenshots: `https://claude.ai/artifact/3acCndTsXsiRpbQbhRWzQg#s-3-3` for 3.3.
+
+Keep every *(label to confirm)* flag. If the path isn't in the file, say it isn't captured yet and give the runbook step; never guess at a menu.
 
 ## Workflow
 
@@ -59,7 +71,7 @@ This is preparation for the verifier, not the verification itself.
 **Registers** (WebFetch; record what you saw and the date):
 
 - ABN Lookup `https://abr.business.gov.au/ABN/View?abn=<11 digits>` or a name search: entity name, ABN status, entity type, GST registration, state and postcode, and the ACN for companies.
-- ASIC: company status and registration date where the free search is readable. Director and shareholder names come from the admin's draft 362 in the ASIC portal (runbook 4.1) or a paid extract, so list them as "to confirm" if unknown.
+- ASIC: company status and registration date where the free search is readable (ASIC Connect, or ASIC's new company search at `https://service.asic.gov.au/companysearch`, in beta). Director and shareholder names come from the admin's draft 362 in the ASIC Registered agent portal (runbook 4.1) or a paid extract, so list them as "to confirm" if unknown. Since 2 February 2026, extracts bought on the ASIC website no longer show officeholder addresses; addresses come from the client's forms or the NowInfinity company profile (runbook 5.3).
 - SMSFs: Super Fund Lookup `https://superfundlookup.gov.au` for regulation status and complying status.
 - Admin still saves the ABN Lookup and ASIC PDFs to FYI; say so in the plan.
 
@@ -97,7 +109,7 @@ One message, scannable:
    - Welcome email draft via `email-auto-drafter`
    - FYI filing of anything the client already sent, via `fyi-document-filer`
    - Follow-up reminders (optional Outlook calendar entries)
-6. **For people to do:** ID verification, the 362s, FuseSign, ASIC lodgement, ATO portal, BGL, each with its runbook step number.
+6. **For people to do:** one line per task, in order: owner, runbook step, system and whose login, then the short click path from "People tasks" in Reference, e.g. `Admin, Sydney staff · 6.2 · ATO Online services for agents, own myID · My practice › Client list › add client by TFN`. Usually ID verification, recording it in XPM, keying the data sheet into XPM, the 362s, FuseSign, ASIC lodgement, the ATO and ABR portals and BGL. The full numbered clicks go in the admin checklists (steps 8 and 9).
 
 ### 5. XPM data sheet (runbook 3.2 to 3.7)
 
@@ -109,6 +121,8 @@ XPM has no connector, so Claude writes exactly what admin types. Build it from t
 - **Missing:** every blank still needing the client after the forms, feeding the welcome email.
 
 Naming rules: people `SURNAME, First Name` (display) with first, middle and last exactly as ATO records; companies as ASIC; trusts `Trustee Pty Ltd ATF The Trust Name`; SMSFs `Trustee Pty Ltd ATF Fund Name`. A company that trades and is also a trustee gets two XPM entities. Trust or SMSF with a corporate trustee: note in the sheet "create as Company, add directors and shareholders, then switch Business Structure". Mobiles: strip spaces, replace a leading 0 or +61 with 61, check the result is 614 plus 8 digits.
+
+Add a fifth sheet, **How**, first in the workbook: the login line and the numbered XPM clicks for runbook 3.1 to 3.7 from `references/click-paths.md`, so admin keys in from one file.
 
 File it: `fyi-document-filer` rules, name `YYYY - XPM Data Sheet - <Group Name>`, Permanent cabinet `194015`, Year + Entity Set Up `6536498`, against the main entity once it exists in FYI (hold it in the chat until then).
 
@@ -147,13 +161,22 @@ Ignition forms can't take uploads and have no conditional questions. Documents (
 ### 8. When documents and signatures come back (runbook Phases 5 and 6)
 
 - File what the client sends with `fyi-document-filer`, using the onboarding names below.
-- Give admin the Phase 5 and 6 checklist with the client's names filled in: lodge the signed 362, save the ASIC extract and debt report, match XPM to the extract, ASIC Register and NowInfinity registers, check nominations, add by TFN, update XPM from the portal, tidy ABR (email, ABN contacts, remove old accountant as authorised representative, business address), check addresses, save the portal snapshot.
+- Give admin the Phase 5 and 6 checklist with the client's names filled in and, under each item, the login and the numbered clicks from `references/click-paths.md`. Mark the ATO and ABR items Sydney staff.
+  1. Lodge the signed 362, only after the partner's OK (5.1). In NowInfinity it must be marked signed first: MENU › Lodgements › Incomplete › row ⋮ › Mark as Signed, then Actions › Lodge Selected.
+  2. Save the ASIC debt report and current extract (5.2): RA63 in the Registered agent portal; the extract from ASIC Connect (paid).
+  3. Match XPM to the extract (5.3), then the ASIC Register and NowInfinity registers (5.4).
+  4. Check nominations (6.1): Online services for agents, Reports and forms › Reports › Client nominations.
+  5. Add each client by TFN (6.2), then update XPM from the portal (6.3).
+  6. Tidy ABR (6.4): email, ABN contacts, remove the old accountant as authorised representative, business address.
+  7. Check addresses (6.5) and save the portal snapshot as PDFs (6.6).
 - **Portal against the proposal (runbook 6.8):** compare the ATO portal summary with the engagement scope. Overdue returns, activity statements or debts the proposal doesn't cover go back to the manager and partner, with `ignition-proposal-builder` in amend mode, before work starts.
 - Draft the ATO summary email (runbook 6.7) for the accountant to approve: balances and payment details if anything is owing, outstanding lodgements, ASIC extract and debt report with address differences, and anything still missing (constitution, stamped deed and variations, signed SMSF deed and member declarations).
 
 ### 9. SMSF in BGL (runbook Phase 7)
 
 Give admin the BGL checklist: search first, Add New Entity from XPM, fund address now and signed deed and member declarations later (audit), standard relationships for John's team (confirm HZ team's), members as Accumulation with start date = ABN registration date for new funds (ask the manager for existing funds), opening balances "No", SuperStream registration once regulated (about 28 days for new funds) with John Kalachian as accountant, the three ESA documents, BGL as the nominated SuperStream on the ATO portal, ESA letters sent on the same email chain.
+
+Put the BGL login line and the numbered clicks from `references/click-paths.md` (runbook 7.1 to 7.3) under each item. The key ones: HOME › Search by Entity Label before + Add New Entity; FUND RELATIONSHIPS tab for the standard cards; MEMBER › Member List › Add Accumulation Member, then **No** to opening balances; CONNECT › SuperStream Dashboard › All Funds › Register; Export › Notification Letters (New ESA Registration) for the letters. A subscription error when adding a fund means the firm needs another BGL licence: ask Bernadette, Rehman or Nicole.
 
 ### 10. Close-out and report (runbook Phase 8)
 
@@ -168,6 +191,41 @@ Check the definition of done and report in this shape:
 - **Offers:** previous accountant handover request (8.4), group structure chart, AML/CTF register update (run the XPM "AML/CTF Report").
 
 ## Reference
+
+### People tasks: owner, login, click path
+
+The short path is for the plan (step 4). Checklists and how-to answers use the full numbered clicks in `references/click-paths.md`. `*` marks a label still to confirm on screen.
+
+| Step | Task | Owner | System and login | Short click path |
+|---|---|---|---|---|
+| 1.2 | Send forms Claude created but didn't send | Partner or admin | Ignition, own login | Clients › open the client › Summary tab › Send Form |
+| 2.2 | Verify ID, file the report | Partner or manager | NowInfinity, own login (every completed check is charged); FYI | MENU › Identity Verifications › Add Identity Verification; PDF icon on the completed check; FYI green + › Upload |
+| 2.3 | Sanctions list, if Claude couldn't read it | Manager | DFAT Consolidated List, no login | dfat.gov.au › Sanctions › Consolidated List › download; Excel Find All within Workbook |
+| 2.6 | Record the verification | Admin | XPM, own Xero login | Clients › Search clients › person › Edit details (Date Verified, Verified By*); custom fields 01 to 032* |
+| 3.1 | Search before creating | Admin | XPM | Clients › Search clients, then the Archived clients, Contacts and Groups tabs |
+| 3.2 | Create the group | Admin | XPM | Clients › Groups tab › New Group*; tick the clients › Add to group ▾ |
+| 3.3 | Create the people | Admin | XPM | Clients › Add client › Business structure Individual › Create › Edit details |
+| 3.4 | Contacts | Admin | XPM | person › Contacts › Add Contact › Create contact; the same contact on their other entities, never a second one |
+| 3.5 | Create the entities | Admin | XPM | Clients › Add client › Company (also a trust or SMSF with a corporate trustee, switched after 3.7) |
+| 3.6 | Fields and register PDFs | Admin | XPM; ABN Lookup and ASIC Connect, no login | Edit details; register page › Ctrl+P › Save as PDF › FYI |
+| 3.7 | Relationships and billing | Admin | XPM | entity › Relationships › add*; Edit details › billing client* |
+| 4.1 | Prepare the 362s | Admin | ASIC Registered agent portal (FAP agent number, own username) to read the directors only, don't submit; NowInfinity to generate | NowInfinity MENU › Corporate Messenger › Appoint an Agent › ACN |
+| 4.4 | E-sign the 362s and CU forms | Admin | FYI, own login (sends through FuseSign) | tick the PDFs › Signature › Service FuseSign › Send |
+| 5.1 | Lodge the signed 362 | Admin, after the partner's OK | NowInfinity | MENU › Lodgements › Incomplete › row ⋮ › Mark as Signed › Actions › Lodge Selected |
+| 5.2 | Debt report and extract | Admin | ASIC Registered agent portal; ASIC Connect (paid) | portal: ACN › RA63 › Inbox; ASIC Connect: company › Company extract › Current company information › Add to cart |
+| 5.3 | Match XPM to ASIC | Admin | NowInfinity; XPM | Corporate Messenger Companies* › See Full Profile; XPM Edit details and Relationships |
+| 5.4 | Registers | Admin | NowInfinity | MENU › Super Comply › Funds for an SMSF; trust register menu not captured yet |
+| 6.1 | Pending nominations | Admin or manager, Sydney staff | ATO Online services for agents, own myID | Reports and forms › Reports › Client nominations |
+| 6.2 | Add the clients | Admin, Sydney staff | ATO Online services for agents, own myID | My practice › Client list › add client* › TFN |
+| 6.3 | Update XPM from the portal | Admin, Sydney staff | ATO Online services for agents; XPM | client › Profile › Tax registrations and Client details; XPM Edit details |
+| 6.4 | Tidy the ABR | Admin, Sydney staff | ABR Tax professional's services, own myID | abr.gov.au › Tax professionals › client ABN › update the ABN record* |
+| 6.5 | Addresses | Admin, Sydney staff | ATO Online services for agents | client › Profile › Client addresses › Edit |
+| 6.6 | Portal snapshot | Admin, Sydney staff | ATO Online services for agents | Client summary › Print friendly version › Save as PDF; Tax accounts; Lodgments |
+| 7.1 | Add the fund | Admin | BGL Simple Fund 360, own login | HOME › Search by Entity Label, only then + Add New Entity › Enter SMSF Details |
+| 7.2 | Relationships and members | Admin | BGL | FUND RELATIONSHIPS tab; MEMBER › Member List › Add Accumulation Member; opening balances No |
+| 7.3 | SuperStream and ESA letters | Admin | Super Fund Lookup, no login; BGL | CONNECT › SuperStream Dashboard › All Funds › Register; Export › Notification Letters (New ESA Registration) |
+| 8.2 | AML/CTF register | Admin | XPM | Reports › AML/CTF Report* |
+| 8.3 | File the structure chart | Admin | FYI | green + › Upload › Permanent, Structure; Comment tab › @ the manager and partner |
 
 ### Missing items (asked in the Ignition forms; documents by email to admin@)
 
@@ -264,3 +322,5 @@ The September 2026 guide used an older format (`ABN XXXX26 – Client Name`). Th
 ## Sources behind this skill
 
 FAP Client Onboarding Guide 290926 and the Y2K Procedures and Policies documents (XPM - Adding an Entity, Client Onboarding - Individual(s), Client Onboarding - Corporates and Groups, ID Verification, Corporate Role Requirements, How to Appoint FAP as your Tax Agent, How To Set Up New Entities, Client Onboarding - Meeting Notes, Stage 1 Intake & Proposal SOP v0.4), the Fortis AML/CTF Process Procedures v1.0, and Onboarding - Tax Return & ITR Procedures (postal address rule).
+
+The click paths (runbook revision 2 and `references/click-paths.md`, 29 September 2026) also draw on BGL - How to add an SMSF, Creating New Entities, ASIC & NI - Updating Details, ASIC - Business Name Search and the Client Address Update Checklist, and on the vendors' help pages: Xero, the ATO Online services for agents user guide, ASIC's registered agent guides, NowInfinity, FYI, Ignition and monday.com. When a screen changes, update the runbook's click-by-click block and `references/click-paths.md` together.
