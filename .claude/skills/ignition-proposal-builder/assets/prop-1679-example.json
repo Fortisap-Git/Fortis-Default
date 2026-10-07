@@ -1,0 +1,133 @@
+{
+  "_comment": "Canonical worked example for the default build: PROP-1679 Portquip Group - FY26 Annual Compliance (accepted). Captured live from get_proposal_document on 2026-07-21. Mirror this structure for every 50/50 deposit/balance group compliance build. HTML data-list-item-id attributes stripped; Ignition regenerates them.",
+  "proposal": {
+    "slug": "prop_njfucjsxhdpqa3aatoua",
+    "reference_number": "PROP-1679",
+    "state": "accepted",
+    "name": "Portquip Group - FY26 Annual Compliance",
+    "client_slug": "cli_naxk5yne733qaaiawwna",
+    "client_name": "Portquip Pty. Ltd.",
+    "currency": "AUD",
+    "start_on": "date",
+    "start_date": "2026-07-01",
+    "minimum_contract_length": 12,
+    "auto_expiring": false,
+    "service_price_display": "hide",
+    "proposal_value_display": "hide",
+    "one_time_date_display": "hide",
+    "sender_type": "user",
+    "sender_user_slug": "user_navlhqeygx7qapqauagq",
+    "email_template_slug": "practempl_mkz7tnu77fwaa7ifxbqa",
+    "terms_template_slug": "practempl_nbxxmoefb5jaawiahlba",
+    "payment_method_required": true,
+    "credit_card_accepted": true,
+    "direct_debit_accepted": true
+  },
+  "personalised_message": "<p>Hi&nbsp;{{ contact.addressee | default:contact.name }},</p><p>Thank you for continuing to work with us. We&rsquo;ve prepared your engagement covering the annual compliance for your group for the most recently completed financial year. A deposit of 50% is payable on acceptance, with the balance invoiced on completion of the work.</p><p>Please find the scope of works and fees set out below for your review and approval. We look forward to continuing our work with you for years to come.</p><p>Best regards,</p><p>{{ practice.admin }}</p>",
+  "monday_source": {
+    "board_id": 18419272927,
+    "board_name": "Annual Compliance 2026-2027",
+    "group_column_value": "Portquip Pty Ltd",
+    "fees_convention": "Group fee stored once on the head entity item (PORTQUIP PTY. LTD. = 20000, ex GST, last FY). Other entity items blank. SMSF (B&J Super, fee 4210) excluded from group proposal per standing rule.",
+    "note": "Accepted PROP-1679 fee was 20500 ex GST against the 20000 board figure; Rehman adjusted at the confirm step. The board fee plus uplift is the starting proposal, not a locked number. Under the current default (5%, rounded to $50) the same board figure would give 21,000 before the pricing check."
+  },
+  "structure": {
+    "option": {
+      "slug": "propscen_njfucjsxhdpqa3aatouq",
+      "name": "Option 1",
+      "position": 1
+    },
+    "project": {
+      "slug": "propproj_njfucjsxhdpqa3aatova",
+      "name": "Portquip Group FY2026",
+      "position": 1,
+      "naming_pattern": "[Group Name] FY[YYYY]"
+    },
+    "service_group": {
+      "slug": "propsegr_njfucjsxhdpqa3aatovq",
+      "billing_mode": "deposit",
+      "position": 1,
+      "billing_schedules": [
+        {
+          "slug": "propbist_njfumbsjlfiqalaafl5q",
+          "position": 1,
+          "name": "Deposit",
+          "bill_type": "once_off",
+          "start_type": "acceptance",
+          "start_date": null,
+          "start_delay": "P0M"
+        },
+        {
+          "slug": "propbist_njfumbsjlfiqalaafl6a",
+          "position": 2,
+          "name": "Balance",
+          "bill_type": "once_off",
+          "start_type": "date",
+          "start_date": "2027-06-30",
+          "start_delay": "P0M",
+          "note": "Balance schedule anchored to end of engagement term (30 June following). Invoiced manually on completion, usually earlier than this date."
+        }
+      ]
+    },
+    "proposed_service": {
+      "slug": "proppros_njfucjsxhdpqa3aatowq",
+      "service_slug": "svc_navnvsskmlbqaaiawxgq",
+      "service_library_name": "Annual Group Compliance",
+      "name": "Annual Group Compliance - Deposit (50% on acceptance)",
+      "position": 1,
+      "is_add_on": false,
+      "tax_slug": "iatax_micj562adeoaaayaxzaq",
+      "tax_exempt": false,
+      "invoice_strategy": "automatic",
+      "price_rule": {
+        "type": "fixed",
+        "currency": "AUD",
+        "amount_cents": 2050000
+      },
+      "quantity_rule": {
+        "type": "estimate",
+        "amount": 1.0
+      },
+      "discount_rule": {
+        "type": "none",
+        "currency": "AUD"
+      },
+      "portions": [
+        {
+          "slug": "propinst_njfumbsjlfiqalaafl6q",
+          "billing_schedule_position": 1,
+          "position": 1,
+          "invoice_strategy": "automatic",
+          "price_rule": {
+            "type": "fixed",
+            "currency": "AUD",
+            "amount_cents": 1025000
+          },
+          "role": "Deposit: 50% of total, invoiced automatically on acceptance"
+        },
+        {
+          "slug": "propinst_njfumbsjlfiqalaafl7a",
+          "billing_schedule_position": 2,
+          "position": 2,
+          "invoice_strategy": "manual",
+          "price_rule": {
+            "type": "fixed",
+            "currency": "AUD",
+            "amount_cents": 1025000
+          },
+          "role": "Balance: 50% of total, invoiced MANUALLY on completion of the work"
+        }
+      ]
+    }
+  },
+  "pricing_summary": {
+    "minimum_contract_value_cents": 2050000,
+    "minimum_contract_value_with_tax_cents": 2255000,
+    "minimum_contract_value_tax_cents": 205000,
+    "reading": "20,500.00 ex GST; 22,550.00 inc GST; amounts entered ex GST, GST resolves via tax_slug"
+  },
+  "service_line_terms_html": "<p><strong>Basis of fee and payment</strong></p><p>The fee for this engagement is an annual fee for the compliance work set out above. A deposit of 50% is payable on acceptance of this proposal, with the remaining 50% invoiced on completion of the work.</p><p>The deposit secures your place in our workflow and covers the initial work on your file. If the engagement is ended after work has commenced, the deposit is not refundable to the extent the related work has been performed, and any further work completed up to the date of termination will be invoiced.</p>",
+  "scope_description_html": "<p><strong>Period covered by this engagement</strong></p><p>This engagement covers the annual compliance for the group for the year ended 30 June 2026 (FY2026). The scope is defined by the income year being finalised and by the lodgements that fall due during the term:</p><ul style=\"list-style-type:disc;\"><li><strong>Annual financial statements and income tax returns</strong> for each entity in the group for the year ended 30 June 2026 (FY2026), which has just been completed.</li><li><strong>Amendment to the June 2026 quarter activity statement (BAS)</strong> where required, to correct the GST position for the year of compliance. Ongoing preparation and lodgement of quarterly activity statements (BAS and IAS) is not included in this engagement and will be quoted separately.</li><li><strong>Other associated lodgements and obligations</strong> for the group falling due during the term, being the ASIC annual review, correspondence with the ATO on your behalf, and limited advisory during the year.</li></ul><p><strong>Company – Portquip Pty Ltd</strong></p><ul style=\"list-style-type:disc;\"><li>Preparation of the financial reports including balance sheet, profit and loss statement, fixed asset schedules, notes to the accounts and director's declaration.</li><li>Preparation, completion and lodgement of the company income tax return including associated schedules and franking account.</li><li>Amendment to the June 2026 quarter activity statement (BAS) where required, to correct the GST position for the year of compliance.</li><li>Preparation of Division 7A loan agreement, director resolution and drawdown acknowledgement where required.</li><li>Preparation of dividend statements and minutes.</li><li>Preparation of other associated minutes and resolutions as required for the financial accounts.</li><li>Review of payroll and superannuation each quarter, and STP finalisation at year end.</li><li>ASIC company secretarial services and annual review.</li></ul><p><strong>Company – B &amp; J Invest Pty Ltd</strong></p><ul style=\"list-style-type:disc;\"><li>Dormant company. No income tax return is required for FY2026 and no separate fee applies. ASIC annual review only, where required.</li></ul><p><strong>Trust – J D Ross Family Trust</strong></p><ul style=\"list-style-type:disc;\"><li>Preparation of financial accounts, including reconciliation of bank and loan accounts, operating income and expenses, and all other related end-of-year adjustment journals.</li><li>Preparation, completion and lodgement of the trust income tax return, including tax reconciliation, tax losses and trust distribution schedules.</li><li>Preparation of the trust distribution resolution.</li></ul><p><strong>Trust – B&amp;R O'Shea Family Trust</strong></p><ul style=\"list-style-type:disc;\"><li>Preparation of financial accounts, including reconciliation of bank and loan accounts, operating income and expenses, and all other related end-of-year adjustment journals.</li><li>Preparation, completion and lodgement of the trust income tax return, including tax reconciliation, tax losses and trust distribution schedules.</li><li>Preparation of the trust distribution resolution.</li></ul><p><strong>Individual – James Ross</strong></p><ul style=\"list-style-type:disc;\"><li>Preparation, completion and lodgement of the individual income tax return, including all schedules required.</li><li>Capital gains calculation on sale of business. Assistance with filling forms to claim exemptions.</li></ul><p><strong>Individual – Danielle Ross</strong></p><ul style=\"list-style-type:disc;\"><li>Preparation, completion and lodgement of the individual income tax return, including all schedules required.</li></ul><p><strong>Individual – Brendan O'Shea</strong></p><ul style=\"list-style-type:disc;\"><li>Preparation, completion and lodgement of the individual income tax return, including all schedules required.</li><li>Capital gains calculation on sale of business. Assistance with filling forms to claim exemptions.</li></ul><p><strong>Individual – Rebecca O'Shea</strong></p><ul style=\"list-style-type:disc;\"><li>Preparation, completion and lodgement of the individual income tax return, including all schedules required.</li></ul><p>All other matters as required.</p><p>Additional services that are not covered in this proposal will be charged at our hourly rates as listed in the Terms &amp; Conditions on a periodic basis as required.</p>",
+  "scope_description_pattern": "Opening 'Period covered by this engagement' block with the three standard bullets, then straight into one bolded heading per entity ('Company – X', 'Trust – Y', 'Individual – Z') with entity-type-standard scope bullets, closing with 'All other matters as required.' and then the house closing sentence: 'Additional services that are not covered in this proposal will be charged at our hourly rates as listed in the Terms & Conditions on a periodic basis as required.' Dormant entities get a single no-fee bullet. SMSFs never appear. The three standard bullets are: (1) annual financial statements and income tax returns for each entity; (2) amendment to the June quarter activity statement (BAS) where required to correct the GST position for the year of compliance, plus the sentence excluding ongoing quarterly BAS and IAS work; (3) other associated lodgements, being the ASIC annual review, ATO correspondence, and limited advisory during the year. Activity statements are NOT a default inclusion beyond the June amendment, and PAYG instalments and STP finalisation are NOT default inclusions. The former overdue/multi-year catch-up carve-out paragraph is retired and must not be written.",
+  "scope_defaults_note": "SCOPE DEFAULTS CHANGED 2026-08-19 on Rehman's instruction. The activity-statement bullet and the other-lodgements bullet in scope_description_html no longer match PROP-1679 exactly as accepted. As accepted, PROP-1679 covered quarterly BAS and IAS across the term and listed PAYG instalments and STP finalisation under other lodgements. The current default is: June quarter BAS amendment only for GST correction, with ongoing quarterly activity statements excluded and quoted separately; and other lodgements limited to ASIC annual review, ATO correspondence and limited advisory. Everything else in this file remains a faithful capture of the accepted proposal. First proposal built under the new default: PROP-1923 Greensmith Group. SECOND CHANGE 2026-09-10 on Rehman's instruction: the 'Substantially overdue or multi-year catch-up lodgements...' paragraph is removed from the scope pattern, and every scope now ends with the additional-services-at-hourly-rates sentence after 'All other matters as required.' As accepted, PROP-1679 carried the catch-up paragraph and no closing sentence; scope_description_html above has been edited to the current default. Fee default also changed the same day from Monday fee + 6% to Monday fee + 5% rounded to the nearest $50, with a pricing consistency check against references/pricing-reference.md; PROP-1679's 20,500 was set under the old default."
+}

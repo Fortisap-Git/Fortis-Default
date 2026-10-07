@@ -1,0 +1,154 @@
+{
+  "_comment": "Canonical worked example for AMEND MODE and for the one-service-line rule: PROP-1786 RAJBANSHI, Rohit Group - FY26 Compliance (2R Design Studio). Captured live from get_proposal_document on 2026-08-05, immediately after consolidating three per-entity lines into one group line. Use this when Rehman asks to amend an existing draft, and whenever a group build would otherwise produce one service line per entity. Pair with prop-1679-example.json, which remains the reference for the 50/50 deposit/balance billing structure.",
+  "what_changed": {
+    "before": [
+      "Line 1: Annual Company Financial Report and Tax Return - 2R Design Studio Pty Ltd, svc_na6vp2xd2buaakiafw4q, 280000 cents",
+      "Line 2: Individual Tax Return - Rohit Rajbanshi, svc_nbwlzcgfp3uaaqaaqseq, 25000 cents",
+      "Line 3: Individual Tax Return - Rohit Rajbanshi (billing_name 'Individual Tax Return - Babita Rajbanshi'), svc_nbwlzcgfp3uaaqaaqseq, 25000 cents"
+    ],
+    "after": "Single line: Annual Group Compliance - FY2026, svc_navnvsskmlbqaaiawxgq, 330000 cents, per-entity scope inside one description.",
+    "fee_effect": "None. 280000 + 25000 + 25000 = 330000. Consolidation never changes the total unless Rehman says so.",
+    "defect_fixed_in_passing": "Line 3 carried Rohit's name and Rohit's description with only the billing_name changed to Babita. Per-entity duplicate lines invite exactly this error, which is one reason the one-line form is the default.",
+    "2026-09-10_scope_and_fee_defaults": "scope_description_html edited to append the house closing sentence (additional services at hourly rates) after 'All other matters as required.'; the accepted proposal did not carry it. Fee default is now Monday fee + 5% rounded to $50 with a pricing check against references/pricing-reference.md; PROP-1786's 3,300 was set by Rehman as a new client under the old default."
+  },
+  "proposal": {
+    "slug": "prop_njrkshzqmj3aanya47sq",
+    "reference_number": "PROP-1786",
+    "state": "draft",
+    "name": "RAJBANSHI, Rohit Group - FY26 Compliance",
+    "client_slug": "cli_njqgldhsgf3aa3aamkrq",
+    "client_name": "2R Design Studio Pty Ltd",
+    "currency": "AUD",
+    "start_on": "date",
+    "start_date": "2026-07-01",
+    "minimum_contract_length": 12,
+    "auto_expiring": false,
+    "service_price_display": "hide",
+    "proposal_value_display": "hide",
+    "one_time_date_display": "hide",
+    "sender_type": "user",
+    "sender_user_slug": "user_navlhqeygx7qapqauagq",
+    "email_template_slug": "practempl_mkz7tnu77fwaa7ifxbqa",
+    "terms_template_slug": "practempl_nbxxmoefb5jaawiahlba",
+    "payment_method_required": true,
+    "credit_card_accepted": true,
+    "direct_debit_accepted": true
+  },
+  "personalised_message": "<p>Hi&nbsp;{{ contact.addressee | default:contact.name }},</p><p>Thank you for choosing Fortis Accounting Partners. We have prepared this engagement covering the annual compliance for your group for the year ending 30 June 2026, together with a first year tax planning session to get us started. A deposit of 50% is payable on acceptance, with the balance invoiced on completion of the work.</p><p>Please find the scope of works and fees set out below for your review and approval. We look forward to working with you for years to come.</p><p>Best regards,</p><p>{{ practice.admin }}</p>",
+  "monday_source": {
+    "board_id": 18419272927,
+    "board_name": "Annual Compliance 2026-2027",
+    "group_column_value": "RAJBANSHI, Rohit",
+    "head_entity_item_id": 12437491855,
+    "head_entity_name": "2R DESIGN STUDIO PTY LTD",
+    "note": "New client, so the FY26 fee was set by Rehman rather than uplifted from a prior-year board figure."
+  },
+  "structure": {
+    "option": {
+      "slug": "propscen_njrkshzqmj3aanya47ta",
+      "name": "Option 1",
+      "position": 1
+    },
+    "project": {
+      "slug": "propproj_njrkshzqmj3aanya47tq",
+      "name": "RAJBANSHI, Rohit Group FY2026",
+      "position": 1,
+      "naming_pattern": "[Group Name] FY[YYYY]"
+    },
+    "service_group": {
+      "slug": "propsegr_njrkshzqmj3aanya47ua",
+      "billing_mode": "once_off",
+      "position": 1,
+      "billing_schedules": [
+        {
+          "slug": "propbist_njrkshzqmj3aanya47uq",
+          "position": 1,
+          "name": "Annual Fee",
+          "bill_type": "once_off",
+          "start_type": "acceptance",
+          "start_date": null,
+          "start_delay": "P0M"
+        }
+      ],
+      "known_defect": "This group bills 100% on acceptance, but both the personalised message and the service-line terms promise 50% deposit and 50% on completion. Left as found and flagged to Rehman, because he asked only for the line consolidation. Do NOT silently switch billing modes during an amend. See amend_consistency_checks below."
+    },
+    "proposed_service": {
+      "slug": "proppros_njzntrhrzeuaa3ialliq",
+      "service_slug": "svc_navnvsskmlbqaaiawxgq",
+      "service_library_name": "Annual Group Compliance",
+      "name": "Annual Group Compliance - FY2026",
+      "billing_name": "Annual Group Compliance - FY2026",
+      "position": 1,
+      "is_add_on": false,
+      "tax_slug": "iatax_micj562adeoaaayaxzaq",
+      "tax_exempt": false,
+      "invoice_strategy": "automatic",
+      "price_rule": {
+        "type": "fixed",
+        "currency": "AUD",
+        "amount_cents": 330000
+      },
+      "quantity_rule": {
+        "type": "estimate",
+        "amount": 1.0
+      },
+      "discount_rule": {
+        "type": "none",
+        "currency": "AUD"
+      },
+      "portions": [
+        {
+          "slug": "propinst_njzntrhrzeuaa3iallja",
+          "billing_schedule_position": 1,
+          "position": 1,
+          "invoice_strategy": "automatic",
+          "price_rule": {
+            "type": "fixed",
+            "currency": "AUD",
+            "amount_cents": 330000
+          },
+          "role": "Whole fee on the single Annual Fee schedule. A 50/50 build would carry two portions instead, per prop-1679-example.json."
+        }
+      ]
+    }
+  },
+  "pricing_summary": {
+    "minimum_contract_value_cents": 330000,
+    "minimum_contract_value_with_tax_cents": 363000,
+    "minimum_contract_value_tax_cents": 33000,
+    "reading": "3,300.00 ex GST; 3,630.00 inc GST; amounts entered ex GST, GST resolves via tax_slug"
+  },
+  "service_line_terms_html": "<p><strong>Basis of fee and payment</strong></p><p>The fees for this engagement are set out above. A deposit of 50% is payable on acceptance of this proposal, with the remaining 50% invoiced on completion of the work.</p><p>The deposit secures your place in our workflow and covers the initial work on your file. If the engagement is ended after work has commenced, the deposit is not refundable to the extent the related work has been performed, and any further work completed up to the date of termination will be invoiced.</p>",
+  "scope_description_html": "<p>This engagement covers the annual compliance work for the Rajbanshi group for the year ended 30 June 2026, as set out below.</p><p><strong>2R Design Studio Pty Ltd</strong></p><p>Preparation of the financial reports for the year ended 30 June 2026, including balance sheet, profit and loss statement, fixed asset schedules, notes to the accounts and director's declaration.</p><p>Preparation, completion and lodgement of the company income tax return including associated schedules.</p><p>Preparation and lodgement of activity statements, and any amendment to BAS for FY2026 if required.</p><p>Advice and ongoing support for business consultation.</p><p><strong>Rohit Rajbanshi</strong></p><p>Preparation, completion and lodgement of the individual income tax return for the year ended 30 June 2026, including standard income and deductions.</p><p><strong>Babita Rajbanshi</strong></p><p>Preparation, completion and lodgement of the individual income tax return for the year ended 30 June 2026, including standard income and deductions.</p><p>The individual returns are priced as basic returns with no additional schedules. If rental property, capital gains, sole trader or business, motor vehicle, managed fund or cryptocurrency matters apply, an additional schedule fee will apply and will be confirmed with you.</p><p>All other matters as required.</p><p>Additional services that are not covered in this proposal will be charged at our hourly rates as listed in the Terms &amp; Conditions on a periodic basis as required.</p>",
+  "scope_description_pattern": "Short lead-in naming the group and the year, then one bolded entity heading per entity in the group, then the scope for that entity, closing with 'All other matters as required.' Shared caveats that span several entities (such as the basic-return schedule carve-out for the individuals) sit in one paragraph before the closing line rather than repeated under each person. This is the compact variant. Where the engagement term spans lodgements beyond the one income year, open with the 'Period covered by this engagement' block from prop-1679-example.json instead of the short lead-in. Bold <p> headings and plain <p> body are acceptable in place of <ul> bullets; both render correctly.",
+  "consolidation_recipe": {
+    "why": "update_proposed_service cannot change service_slug. Converting per-entity lines into one group line therefore means adding a new line on the correct library service, patching it, then removing the old ones.",
+    "order_matters": "Add and fully price the new line BEFORE removing any old line. Removing first leaves the draft at a wrong total, and if a later call fails the draft is left gutted.",
+    "steps": [
+      "1. get_proposal_document. Record every line slug, its amount, the service_group_slug, and the existing service-line terms HTML.",
+      "2. add_proposed_service with the Annual Group Compliance library slug svc_navnvsskmlbqaaiawxgq onto the existing service_group_slug.",
+      "3. update_proposed_service on the new line in ONE call: name, billing_name, description, terms, price_rule (sum of the removed lines), quantity_rule estimate 1, tax_slug, invoice_strategy. This also clears the dirty defaults the library service arrives with.",
+      "4. remove_proposed_service on each old line, one call each.",
+      "5. Re-read and check: proposed_service_count is 1, pricing summary is unchanged from the starting total, tax_exempt is false, validation_summary.valid is true, state is still draft."
+    ],
+    "library_service_arrives_dirty": "add_proposed_service on svc_navnvsskmlbqaaiawxgq returns name 'Annual Group Compliance (Monthly)', amount_cents 0, tax_exempt true, and a boilerplate description full of 'XXX Pty Ltd' placeholders. This is expected, not an error. The single update_proposed_service call in step 3 fixes all of it, including re-resolving the tax_exempt flag (same false alarm documented in the mechanics reference)."
+  },
+  "amend_consistency_checks": {
+    "purpose": "Run these after any amend and report what fails. Report, do not silently fix, anything outside what Rehman asked for.",
+    "checks": [
+      "Billing structure matches the wording. If the personalised message or service-line terms say '50% deposit, balance on completion', the service group must be billing_mode deposit with two schedules and two portions. A once_off group with that wording bills 100% on acceptance and contradicts the engagement letter.",
+      "Everything promised in the personalised message appears in a service line. PROP-1786 promised a first year tax planning session that no line covered.",
+      "Line names, billing names and description bodies all refer to the same entity. Duplicated lines are where this breaks.",
+      "Total after the amend equals the total before, unless a fee change was requested.",
+      "Display settings still need Rehman's manual click in Ignition. Say so every time."
+    ],
+    "cannot_fix_from_here": "add_proposal_service_group only accepts once_off and recurring. There is no API path to convert an existing group to deposit billing, so correcting a once_off group to the 50/50 structure requires rebuilding the proposal with create_proposal. Offer it, do not do it unasked.",
+    "closing_sentence_and_no_catch_up": "Scope closes with 'All other matters as required.' followed by the additional-services-at-hourly-rates sentence, and contains no catch-up paragraph.",
+    "fee_rounding": "Every fee on the draft is rounded to the nearest $50 ex GST."
+  },
+  "known_slugs_learned": {
+    "2R Design Studio Pty Ltd (Ignition client)": "cli_njqgldhsgf3aa3aamkrq",
+    "Annual Company Financial Report and Tax Return (library service)": "svc_na6vp2xd2buaakiafw4q",
+    "Individual Tax Return (library service)": "svc_nbwlzcgfp3uaaqaaqseq"
+  }
+}
