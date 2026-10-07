@@ -10,7 +10,7 @@
     "fee_effect": "None. 280000 + 25000 + 25000 = 330000. Consolidation never changes the total unless Rehman says so.",
     "defect_fixed_in_passing": "Line 3 carried Rohit's name and Rohit's description with only the billing_name changed to Babita. Per-entity duplicate lines invite exactly this error, which is one reason the one-line form is the default.",
     "2026-09-10_scope_and_fee_defaults": "scope_description_html edited to append the house closing sentence (additional services at hourly rates) after 'All other matters as required.'; the accepted proposal did not carry it. Fee default is now Monday fee + 5% rounded to $50 with a pricing check against references/pricing-reference.md; PROP-1786's 3,300 was set by Rehman as a new client under the old default.",
-    "2026-10-07_split_invoice_notice": "PROP-1786 predates the split-invoice notice and is left as captured. An amend of a draft like it today also brings the notice up to standard (SKILL.md step 4a): personalised_message gets the notice straight after the greeting (new client, so no 'this has changed' sentence), the line is renamed and billing_name set to 'Annual Group Compliance FY2026 (total fee $3,630.00 inc GST)', the description opens with the notice block, terms become the script's terms_html, next_steps_message is set, and update_proposal is tried for proposal_value_display and service_price_display 'show' (MUST DO for Rehman if it needs his approval). The schedule name 'Annual Fee' cannot be changed through the API (mechanics quirk 15). Here the once_off billing contradicts the 50/50 wording anyway, so the rebuild offered for that defect would also fix the schedule names."
+    "2026-10-07_split_invoice_notice": "PROP-1786 predates the split-invoice notice and is left as captured. An amend of a draft like it today also brings the notice up to standard (SKILL.md step 4a): personalised_message becomes the script's message (greeting 'Hi Rohit and Babita,', new-client wording, one highlighted line with the total), the line is renamed and billing_name set to 'Annual Group Compliance FY2026 (total fee $3,630.00 inc GST)', terms become the script's plain terms_html, next_steps_message gets the one-line reminder, any notice block in the description is removed, and update_proposal is tried for proposal_value_display and service_price_display 'show' (MUST DO for Rehman if it needs his approval). The schedule name 'Annual Fee' cannot be changed through the API (mechanics quirk 15). Here the once_off billing contradicts the 50/50 wording anyway, so the rebuild offered for that defect would also fix the schedule names."
   },
   "proposal": {
     "slug": "prop_njrkshzqmj3aanya47sq",
@@ -142,16 +142,16 @@
       "Line names, billing names and description bodies all refer to the same entity. Duplicated lines are where this breaks.",
       "Total after the amend equals the total before, unless a fee change was requested.",
       "Display settings still need Rehman's manual click in Ignition. Say so every time.",
-      "Split-invoice notice present and current (references/split-invoice-notice.md section 6): notice straight after the greeting in the personalised message, Freya's sentence verbatim, total fee and both invoice amounts agreeing with the pricing summary.",
+      "Split-invoice wording present and current (references/split-invoice-notice.md section 6): first-name greeting, then exactly one highlighted line in the personalised message with Freya's sentence verbatim and the total ex and inc GST agreeing with the pricing summary.",
       "No service name or billing name carries billing words ('Deposit (50% on acceptance)' and similar). Name and billing name are '[Service] FY[YYYY] (total fee $X inc GST)'.",
-      "Description opens with the notice block; terms open with the notice heading and table; next steps message carries the reminder.",
+      "Said once: no split-invoice notice in the description, plain 'Basis of fee and payment' terms, one-line reminder in the next steps message.",
       "proposal_value_display and service_price_display are 'show'. If update_proposal could not set them, that is the MUST DO at the top of the summary.",
       "Billing schedule names. If they are still 'Deposit'/'Balance' (or 'Annual Fee'), say so: they cannot be renamed through the API, and the client will see them in brackets on the pricing page and invoices."
     ],
     "cannot_fix_from_here": "add_proposal_service_group only accepts once_off and recurring. There is no API path to convert an existing group to deposit billing, so correcting a once_off group to the 50/50 structure requires rebuilding the proposal with create_proposal. Offer it, do not do it unasked.",
     "closing_sentence_and_no_catch_up": "Scope closes with 'All other matters as required.' followed by the additional-services-at-hourly-rates sentence, and contains no catch-up paragraph.",
     "fee_rounding": "Every fee on the draft is rounded to the nearest $50 ex GST.",
-    "split_invoice_notice": "Applied on every amend, like the closing sentence and the catch-up paragraph removal. Generate it with scripts/split_invoice_notice.py and re-run it whenever the fee changes."
+    "split_invoice_notice": "Applied on every amend, like the closing sentence and the catch-up paragraph removal. Generate it with scripts/split_invoice_notice.py (first names, what the engagement covers) and re-run it whenever the fee changes."
   },
   "known_slugs_learned": {
     "2R Design Studio Pty Ltd (Ignition client)": "cli_njqgldhsgf3aa3aamkrq",
