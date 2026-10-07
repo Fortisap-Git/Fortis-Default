@@ -44,7 +44,7 @@
 
 **Evidence for the invoice rows.** PROP-1897 has billing schedules named "Deposit" and "Balance". Its balance invoice INV-0805 carries `billing_name: "Balance"` on the item. In Xero (2026-3010) that line reads "(Balance) Annual Group Accounting & Tax Compliance", and the line description is PROP-1897's service description word for word. So the bracketed prefix is the **schedule name**, and the description travels to the invoice.
 
-**Evidence for the formatting.** On 7 October 2026 the full build below went through `validate_proposal_document`. It returned valid with no warnings, and the `<mark class="marker-yellow">`, `<figure class="table">` and `<span style="color:...">` markup came back intact. Validation saves nothing. Ignition's editor is CKEditor 5 (note the `data-list-item-id` attributes on stored lists), and that is CKEditor 5's own markup for highlight, tables and font colour.
+**Evidence for the formatting.** On 7 October 2026 the full build below went through `validate_proposal_document`. It returned valid with no warnings, and the `<mark class="marker-yellow">`, `<figure class="table">` and `<span style="color:...">` markup came back intact. Validation saves nothing. The same day the first live build, **PROP-2097** (Khatiwada, $400 + GST), was created with this recipe. A fresh `get_proposal_document` read passed all ten checks in section 6: both display settings took at creation, the schedule names stuck, and every piece of markup survived storage. Ignition's editor is CKEditor 5 (note the `data-list-item-id` attributes on stored lists), and that is CKEditor 5's own markup for highlight, tables and font colour.
 
 ## 3. How to produce and place it
 

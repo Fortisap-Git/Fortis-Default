@@ -9,7 +9,8 @@ Verify these still resolve before relying on them; re-read from a recent accepte
 | Thing | Slug |
 |---|---|
 | GST tax | `iatax_micj562adeoaaayaxzaq` |
-| Sender user (Rehman) | `user_navlhqeygx7qapqauagq` |
+| Sender user (house default: **John Kalachian, Partner**; this row was mislabelled "Rehman" until `get_user` checked it on 7 Oct 2026. PROP-1679, PROP-1786 and every skill build send from it) | `user_navlhqeygx7qapqauagq` |
+| Rehman Khan (user; the sender only if Rehman asks to send as himself) | `user_na7zbbpmkk5aakabddtq` |
 | Engagement letter terms template | `practempl_nbxxmoefb5jaawiahlba` |
 | Proposal email template | `practempl_mkz7tnu77fwaa7ifxbqa` |
 | Individual Tax Return JK (with quote) template | `pectmp_nb3uhrjml62aakaatm2a` |
@@ -19,6 +20,7 @@ Verify these still resolve before relying on them; re-read from a recent accepte
 | RAJBANSHI / 2R Design proposal (amend mode + one-line reference) | `prop_njrkshzqmj3aanya47sq` (PROP-1786) |
 | Penn Property group compliance proposal (mirror source, monthly instalments) | `prop_nja3kfz7j2xaanyal2aa` (PROP-1591) |
 | Portquip Group FY26 proposal (mirror source, 50/50 deposit/balance, DEFAULT) | `prop_njfucjsxhdpqa3aatoua` (PROP-1679) |
+| Khatiwada FY26 tax returns (first live build with the split-invoice notice, 7 Oct 2026) | `prop_nlc3f4wlcdhaaoya7joa` (PROP-2097) |
 
 ## Monday.com Annual Compliance board (fee and group source)
 
@@ -71,7 +73,7 @@ Mirror `assets/prop-1679-example.json` structurally. The load-bearing parts:
 9. **Removals renumber positions.** After each `remove_proposed_service` the surviving lines shift up. Work off slugs, never positions, and re-read at the end rather than assuming.
 
 10. **Client search is weak.** Ignition's `list_clients` misses company entities whose registered name doesn't contain the search term. Resolve the group via the Monday board first, then FYI (`fyi_list_clients`) if not on the board, then match to the Ignition record.
-11. **Structured filters fail from chat (24 Sep 2026).** `list_clients` and `list_proposals` reject every `filter` value with "value at /filter is not an object", whether a single condition or wrapped in `and`/`or`. Unfiltered listing works but the practice has 4,084 clients (mostly XPM-imported leads), so do not page for a name. Fallback: `create_proposal` without `client_slug` (state `new`, deleted after 7 days without a client); Rehman assigns the client in the editor. `get_proposal` by slug still finds it; `list_proposals` does not until a client is attached.
+11. **Structured filters: try them first.** On 7 Oct 2026 `list_clients` with `{"property": "name", "rich_text": {"contains": "Khatiwada"}}` and `list_proposals` with an `or` of `client_slug` / `client_group_slug` relation conditions both worked. Use them first, and fall back as below only if they error again. **History, 24 Sep 2026: structured filters failed from chat.** `list_clients` and `list_proposals` reject every `filter` value with "value at /filter is not an object", whether a single condition or wrapped in `and`/`or`. Unfiltered listing works but the practice has 4,084 clients (mostly XPM-imported leads), so do not page for a name. Fallback: `create_proposal` without `client_slug` (state `new`, deleted after 7 days without a client); Rehman assigns the client in the editor. `get_proposal` by slug still finds it; `list_proposals` does not until a client is attached.
 12. **The bracketed prefix the client sees is the billing schedule name.** On the pricing page each line reads "(schedule name) service name". The Xero invoice line reads "(schedule name) billing name, or name if blank". Proof, 7 Oct 2026: PROP-1897's schedules are named "Deposit" and "Balance"; its balance invoice INV-0805 carries `billing_name: "Balance"` on the item; Xero 2026-3010 shows "(Balance) Annual Group Accounting & Tax Compliance". Name schedules for the client ("Invoice 1 of 2: 50% deposit"), never for staff.
 13. **The service description travels to the Xero invoice.** The Xero line description on 2026-3010 is PROP-1897's proposed-service description, word for word, as plain text. Whatever opens the description is what the client reads first on both invoices, which is why the split-invoice notice goes first.
 14. **Rich text differs by field.** `personalised_message`, `next_steps_message` and `terms` take the full toolbar: font colour `<span style="color:rgb(...)">`, highlight `<mark class="marker-yellow">`, headings, and tables `<figure class="table"><table>...`. A service `description` takes only bold, italic, underline, headings, links, alignment, lists and blockquotes, so no tables, colour or highlight there. The editor is CKEditor 5 (hence `data-list-item-id` on stored lists), and those are its native tags. All of them round-tripped intact through `validate_proposal_document` on 7 Oct 2026, which saves nothing.
@@ -90,6 +92,7 @@ Mirror `assets/prop-1679-example.json` structurally. The load-bearing parts:
 - Portquip Pty. Ltd.: Ignition `cli_naxk5yne733qaaiawwna`, Monday Group "Portquip Pty Ltd" on board 18419272927 (head entity item 12434121809)
 - 2R Design Studio Pty Ltd: Ignition `cli_njqgldhsgf3aa3aamkrq`, Monday Group "RAJBANSHI, Rohit" on board 18419272927 (head entity item 12437491855). Group is the company plus Rohit and Babita Rajbanshi.
 
+- Khatiwada, Bijit and Rashmi (two individuals): Ignition `cli_naxk5vv32csqaaiahqoa` (Bijit, used as the proposal client) and `cli_naxk5vuquvjaaaiawxna` (Rashmi), client group `cligrp_nft75cswxfsaaailhx2a`. FYI group 34765268. Monday Group "KHATIWADA Bijit & KHATIWADA Rashmi" on board 18419272927 (Bijit item 12434050899, fee 400; Rashmi item 12433633902, blank). PROP-2097.
 - Trojan Medtech group (Troy and Amelia Rose, Bianco & Co Trust): Ignition client slug not yet known. PROP-2055 (`prop_nk2hkgstmmdqaviantca`) built unassigned on 24 Sep 2026, Monday Group "Trojan Medtech Pty Ltd" (head entity item 12437467634, fee 4,600; Troy item 12433826018, fee 1,200).
 
 Add to this table as builds happen; a slug looked up once should not be looked up twice.

@@ -5,6 +5,8 @@ description: Builds and amends draft Ignition engagement proposals for Fortis cl
 
 # Ignition Proposal Builder
 
+<!-- Maintainers: never write a dollar sign directly followed by a digit in this file. The skill loader treats a dollar sign plus a number as "that word of the invocation arguments", so a worked amount of three thousand one hundred and thirty-five dollars rendered as "draft,135.00" on 7 Oct 2026. Write "$X" and put worked amounts in the references, which are read as files and not substituted. The existing fifty-dollar rounding mentions are only safe while the arguments stay under 50 words. -->
+
 You build and amend draft Ignition proposals for Rehman at Fortis Accounting Partners. Every build and every amendment ends at a draft for his review in Ignition. You never send a proposal and never change its state beyond draft.
 
 Read these before your first Ignition write call:
@@ -23,7 +25,7 @@ On **every** build and **every** amend, whatever the proposal type (group, indiv
 
 1. **Run `scripts/split_invoice_notice.py`** on the agreed fee ex GST. Use its output verbatim. Never type the amounts by hand. Re-run it whenever the fee changes.
 2. **Intro message:** the notice goes **immediately after "Hi [name],"**, before anything else. It has an orange heading "PLEASE NOTE: YOUR FEE IS SPLIT INTO TWO INVOICES", Freya's sentence highlighted, and a table showing the **total fee**, invoice 1 and invoice 2.
-3. **Pricing page and invoices:** name the billing schedules **"Invoice 1 of 2: 50% deposit"** and **"Invoice 2 of 2: 50% balance"**. Name the service line (and its `billing_name`) **"[Service] FY[YYYY] (total fee $X inc GST)"**. Ignition prints the schedule name in brackets in front of the service name, on the pricing page and on the Xero invoice line. The client reads "(Invoice 2 of 2: 50% balance) Annual Group Compliance FY2026 (total fee $3,135.00 inc GST)".
+3. **Pricing page and invoices:** name the billing schedules **"Invoice 1 of 2: 50% deposit"** and **"Invoice 2 of 2: 50% balance"**. Name the service line (and its `billing_name`) **"[Service] FY[YYYY] (total fee $X inc GST)"**. Ignition prints the schedule name in brackets in front of the service name, on the pricing page and on the Xero invoice line. The client reads "(Invoice 2 of 2: 50% balance) Individual Tax Returns FY2026 (total fee $X inc GST)", with the real total in place of X. PROP-2097 is the first live build; the reference has worked examples.
 4. **Total on the pricing page:** create with `proposal_value_display: show` and `service_price_display: show`.
 5. **Scope description:** the notice block comes **first**, ahead of the period-covered block. The same text is the line description on both Xero invoices.
 6. **Service terms and the after-signing screen:** use the script's `terms_html` and `next_steps_message_html`.
@@ -77,7 +79,7 @@ Follow the PROP-1679 recipe in the asset file exactly:
 - One option, one project named "[Group Name] FY[YYYY]", one service group with `billing_mode: deposit`.
 - Two billing schedules on the service group: schedule 1 **"Invoice 1 of 2: 50% deposit"** (`once_off`, `start_type: acceptance`, `start_delay: P0M`) and schedule 2 **"Invoice 2 of 2: 50% balance"** (`once_off`, `start_type: date`, start date 30 June at the end of the engagement term). The names are client-facing: Ignition prints them in brackets on the pricing page and on each invoice line. They cannot be renamed after creation, so get them right in `create_proposal`.
 - One proposed service on the group's compliance service (see slugs table), full fee as a fixed price rule, split into two 50% portions: the deposit portion with `invoice_strategy: automatic`, the balance portion with `invoice_strategy: manual` (invoiced on completion of the work).
-- **Service name and billing name** are both the script's `service_name`: "[Service] FY[YYYY] (total fee $X inc GST)", for example "Annual Group Compliance FY2026 (total fee $3,135.00 inc GST)". Never "... - Deposit (50% on acceptance)" or any other billing words. Proposal name pattern: "[Client/Group Name] - FY[YY] [Engagement type]".
+- **Service name and billing name** are both the script's `service_name`: "[Service] FY[YYYY] (total fee $X inc GST)", for example "Annual Group Compliance FY2026 (total fee $X inc GST)" with the script's total in place of X. Never "... - Deposit (50% on acceptance)" or any other billing words. Proposal name pattern: "[Client/Group Name] - FY[YY] [Engagement type]".
 - **Display settings** in `create_proposal`: `proposal_value_display: show`, `service_price_display: show`, `one_time_date_display: hide`. The first two put the total fee on the pricing page. Keep the third hidden because the balance schedule's 30 June anchor date is not when the client is billed.
 - **Personalised message:** the greeting, then the script's `personalised_message_notice_html`, then the house message from the asset. **Next steps message:** the script's `next_steps_message_html`.
 - Scope description follows the pattern documented in the asset: **the script's `description_notice_html` first**, then the period-covered block, then straight into the per-entity bolded headings with entity-type-standard bullets, dormant entities as a single no-fee bullet, no SMSFs, closing with "All other matters as required." followed by the house closing sentence.
